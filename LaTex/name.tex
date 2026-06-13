@@ -1,0 +1,68 @@
+\subsection{Troubleshooting the Sigmoid Network Implementation}
+
+During initial experimentation with the sigmoid-based network, an unexpected behavior was observed: the error remained constant at approximately 82.1097 throughout training, and the final test accuracy stagnated at 11.35\% — barely above random chance (10\%). Figure \ref{fig:sigmoid_failed} shows the flat convergence plot.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/sigmoid_failed_convergence.png}
+\caption{Initial sigmoid network convergence showing no learning (error constant at 82.1)}
+\label{fig:sigmoid_failed}
+\end{figure}
+
+\subsubsection{Diagnosis: Vanishing Gradients}
+
+To diagnose the issue, gradient norms were monitored during training. As shown in the debug output below, both weight gradient norms remained at exactly zero throughout all 1000 epochs:
+
+\begin{verbatim}
+Epoch 100: error = 82.1097, |dwo| = 0.0000e+00, |dwh| = 0.0000e+00
+Epoch 200: error = 82.1097, |dwo| = 0.0000e+00, |dwh| = 0.0000e+00
+Epoch 300: error = 82.1097, |dwo| = 0.0000e+00, |dwh| = 0.0000e+00
+...
+\end{verbatim}
+
+This confirmed that **no learning was occurring** — the weights were never updated.
+
+\subsubsection{Identifying the Root Cause}
+
+The problem was traced to the sigmoid slope parameter \(\sigma = 0.01\) in the original code. The sigmoid activation function and its derivative are given by:
+
+\begin{equation}
+f(z) = \frac{1}{1 + e^{-\sigma z}}, \quad f'(z) = \sigma \cdot f(z) \cdot (1 - f(z))
+\end{equation}
+
+With \(\sigma = 0.01\), the maximum possible derivative is only:
+
+\begin{equation}
+\max(f'(z)) = \sigma \cdot 0.25 = 0.0025
+\end{equation}
+
+This extremely small gradient magnitude, when propagated through the network via backpropagation, effectively vanished to zero — explaining the flat error curve and zero gradient norms.
+
+\subsubsection{Solution: Increasing \(\sigma\)}
+
+The parameter \(\sigma\) was increased to \(1.0\), which is the standard value for sigmoid activation in most neural network implementations. This change increases the maximum gradient by a factor of 100:
+
+\begin{equation}
+\max(f'(z)) = 1.0 \cdot 0.25 = 0.25
+\end{equation}
+
+With this modification, the network began learning immediately:
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/sigmoid_fixed_convergence.png}
+\caption{Sigmoid network after fixing \(\sigma = 1.0\) — error now decreases}
+\label{fig:sigmoid_fixed}
+\end{figure}
+
+\subsubsection{Results After Fix}
+
+After correcting the sigma value, the sigmoid network achieved:
+
+\begin{itemize}
+    \item Training accuracy: [YOUR RESULT]%
+    \item Test accuracy: [YOUR RESULT]%
+    \item Clear decreasing error trajectory (Figure \ref{fig:sigmoid_fixed})
+\end{itemize}
+
+This experience highlights a critical lesson in neural network implementation: **hyperparameter choices matter significantly**, and values that seem minor (like \(\sigma = 0.01\) vs. \(1.0\)) can completely determine whether a network learns or fails.

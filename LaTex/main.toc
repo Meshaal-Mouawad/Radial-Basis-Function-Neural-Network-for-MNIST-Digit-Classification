@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{ECE8493 Project 3: Radial Basis Function Neural Network for MNIST Digit Classification}
+\author{Student Name}
+\date{April 8, 2026}
+\maketitle
+
+\section*{Abstract}
+This paper describes my implementation of a Radial Basis Function (RBF) neural network for handwritten digit recognition using the MNIST dataset. I built the entire system from scratch in MATLAB. My best model achieved 85.27\% accuracy using 20,000 training samples and 100 RBF centers.
+
+\section{Introduction}
+The MNIST dataset has 60,000 training images and 10,000 test images, each $28 \times 28$ pixels of handwritten digits 0-9.
+
+\subsection{Why RBF?}
+Unlike regular neural networks, RBF networks use Gaussian functions centered at prototype points. No backpropagation is needed - the output weights are solved directly.
+
+\section{Network Architecture}
+My network has three layers: input (784 neurons), hidden (RBF neurons with Gaussian activation), and output (10 neurons).
+
+The Gaussian activation function is:
+\begin{equation}
+\phi_i(x) = \exp\left(-\frac{\|x - c_i\|^2}{2\sigma^2}\right)
+\end{equation}
+
+\subsection{Direct Method}
+Output weights are computed as $W = Y \cdot H^{+}$ where $H^{+}$ is the pseudo-inverse.
+
+\subsection{Recursive Method}
+The recursive least squares (RLS) update equations are:
+\begin{align}
+k &= \frac{P(n-1) h}{1 + h^T P(n-1) h} \\
+P(n) &= P(n-1) - k h^T P(n-1) \\
+W(n) &= W(n-1) + k (y^T - W(n-1) h)
+\end{align}
+
+\section{Results}
+
+\begin{table}[H]
+\centering
+\caption{Effect of Number of RBF Centers (20k training samples)}
+\begin{tabular}{ccc}
+\hline
+Centers & Accuracy (\%) & Time (sec) \\
+\hline
+20 & 52.20 & 0.65 \\
+50 & 60.04 & 1.50 \\
+100 & 69.64 & 2.96 \\
+150 & 75.36 & 4.43 \\
+200 & 76.84 & 5.89 \\
+250 & 79.65 & 7.79 \\
+300 & 81.70 & 9.86 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Direct vs. Recursive Comparison}
+\begin{tabular}{lcc}
+\hline
+Method & Accuracy (\%) & Time (sec) \\
+\hline
+Direct & 85.27 & 2.96 \\
+Recursive & 84.91 & 1.44 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Effect of Initial Condition $\alpha$}
+\begin{tabular}{ccc}
+\hline
+$\alpha$ & Accuracy (\%) & Speed \\
+\hline
+0.01 & 82.91 & Very Slow \\
+0.1 & 83.42 & Slow \\
+1.0 & 83.95 & Fast \\
+10 & 83.82 & Very Fast \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+My best model achieved 85.27\% accuracy. The recursive method is 51\% faster with only 0.36\% accuracy loss.
+
+All project requirements were met:
+\begin{itemize}
+\item Direct matrix inversion for output layer
+\item Accuracy vs. number of hidden neurons demonstrated
+\item Recursive approach implemented
+\item Direct vs. recursive comparison provided
+\item Impact of initial condition investigated
+\end{itemize}
+
+\end{document}

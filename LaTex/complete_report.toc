@@ -1,0 +1,27 @@
+\contentsline {section}{Abstract}{1}{section*.1}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Why RBF?}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Project Requirements}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Network Architecture}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Three-Layer Structure}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Gaussian Activation Function}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Center Selection}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Direct Method: Pseudo-Inverse}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Recursive Method: Recursive Least Squares}{4}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Results}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experiment 1: Direct Method – 10,000 Training Samples}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Experiment 2: Direct Method – 20,000 Training Samples}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Experiment 3: Effect of Number of Centers}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Experiment 4: Visualization of RBF Centers}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Experiment 5: Recursive Method – Initial Condition Study}{12}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Experiment 6: Direct vs. Recursive Comparison}{13}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Experiment 7: Error Analysis}{13}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Discussion}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Why RBF Networks Work}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Why Some Digits Are Harder}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Direct vs. Recursive: Method Selection}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Proposed Improvements}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Comparison with Literature}{17}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{17}{section.5}%
+\contentsline {section}{Acknowledgments}{18}{section*.19}%
+\contentsline {section}{Appendix: MATLAB Code}{19}{section*.21}%

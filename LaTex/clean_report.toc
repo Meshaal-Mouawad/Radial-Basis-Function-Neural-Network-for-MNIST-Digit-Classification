@@ -1,0 +1,27 @@
+\contentsline {section}{Abstract}{1}{section*.1}%
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Radial Basis Function Neural Network (RBFNN)}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Project Requirements}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Network Architecture}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Three-Layer Structure}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Gaussian Activation Function}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Center Selection}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Direct Method: Pseudo-Inverse}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Recursive Method: Recursive Least Squares}{6}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Results}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Experiment 1: Direct Method – 10,000 Training Samples}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Experiment 2: Direct Method – 20,000 Training Samples}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Experiment 3: Effect of Number of Centers}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Experiment 4: Visualization of RBF Centers}{10}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Experiment 5: Recursive Method – Initial Condition Study}{12}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Experiment 6: Direct vs. Recursive Comparison}{13}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Experiment 7: Error Analysis}{13}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Discussion}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Why RBF Networks Work}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Why Some Digits Are Harder}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Direct vs. Recursive: Method Selection}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Proposed Improvements}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Comparison with Literature}{16}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Conclusion}{17}{section.5}%
+\contentsline {section}{List of Figures}{20}{section*.21}%
+\contentsline {section}{Appendix: MATLAB Code}{21}{section*.23}%
