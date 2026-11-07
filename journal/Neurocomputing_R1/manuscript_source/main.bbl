@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{broomhead1988}
+D.~S. Broomhead, D.~Lowe,
+  \href{https://www.complex-systems.com/abstracts/v02_i03_a05/}{Multivariable
+  functional interpolation and adaptive networks}, Complex Systems 2~(3) (1988)
+  321--355.
+\newline\urlprefix\url{https://www.complex-systems.com/abstracts/v02_i03_a05/}
+
+\bibitem{saralajew2025}
+S.~Saralajew, A.~Rana, T.~Villmann, A.~Shaker,
+  \href{https://arxiv.org/html/2412.15499v3}{A robust prototype-based network
+  with interpretable {RBF} classifier foundations}, Proceedings of the AAAI
+  Conference on Artificial Intelligence 39~(19) (2025) 20273--20282.
+\newblock \href {https://doi.org/10.1609/aaai.v39i19.34233}
+  {\path{doi:10.1609/aaai.v39i19.34233}}.
+\newline\urlprefix\url{https://arxiv.org/html/2412.15499v3}
+
+\bibitem{fazaeli2026}
+M.~Fazaeli-Javan, K.~Ghiasi-Shirazi,
+  \href{https://www.sciencedirect.com/science/article/abs/pii/S0925231226013019}{Sample-based
+  interpretability of softmax neurons via learned prototypes}, Neurocomputing
+  694 (2026) 133904.
+\newblock \href {https://doi.org/10.1016/j.neucom.2026.133904}
+  {\path{doi:10.1016/j.neucom.2026.133904}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/abs/pii/S0925231226013019}
+
+\bibitem{noorizadegan2026reliable}
+A.~Noorizadegan, S.~Wang, L.~Ling,
+  \href{https://www.sciencedirect.com/science/article/pii/S0925231226021697}{Making
+  {Gaussian Kolmogorov--Arnold} networks reliable and accurate}, Neurocomputing
+  703 (2026) 134771, available online 10 August 2026.
+\newblock \href {https://doi.org/10.1016/j.neucom.2026.134771}
+  {\path{doi:10.1016/j.neucom.2026.134771}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0925231226021697}
+
+\bibitem{bugmann1998}
+G.~Bugmann,
+  \href{https://www.sciencedirect.com/science/article/pii/S0925231298000277}{Normalized
+  {Gaussian} radial basis function networks}, Neurocomputing 20~(1--3) (1998)
+  97--110.
+\newblock \href {https://doi.org/10.1016/S0925-2312(98)00027-7}
+  {\path{doi:10.1016/S0925-2312(98)00027-7}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0925231298000277}
+
+\bibitem{que2016}
+Q.~Que, M.~Belkin, \href{https://proceedings.mlr.press/v51/que16.html}{Back to
+  the future: Radial basis function networks revisited}, in: Proceedings of the
+  19th International Conference on Artificial Intelligence and Statistics,
+  Vol.~51 of Proceedings of Machine Learning Research, PMLR, 2016, pp.
+  1375--1383.
+\newline\urlprefix\url{https://proceedings.mlr.press/v51/que16.html}
+
+\bibitem{wurzberger2024}
+F.~Wurzberger, F.~Schwenker, Learning in deep radial basis function networks,
+  Entropy 26~(5) (2024) 368.
+\newblock \href {https://doi.org/10.3390/e26050368}
+  {\path{doi:10.3390/e26050368}}.
+
+\bibitem{noorizadegan2026partition}
+A.~Noorizadegan,
+  \href{https://www.sciencedirect.com/science/article/pii/S0925231226028067}{Partition-of-unity
+  {Gaussian Kolmogorov--Arnold} networks}, Neurocomputing (2026) 135408.
+  Available online 14 October 2026.
+\newblock \href {https://doi.org/10.1016/j.neucom.2026.135408}
+  {\path{doi:10.1016/j.neucom.2026.135408}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0925231226028067}
+
+\bibitem{voracek2022}
+V.~Vor{\'a}{\v{c}}ek, M.~Hein,
+  \href{https://proceedings.mlr.press/v162/voracek22a.html}{Provably
+  adversarially robust nearest prototype classifiers}, in: Proceedings of the
+  39th International Conference on Machine Learning, Vol. 162 of Proceedings of
+  Machine Learning Research, PMLR, 2022, pp. 22361--22383.
+\newline\urlprefix\url{https://proceedings.mlr.press/v162/voracek22a.html}
+
+\bibitem{rosenfeld2020}
+E.~Rosenfeld, E.~Winston, P.~Ravikumar, Z.~Kolter,
+  \href{https://proceedings.mlr.press/v119/rosenfeld20b.html}{Certified
+  robustness to label-flipping attacks via randomized smoothing}, in:
+  Proceedings of the 37th International Conference on Machine Learning, Vol.
+  119 of Proceedings of Machine Learning Research, PMLR, 2020, pp. 8230--8241.
+\newline\urlprefix\url{https://proceedings.mlr.press/v119/rosenfeld20b.html}
+
+\bibitem{shibagaki2015}
+A.~Shibagaki, Y.~Suzuki, M.~Karasuyama, I.~Takeuchi,
+  \href{https://proceedings.neurips.cc/paper_files/paper/2015/file/82b8a3434904411a9fdc43ca87cee70c-Paper.pdf}{Regularization
+  path of cross-validation error lower bounds}, in: Advances in Neural
+  Information Processing Systems, Vol.~28, 2015.
+\newline\urlprefix\url{https://proceedings.neurips.cc/paper_files/paper/2015/file/82b8a3434904411a9fdc43ca87cee70c-Paper.pdf}
+
+\bibitem{ndiaye2019}
+E.~Ndiaye, T.~Le, O.~Fercoq, J.~Salmon, I.~Takeuchi,
+  \href{https://proceedings.mlr.press/v97/ndiaye19a.html}{Safe grid search with
+  optimal complexity}, in: Proceedings of the 36th International Conference on
+  Machine Learning, Vol.~97 of Proceedings of Machine Learning Research, PMLR,
+  2019, pp. 4771--4780.
+\newline\urlprefix\url{https://proceedings.mlr.press/v97/ndiaye19a.html}
+
+\bibitem{bindel2025}
+D.~Bindel,
+  \href{https://www.cs.cornell.edu/courses/cs6210/2025fa/lec/2025-09-10.html}{Sums,
+  dots, and error in linear systems}, CS 6210: Matrix Computations, Cornell
+  University (Sep. 2025).
+\newline\urlprefix\url{https://www.cs.cornell.edu/courses/cs6210/2025fa/lec/2025-09-10.html}
+
+\bibitem{lecun1998}
+Y.~LeCun, L.~Bottou, Y.~Bengio, P.~Haffner,
+  \href{https://bottou.org/papers/lecun-98h}{Gradient-based learning applied to
+  document recognition}, Proceedings of the IEEE 86~(11) (1998) 2278--2324.
+\newblock \href {https://doi.org/10.1109/5.726791}
+  {\path{doi:10.1109/5.726791}}.
+\newline\urlprefix\url{https://bottou.org/papers/lecun-98h}
+
+\bibitem{xiao2017fashion}
+H.~Xiao, K.~Rasul, R.~Vollgraf,
+  \href{https://arxiv.org/abs/1708.07747}{{Fashion-MNIST}: A novel image
+  dataset for benchmarking machine learning algorithms}, arXiv:1708.07747
+  (2017).
+\newblock \href {https://doi.org/10.48550/arXiv.1708.07747}
+  {\path{doi:10.48550/arXiv.1708.07747}}.
+\newline\urlprefix\url{https://arxiv.org/abs/1708.07747}
+
+\end{thebibliography}

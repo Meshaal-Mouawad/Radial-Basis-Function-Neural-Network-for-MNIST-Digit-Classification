@@ -1,0 +1,8 @@
+{
+  "seed": 11,
+  "width": "scale_1",
+  "sigma": 7.387656555107866,
+  "lambda": 0.0,
+  "validation_correct": 4333,
+  "validation_n": 5000
+}

@@ -1,0 +1,19 @@
+{
+  "original_repository": "https://github.com/Meshaal-Mouawad/Radial-Basis-Function-Neural-Network-for-MNIST-Digit-Classification",
+  "original_commit": "fc7ff848d10b7f060e028b2271fbfc9ce8687798",
+  "original_research_date": "2026-04-10",
+  "new_study_date": "2026-11-06",
+  "upstream_status": "Original repository retained unchanged; v2 experiment is provided in this package. No remote repository write or publication made.",
+  "original_code_and_data_sha256": {
+    "Code/MNIST_test.mat": "e49e32d2619bbee752eff6e39cafa1d28e14b364329f626aadc363906e034d4b",
+    "Code/MNIST_train.mat": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+    "Code/main_RBFNN.m": "40a40b74498e5f9869212e7e85e2ee5aa6bf4d57e8d993230af966a3f60f6ce2",
+    "Code/predictRBFNN.m": "e326c08bc7761403b7f6255efdb4e532a2e807106570bda859dd1d0636cb10dd",
+    "Code/trainRBFNN.m": "ea5a9ea0425ee9a7176bb49c523fe7ee9020a9ae40b0eefa49f4c42b737f4bdb"
+  },
+  "executed_source_integrity": "The v2 FREEZE.json and result MANIFEST are copied byte-for-byte. The earlier controlled study and its full 45-file manifest are also retained.",
+  "layout": "Executed relative paths are preserved below this package root.",
+  "revision": "v3",
+  "revision_date": "2026-11-07 Asia/Riyadh",
+  "v3_changes": "Native integration of four approved figures, exact archived plotted values, source-faithful licensed fonts, Shibagaki2015 predecessor attribution, expanded benchmark and iterative reviews; no new model training."
+}

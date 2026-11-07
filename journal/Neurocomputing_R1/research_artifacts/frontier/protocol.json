@@ -1,0 +1,20 @@
+{
+  "study": "M1 supplementary post hoc bandwidth frontier analysis",
+  "status": "predeclared before supplementary execution",
+  "frozen_baseline": "../baseline/work/v2/experiment",
+  "groups": "All 30 frozen dataset x seed x K groups; identical inputs, training/prototype/evaluation indices, preprocessing and labels used for fitting",
+  "width_rule": "67 geometrically spaced multipliers from 1/32 through 1/4 inclusive; factor 2^(3/66)=1.032008280 between adjacent widths; s_C reconstructed from frozen s_C/16 width",
+  "selection_uses_evaluation_targets": false,
+  "lambda_floors": [0, 1, 100],
+  "methods": ["sharp", "basic", "cancellation_frobenius"],
+  "certificate_implementation": "Import and execute frozen certificate.py unchanged, including strict/tie guards",
+  "frontier": "For every query, floor and method retain last certified grid width and next failing width. Acceptance is downward closed analytically; verify numerical nesting. Record left censor (no accepted grid width) and right censor (passes largest grid width) explicitly. These are grid brackets of the guarded certificate frontier, not exact real arithmetic optima.",
+  "endpoint_width_selection": "For each floor select, using sharp masks only, the largest accepted grid width with any coverage, >=50% coverage, and >=90% coverage. Missing targets remain missing. Deduplicate fitted widths across floors and targets. Width choices use no evaluation labels.",
+  "endpoint_models": "At each selected width fit all three lambda floor endpoint readouts with frozen thin-SVD reference and cutoff; evaluate exact max-normalized query features. Archive predictions and masks before accessing separate evaluation labels.",
+  "endpoint_metrics": "Report all-query accuracy, nearest agreement, certified-subset accuracy/size and disagreements. Compare all-query endpoint accuracy to nearest accuracy and to maximum frozen readout accuracy over the 16 frozen probe widths at the same penalty; also report best sampled frozen width. The latter is a descriptive post hoc reference, not a selected operating model.",
+  "diagnostics": "Store coverage for all 67 widths, floors and methods; per-query bracket indices and masks; training beta/mu/eta; pair constants; selected endpoint predictions and weights. Check frozen masks at shared 1/16,1/8,1/4 widths, subset relations, nesting, zero certified disagreements.",
+  "execution": "Local CPU, single BLAS thread, no paid service, no writes outside work/v4/frontier. Baseline preserved unchanged.",
+  "freeze": "FREEZE.json contains protocol, supplementary runner, frozen certificate and input archive hashes before run. All supplementary predictions hashed and frozen before scoring evaluation labels.",
+  "interpretation": "Retain all zero coverage and unavailable coverage targets; report actual accuracy losses without presupposing practical coverage. Dense grid narrows previously unresolved interval between frozen widths.",
+  "date_utc": "2026-11-07"
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Matched batch and recursive readout study for Gaussian RBF digit classification",
+  "study_date": "2026-11-06",
+  "original_study_date": "2026-04-10",
+  "status": "new controlled experiment, not replication of original reported runs",
+  "frozen_at_utc": "2026-11-06T13:04:24.253698+00:00",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "train_n": 20000,
+  "validation_n": 5000,
+  "test_n": 10000,
+  "centers_n": 100,
+  "data": {
+    "MNIST_train.mat": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+    "MNIST_test.mat": "e49e32d2619bbee752eff6e39cafa1d28e14b364329f626aadc363906e034d4b"
+  },
+  "split": "sklearn train_test_split stratified 20000 training from 60000; stratified 5000 validation from remaining 40000 with random_state seed+1000; training order retained",
+  "preprocessing": "float64 before division by 255; each 28x28 image flattened in MATLAB column order; no other preprocessing",
+  "centers": "numpy default_rng(seed).choice among training rows without replacement, 100; identical for all settings within seed",
+  "sigma_grid": [
+    {
+      "name": "fixed_1",
+      "rule": "1.0"
+    },
+    {
+      "name": "scale_025",
+      "rule": "0.25 * median(strict upper triangular pairwise center distance) / sqrt(2)"
+    },
+    {
+      "name": "scale_05",
+      "rule": "0.5 * median(strict upper triangular pairwise center distance) / sqrt(2)"
+    },
+    {
+      "name": "scale_1",
+      "rule": "1.0 * median(strict upper triangular pairwise center distance) / sqrt(2)"
+    }
+  ],
+  "lambda_grid_in_order": [
+    0.0,
+    100.0,
+    10.0,
+    2.0,
+    1.0,
+    0.1,
+    0.01
+  ],
+  "lambda_zero": "SVD pseudoinverse with cutoff max(N,K)*machine_epsilon*max singular value",
+  "ridge": "SVD filtered least squares with filter s/(s*s+lambda); unpenalized bias absent",
+  "selection": "highest integer validation correct count; exact ties choose earliest sigma then earliest lambda in predeclared order",
+  "test_conditions": [
+    "validation_selected",
+    "fixed_1_pinv",
+    "fixed_1_lambda_1",
+    "scale_1_pinv",
+    "scale_1_lambda_1",
+    "nearest_of_same_100_random_prototypes"
+  ],
+  "rls_verification": "all six positive lambda values at fixed sigma 1 plus selected sigma and selected positive lambda (lambda 1 if selected lambda 0); de-duplicate coincident conditions; P0=(1/lambda)*I, W0=0, single sample pass, no forgetting",
+  "rls_metrics": [
+    "relative_Frobenius_weight_error",
+    "maximum_absolute_test_score_difference",
+    "test_prediction_disagreements",
+    "minimum_update_denominator"
+  ],
+  "timing": "perf_counter; 1 BLAS thread; feature construction and solver times separate; no repeated benchmark timing claim",
+  "primary_metrics": [
+    "test accuracy",
+    "validation accuracy",
+    "paired test correctness differences",
+    "batch RLS numerical agreement"
+  ],
+  "uncertainty": "sample standard deviation across five seed outcomes; seeds share the test set and overlapping training pools; no claim of independent population samples",
+  "no_further_test_tuning": true,
+  "baseline": "nearest Euclidean prototype using same 100 training prototypes and their class labels; no hyperparameter selection",
+  "tests_before_full_run": [
+    "shape consistency",
+    "known synthetic ridge RLS agreement",
+    "normalization yields nonbinary values",
+    "train validation disjointness",
+    "source data hashes"
+  ]
+}

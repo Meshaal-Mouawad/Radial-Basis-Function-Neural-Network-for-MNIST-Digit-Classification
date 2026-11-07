@@ -1,0 +1,24 @@
+[
+  {
+    "source": "NimbusSans-Regular.otf",
+    "source_sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08",
+    "output": "RBFNimbusSans-Regular.ttf",
+    "output_sha256": "d57aac6c19ac6f7d42b60489a64390ba0f6e93382ecb07cbfe9daa3df0d547cd",
+    "glyph_count": 855,
+    "all_horizontal_metrics_identical": true,
+    "vertical_metrics_identical": true,
+    "units_per_em": 1000,
+    "cubic_to_quadratic_max_error_font_units": 0.1
+  },
+  {
+    "source": "NimbusSans-Bold.otf",
+    "source_sha256": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67",
+    "output": "RBFNimbusSans-Bold.ttf",
+    "output_sha256": "6eb1ba1f9a7ec5ef2b597ed2aaccd4d05e3c0a664adb0666829bb26718a74055",
+    "glyph_count": 855,
+    "all_horizontal_metrics_identical": true,
+    "vertical_metrics_identical": true,
+    "units_per_em": 1000,
+    "cubic_to_quadratic_max_error_font_units": 0.1
+  }
+]

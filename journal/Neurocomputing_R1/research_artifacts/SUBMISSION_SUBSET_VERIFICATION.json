@@ -1,0 +1,14 @@
+{
+  "package_files_checked": 197,
+  "frozen_inputs_checked": 11,
+  "v2_result_files_checked": 71,
+  "prior_study_files_checked": 45,
+  "prediction_recomputation": {
+    "groups": 30,
+    "endpoint_records": 630,
+    "certificate_records": 1890,
+    "certified_probe_checks": 13146228,
+    "violations": 0
+  },
+  "status": "PASS"
+}

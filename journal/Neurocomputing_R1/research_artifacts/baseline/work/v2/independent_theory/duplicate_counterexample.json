@@ -1,0 +1,41 @@
+[
+  {
+    "lambda": 0.0,
+    "first_prototype_readout": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "query_scores_rescaled": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "predicted_class": 1,
+    "nearest_prototype_class": 0
+  },
+  {
+    "lambda": 1.0,
+    "first_prototype_readout": [
+      0.25,
+      0.5
+    ],
+    "query_scores_rescaled": [
+      0.25,
+      0.5
+    ],
+    "predicted_class": 1,
+    "nearest_prototype_class": 0
+  },
+  {
+    "lambda": 100.0,
+    "first_prototype_readout": [
+      0.009708737864077669,
+      0.019417475728155338
+    ],
+    "query_scores_rescaled": [
+      0.009708737864077669,
+      0.019417475728155338
+    ],
+    "predicted_class": 1,
+    "nearest_prototype_class": 0
+  }
+]

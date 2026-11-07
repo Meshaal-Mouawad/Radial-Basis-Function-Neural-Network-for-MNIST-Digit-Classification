@@ -1,0 +1,212 @@
+[
+  {
+    "dataset": "mnist",
+    "seed": 11,
+    "K": 50,
+    "seconds": 1.3740460959998018,
+    "prediction_sha256": "81ab2b81578e47a37842449b4886a40b4a5a7444c96619d79a7d99ad23ddbc69"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 11,
+    "K": 100,
+    "seconds": 2.9800331060014287,
+    "prediction_sha256": "31c935de38ad834eafad01fc6f5afdc62dd0f9a4be8e1949c956a274ee9afb97"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 11,
+    "K": 200,
+    "seconds": 6.661351483000544,
+    "prediction_sha256": "f35232aad84ebda9609b46c475b9bd7a4cf2067e0b5a32c37eb673546491d0ff"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 22,
+    "K": 50,
+    "seconds": 1.3120301159997325,
+    "prediction_sha256": "38d7bb5dc9a365d93243d25e4792df0288b309f191108689936ca303386e8118"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 22,
+    "K": 100,
+    "seconds": 2.963885147999463,
+    "prediction_sha256": "590cb8f9d70326088f6ca6a201aa541caf5691311d63e828366988064f136405"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 22,
+    "K": 200,
+    "seconds": 6.504639292999855,
+    "prediction_sha256": "bf28141188f35e93e314a2020d803be6f60fc22b52ac27140f116975b6517d8b"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 33,
+    "K": 50,
+    "seconds": 1.4666191619999154,
+    "prediction_sha256": "525dd1f881648d5abd974e43dc8d588328d7ce2c05c331615321cfe276db5942"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 33,
+    "K": 100,
+    "seconds": 2.820156470999791,
+    "prediction_sha256": "ba8f0ed0631e2198a8d446433ce6abdb352c8a6599a996cba97da20c96b922b7"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 33,
+    "K": 200,
+    "seconds": 5.929156596999746,
+    "prediction_sha256": "e14ce81c71864cef7278333860bdf63b0be861c8ac1ec68f72b609d4fd88afa5"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 44,
+    "K": 50,
+    "seconds": 1.107513763001407,
+    "prediction_sha256": "3acb2940b037f7f8015d5f4d7a8f9f96aacf197373094f9b221c3226e56e728c"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 44,
+    "K": 100,
+    "seconds": 3.268444544999511,
+    "prediction_sha256": "327817673f4680110fb3e5ba434c2d4db4c8cec31788997751333c55b431cb4e"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 44,
+    "K": 200,
+    "seconds": 7.1847024590006185,
+    "prediction_sha256": "753a9e25a328e5891031dd0b1d0809cc9a0b0723f66ac9d3ec262401abaf4368"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 55,
+    "K": 50,
+    "seconds": 1.3249955810006213,
+    "prediction_sha256": "8615d55cf1e91129cf3cb263b5e686ce8dd8183cd3906f65eea1b6bdb7d9a178"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 55,
+    "K": 100,
+    "seconds": 3.0069954600003257,
+    "prediction_sha256": "b925ddb20511c60e2180d734a3bdad74c59799f403a0e2a5c5ce31d57c8ac01d"
+  },
+  {
+    "dataset": "mnist",
+    "seed": 55,
+    "K": 200,
+    "seconds": 6.759258427000532,
+    "prediction_sha256": "3563bfa9436a10aa55087e5ea91f031bbc474da040b4ec9727575ac79b6f4dc9"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 11,
+    "K": 50,
+    "seconds": 1.7671123269992677,
+    "prediction_sha256": "fc59ad91fb25abf2dddb25fe49abaab7d0ad69dfa33431e640cfbda5e391b5c6"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 11,
+    "K": 100,
+    "seconds": 3.961055227000543,
+    "prediction_sha256": "1ae363aaddefdaa45e2f048aca28cc13e5ae66d4446fe87a07e0f5d0681b3472"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 11,
+    "K": 200,
+    "seconds": 8.104778172999431,
+    "prediction_sha256": "f470539b162b65fe18218b7616f1071f4c940ba940d5fb05b307176c0abc2c13"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 22,
+    "K": 50,
+    "seconds": 1.7830887390009593,
+    "prediction_sha256": "dbb8ad6bf55478aabbc879dafe4d8c66076656ddb0072b225f3b8a304a6c397c"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 22,
+    "K": 100,
+    "seconds": 3.9840619059996243,
+    "prediction_sha256": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 22,
+    "K": 200,
+    "seconds": 8.154854529000659,
+    "prediction_sha256": "0a724af3a492d91875181aad53a125a06588af21600b698ec4c1b3f22261deb4"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 33,
+    "K": 50,
+    "seconds": 1.7761780609998823,
+    "prediction_sha256": "d4a16ca4e87d0a30c04b4c254a016fab5f8450c80342bfaa664e8eb5c23627f9"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 33,
+    "K": 100,
+    "seconds": 3.7874400630007585,
+    "prediction_sha256": "9aef24822087cd238b599e45234d5cbb87985eee2b88b09af76706bf551f1ea2"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 33,
+    "K": 200,
+    "seconds": 7.706192667001233,
+    "prediction_sha256": "729097152d4be6331911909cb5d831dd26019ab13e25bce892272867a2d96630"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 44,
+    "K": 50,
+    "seconds": 1.7918178660002013,
+    "prediction_sha256": "ca51f3ebea112f3756211c91f165bd01e2a913e6658018b720d4f669a83172e4"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 44,
+    "K": 100,
+    "seconds": 3.8347210600004473,
+    "prediction_sha256": "a43131e3a017fda6dc185054280fabb9491b20e341807098a76798be75dd6c98"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 44,
+    "K": 200,
+    "seconds": 7.688242109999919,
+    "prediction_sha256": "cbbfb18d5b5e4a0fa1f907411b28db46f2d30e2295abb6baca01e611ee74dad7"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 55,
+    "K": 50,
+    "seconds": 1.7492222330001823,
+    "prediction_sha256": "e16ccbc922017a4b57afcbe644bd06063a78bfcebf81f429b0631ae54bb4086a"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 55,
+    "K": 100,
+    "seconds": 3.5937029599990638,
+    "prediction_sha256": "d2e45ab44010faa8226c8330561548c7a50f766897f3b9d8a2ccfa9a761ff2c7"
+  },
+  {
+    "dataset": "fashion_mnist",
+    "seed": 55,
+    "K": 200,
+    "seconds": 7.312804971999867,
+    "prediction_sha256": "b15da77892c728c3fcbbcf985ccee87097e62e2689c9d65d87f5eca473d83ccb"
+  }
+]

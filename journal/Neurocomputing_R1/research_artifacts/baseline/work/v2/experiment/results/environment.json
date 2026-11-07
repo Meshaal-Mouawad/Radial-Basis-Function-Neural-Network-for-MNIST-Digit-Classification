@@ -1,0 +1,45 @@
+{
+  "started_utc": "2026-11-06T15:46:02.496277+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "threads": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 9,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 9,
+      "prefix": "libscipy_openblas",
+      "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 9,
+      "prefix": "libgomp",
+      "filepath": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    }
+  ],
+  "freeze": {
+    "frozen_at_utc": "2026-11-06T15:46:01.300467+00:00",
+    "protocol_sha256": "63aa7750d07f2bc74e46e01cf7b1866f487504f64ff325ff94135f122bca36d5",
+    "run_source_sha256": "52e60a9221a6610e2c68c64d06f5781489267dd9852fdc858abdda9796f10065",
+    "certificate_source_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+    "synthetic_checks_sha256": "364efd5f480d1e4c16e1e17645ba69440b4f5a943d1739f4bc8d54e02ba41bc5",
+    "independent_theory_review_sha256": "0cac62664d65076ba3b2f0330c7883984e194a37b14be9cf4f2a71474305bfc9",
+    "authorization": "Lead editor /root explicitly authorized freezing and single execution after independent theorem review and synthetic checks on 2026-11-06."
+  }
+}

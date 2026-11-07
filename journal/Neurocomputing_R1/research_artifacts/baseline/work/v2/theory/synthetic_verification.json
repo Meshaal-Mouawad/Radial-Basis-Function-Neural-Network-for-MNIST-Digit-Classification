@@ -1,0 +1,26 @@
+{
+  "synthetic_datasets": 100,
+  "query_rectangle_checks": 6555,
+  "certified_query_rectangles": 4394,
+  "fitted_comparisons": 163875,
+  "certified_label_violations": 0,
+  "residual_bound_failures": 0,
+  "eigenvalue_bound_failures": 0,
+  "loose_dominance_failures": 0,
+  "worst_residual_excess": 4.440892098500626e-16,
+  "worst_lower_eigenvalue_excess": 1.3642420526593924e-12,
+  "contradictory_duplicate_counterexample": {
+    "nearest_selected_prototype_label": 0,
+    "small_width_ridge_prediction": 1,
+    "matrix_W": [
+      [
+        0.25,
+        0.5
+      ],
+      [
+        0.0,
+        0.5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+seed,comparison,percentage_point_change,wrong_to_right,right_to_wrong,both_right,both_wrong
+11,bandwidth_at_pinv,20.330000000000002,2268,235,6585,912
+11,bandwidth_at_lambda1,20.34,2276,242,6560,922
+11,selected_vs_nearest,19.66,2213,247,6640,900
+22,bandwidth_at_pinv,22.34,2477,243,6399,881
+22,bandwidth_at_lambda1,21.66,2418,252,6390,940
+22,selected_vs_nearest,22.0,2447,247,6429,877
+33,bandwidth_at_pinv,16.81,1917,236,6897,950
+33,bandwidth_at_lambda1,16.33,1883,250,6871,996
+33,selected_vs_nearest,16.64,1904,240,6909,947
+44,bandwidth_at_pinv,16.470000000000002,1899,252,6953,896
+44,bandwidth_at_lambda1,16.34,1893,259,6936,912
+44,selected_vs_nearest,16.400000000000002,1898,258,6954,890
+55,bandwidth_at_pinv,15.329999999999998,1742,209,7138,911
+55,bandwidth_at_lambda1,14.6,1684,224,7120,972
+55,selected_vs_nearest,15.22,1737,215,7143,905

@@ -1,0 +1,10 @@
+{
+  "checked_files": 262,
+  "hash_mismatches": [],
+  "extra_files": [],
+  "removed_generated_import_cache": [
+    "work/v2/experiment/__pycache__/certificate.cpython-312.pyc",
+    "work/v2/experiment/__pycache__/run_experiment.cpython-312.pyc"
+  ],
+  "baseline_preserved": true
+}

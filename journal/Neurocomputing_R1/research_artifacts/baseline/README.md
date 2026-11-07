@@ -1,0 +1,1 @@
+Scientific subset of the preserved study archive for journal review. Executed experiment/protocol/result identities are unchanged. The local MANIFEST_SHA256.json indexes this scientific subset, rather than the larger historical author package. Original source and result manifests remain intact under work/. Use python verify_package.py --predictions from this directory.

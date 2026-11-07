@@ -1,0 +1,42 @@
+{"dataset": "mnist", "seed": 11, "K": 50, "seconds": 2.1247042790000705, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 11, "K": 100, "seconds": 3.7184371339999416, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 11, "K": 200, "seconds": 6.778322760000037, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 22, "K": 50, "seconds": 2.1894251950000125, "selected_distinct_widths": 1}
+{"dataset": "mnist", "seed": 22, "K": 100, "seconds": 3.6913681200001065, "selected_distinct_widths": 1}
+{"dataset": "mnist", "seed": 22, "K": 200, "seconds": 7.773015529000077, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 33, "K": 50, "seconds": 2.506864923999956, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 33, "K": 100, "seconds": 4.4870822450000105, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 33, "K": 200, "seconds": 7.9212876759997926, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 44, "K": 50, "seconds": 2.1404077530000905, "selected_distinct_widths": 1}
+{"dataset": "mnist", "seed": 44, "K": 100, "seconds": 3.6780707099997016, "selected_distinct_widths": 1}
+{"dataset": "mnist", "seed": 44, "K": 200, "seconds": 8.559406902000319, "selected_distinct_widths": 1}
+{"dataset": "mnist", "seed": 55, "K": 50, "seconds": 2.2658129080000435, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 55, "K": 100, "seconds": 3.695393164000052, "selected_distinct_widths": 2}
+{"dataset": "mnist", "seed": 55, "K": 200, "seconds": 7.31489519600018, "selected_distinct_widths": 1}
+{"dataset": "fashion_mnist", "seed": 11, "K": 50, "seconds": 3.37737895500004, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 11, "K": 100, "seconds": 6.50543592699978, "selected_distinct_widths": 6}
+{"dataset": "fashion_mnist", "seed": 11, "K": 200, "seconds": 11.474045180999838, "selected_distinct_widths": 5}
+{"dataset": "fashion_mnist", "seed": 22, "K": 50, "seconds": 3.5347545620002165, "selected_distinct_widths": 6}
+{"dataset": "fashion_mnist", "seed": 22, "K": 100, "seconds": 6.082807333999881, "selected_distinct_widths": 7}
+{"dataset": "fashion_mnist", "seed": 22, "K": 200, "seconds": 11.639830691000043, "selected_distinct_widths": 5}
+{"dataset": "fashion_mnist", "seed": 33, "K": 50, "seconds": 3.8246935230004055, "selected_distinct_widths": 3}
+{"dataset": "fashion_mnist", "seed": 33, "K": 100, "seconds": 6.028916586999912, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 33, "K": 200, "seconds": 11.127191930999743, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 44, "K": 50, "seconds": 3.5191745890001584, "selected_distinct_widths": 3}
+{"dataset": "fashion_mnist", "seed": 44, "K": 100, "seconds": 5.783171654999933, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 44, "K": 200, "seconds": 10.026115195999864, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 55, "K": 50, "seconds": 3.2903700649999337, "selected_distinct_widths": 1}
+{"dataset": "fashion_mnist", "seed": 55, "K": 100, "seconds": 5.495362779000061, "selected_distinct_widths": 2}
+{"dataset": "fashion_mnist", "seed": 55, "K": 200, "seconds": 10.735343632000422, "selected_distinct_widths": 2}
+{
+  "completed_utc": "2026-11-07T09:06:47.536495+00:00",
+  "groups": 30,
+  "grid_widths": 67,
+  "coverage_rows": 18090,
+  "endpoint_rows": 270,
+  "runtime_seconds": 172.27343819099997,
+  "certified_endpoint_disagreements": 0,
+  "numeric_nesting": "PASS",
+  "frozen_shared_width_masks": "PASS"
+}
+

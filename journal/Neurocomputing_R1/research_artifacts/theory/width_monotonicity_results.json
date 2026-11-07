@@ -1,0 +1,15 @@
+{
+  "seed": 772911,
+  "geometries": 80,
+  "widths_per_geometry": 61,
+  "ridge_floors": [
+    0,
+    1,
+    100
+  ],
+  "constant_order_violations": 0,
+  "mask_order_violations": 0,
+  "applicability_order_violations": 0,
+  "certified_query_width_method_cases": 594736,
+  "comparison_scope": "independent synthetic geometries; archived implementation"
+}

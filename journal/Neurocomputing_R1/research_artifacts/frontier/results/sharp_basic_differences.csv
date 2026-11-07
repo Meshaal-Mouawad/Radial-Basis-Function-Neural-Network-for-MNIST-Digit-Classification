@@ -1,0 +1,7 @@
+dataset,lambda_floor,group_grid_conditions,conditions_sharp_exceeds_basic,sum_query_condition_differences,maximum_query_difference
+mnist,0,1005,0,0,0
+mnist,1,1005,12,176,101
+mnist,100,1005,2,2,1
+fashion_mnist,0,1005,0,0,0
+fashion_mnist,1,1005,17,635,382
+fashion_mnist,100,1005,4,14,9

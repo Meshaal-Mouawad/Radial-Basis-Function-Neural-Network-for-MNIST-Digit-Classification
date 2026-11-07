@@ -1,0 +1,158 @@
+{
+  "analysis_utc": "2026-11-06T15:58:16.419584+00:00",
+  "completed": {
+    "finished_utc": "2026-11-06T15:48:05.711341+00:00",
+    "total_seconds": 123.20194277299925,
+    "groups": 30,
+    "certificate_rows": 1890,
+    "endpoint_rows": 630,
+    "certified_probe_violations": 0,
+    "source_hashes": {
+      "frozen_at_utc": "2026-11-06T15:46:01.300467+00:00",
+      "protocol_sha256": "63aa7750d07f2bc74e46e01cf7b1866f487504f64ff325ff94135f122bca36d5",
+      "run_source_sha256": "52e60a9221a6610e2c68c64d06f5781489267dd9852fdc858abdda9796f10065",
+      "certificate_source_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+      "synthetic_checks_sha256": "364efd5f480d1e4c16e1e17645ba69440b4f5a943d1739f4bc8d54e02ba41bc5",
+      "independent_theory_review_sha256": "0cac62664d65076ba3b2f0330c7883984e194a37b14be9cf4f2a71474305bfc9",
+      "authorization": "Lead editor /root explicitly authorized freezing and single execution after independent theorem review and synthetic checks on 2026-11-06."
+    }
+  },
+  "verified_result_manifest_files": 71,
+  "analysis_source_sha256": "3b7f278bd2a2978a6f8bfe1d41ea70e500ded5021c71025093009969be058291",
+  "query_denominators": {
+    "mnist": 4027,
+    "fashion_mnist": 10000
+  },
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "dataset_seed_budget_groups": 30,
+  "seeds_per_summary": 5,
+  "certificate_method_cells": 1890,
+  "endpoint_cells": 630,
+  "distinct_region_cells_without_method": 630,
+  "evaluated_method_query_rectangles": 13255515,
+  "evaluated_query_rectangles_without_method": 4418505,
+  "certified_method_query_rectangles": 1460692,
+  "certified_query_rectangles_without_method": 587703,
+  "finite_certified_method_rectangle_probe_comparisons": 13146228,
+  "finite_certified_sharp_rectangle_probe_comparisons": 5289327,
+  "distinct_certified_query_parameter_comparisons_within_group": 3585477,
+  "distinct_certified_query_parameter_comparisons_within_group_by_method": {
+    "sharp": 3585477,
+    "basic": 3585477,
+    "cancellation_frobenius": 1711761
+  },
+  "finite_probe_violations": 0,
+  "deduplicated_finite_probe_violations": 0,
+  "zero_coverage_method_cells": 1676,
+  "inapplicable_method_cells": 306,
+  "all_absolute_width_one_cells_zero": true,
+  "all_scaled_width_one_eighth_through_two_cells_zero": true,
+  "sharp_basic_masks_identical": true,
+  "frobenius_subset_basic_subset_sharp": true,
+  "maximum_sharp_minus_basic_pp": 0.0,
+  "maximum_sharp_minus_frobenius_pp": 99.92550285572386,
+  "minimum_certified_margin_cell": {
+    "dataset": "fashion_mnist",
+    "seed": 44,
+    "K": 200,
+    "width_index": 1,
+    "lambda_lower": 0,
+    "method": "cancellation_frobenius",
+    "certified": 8623,
+    "near_nearest_distance_ties": 0,
+    "minimum_certified_raw_margin": 1.4658047523541384e-05,
+    "minimum_certified_margin_guard_ratio": 51145.06721222982
+  },
+  "minimum_certified_margin_guard_ratio_cell": {
+    "dataset": "fashion_mnist",
+    "seed": 44,
+    "K": 200,
+    "width_index": 1,
+    "lambda_lower": 0,
+    "method": "cancellation_frobenius",
+    "certified": 8623,
+    "near_nearest_distance_ties": 0,
+    "minimum_certified_raw_margin": 1.4658047523541384e-05,
+    "minimum_certified_margin_guard_ratio": 51145.06721222982
+  },
+  "all_probe_matrices_full_rank": true,
+  "all_groups_have_distinct_prototype_images": true,
+  "near_nearest_tie_queries_summed_over_groups": 0,
+  "per_dataset_method": [
+    {
+      "dataset": "fashion_mnist",
+      "method": "basic",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 3150000,
+      "certified_query_rectangles": 406663,
+      "finite_certified_rectangle_probe_comparisons": 3659967,
+      "zero_coverage_cells": 274,
+      "inapplicable_cells": 51
+    },
+    {
+      "dataset": "fashion_mnist",
+      "method": "cancellation_frobenius",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 3150000,
+      "certified_query_rectangles": 202552,
+      "finite_certified_rectangle_probe_comparisons": 1822968,
+      "zero_coverage_cells": 294,
+      "inapplicable_cells": 51
+    },
+    {
+      "dataset": "fashion_mnist",
+      "method": "sharp",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 3150000,
+      "certified_query_rectangles": 406663,
+      "finite_certified_rectangle_probe_comparisons": 3659967,
+      "zero_coverage_cells": 274,
+      "inapplicable_cells": 51
+    },
+    {
+      "dataset": "mnist",
+      "method": "basic",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 1268505,
+      "certified_query_rectangles": 181040,
+      "finite_certified_rectangle_probe_comparisons": 1629360,
+      "zero_coverage_cells": 270,
+      "inapplicable_cells": 51
+    },
+    {
+      "dataset": "mnist",
+      "method": "cancellation_frobenius",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 1268505,
+      "certified_query_rectangles": 82734,
+      "finite_certified_rectangle_probe_comparisons": 744606,
+      "zero_coverage_cells": 294,
+      "inapplicable_cells": 51
+    },
+    {
+      "dataset": "mnist",
+      "method": "sharp",
+      "declared_seed_condition_cells": 315,
+      "evaluated_query_rectangles": 1268505,
+      "certified_query_rectangles": 181040,
+      "finite_certified_rectangle_probe_comparisons": 1629360,
+      "zero_coverage_cells": 270,
+      "inapplicable_cells": 51
+    }
+  ],
+  "counting_notes": [
+    "A query rectangle is one query within one dataset/seed/budget/width-bound/penalty-floor condition.",
+    "Method-tagged counts additionally repeat each rectangle for sharp, basic, and Frobenius.",
+    "There are nine finite probes per rectangle. Repeated rectangle/probe counts may revisit the same query and parameter pair.",
+    "Distinct query/parameter counts deduplicate overlapping rectangles and methods within each dataset/seed/budget group; seeds and budgets remain separate.",
+    "Five seeds share evaluation subjects. Mean and sample SD describe seed realizations. Grid cells and probes are not independent population samples.",
+    "Finite agreement checks verify implementation on sampled parameter points; the analytical theorem supplies the continuous-region guarantee.",
+    "Accuracy uses ground-truth labels at the upper-width/lower-penalty endpoint. Agreement compares readout and nearest-prototype labels at that endpoint."
+  ]
+}

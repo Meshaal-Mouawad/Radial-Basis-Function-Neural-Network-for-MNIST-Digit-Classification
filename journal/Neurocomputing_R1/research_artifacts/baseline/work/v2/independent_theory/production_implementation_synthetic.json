@@ -1,0 +1,14 @@
+{
+  "synthetic_endpoint_cases": 450,
+  "method_query_mask_entries_checked": 14850,
+  "max_array_abs_difference": 0.0,
+  "all_masks_exactly_equal": true,
+  "freeze_checks": {
+    "protocol_matches_freeze": true,
+    "run_matches_freeze": true,
+    "certificate_matches_freeze": true
+  },
+  "production_certificate_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+  "heldout_arrays_read": false,
+  "completion_exists_at_end": true
+}

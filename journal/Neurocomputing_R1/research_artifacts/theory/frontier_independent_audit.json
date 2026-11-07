@@ -1,0 +1,15 @@
+{
+  "groups": 30,
+  "grid_coverage_rows_recomputed": 18090,
+  "endpoint_rows_recomputed": 270,
+  "query_frontier_rows_recomputed": 270,
+  "selected_width_training_terms_recomputed": 74,
+  "selected_readouts_normal_equations_checked": 222,
+  "stored_prediction_labels_reconstructed": 1789944,
+  "manifest_files_verified": 98,
+  "certified_endpoint_disagreements": 0,
+  "maximum_normal_equation_relative_residual": 3.616084945133502e-15,
+  "maximum_selected_constant_relative_difference": 2.0875906454708817e-15,
+  "status": "PASS",
+  "all_selected_best_frozen_widths_broader": true
+}

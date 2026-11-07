@@ -1,0 +1,6 @@
+{"seed": 11, "selected_width": "scale_1", "sigma": 7.387656555107866, "lambda": 0.0, "selected_test_accuracy": 0.8853, "elapsed_seconds": 5.389551717000359}
+{"seed": 22, "selected_width": "scale_1", "sigma": 7.3209846660366, "lambda": 0.0, "selected_test_accuracy": 0.8876, "elapsed_seconds": 5.500159697000527}
+{"seed": 33, "selected_width": "scale_1", "sigma": 7.142665206584937, "lambda": 0.01, "selected_test_accuracy": 0.8813, "elapsed_seconds": 5.422688809000647}
+{"seed": 44, "selected_width": "scale_1", "sigma": 7.327441535861774, "lambda": 0.0, "selected_test_accuracy": 0.8852, "elapsed_seconds": 5.833053085999381}
+{"seed": 55, "selected_width": "scale_1", "sigma": 7.3903945373830195, "lambda": 0.0, "selected_test_accuracy": 0.888, "elapsed_seconds": 6.397263603999818}
+COMPLETE

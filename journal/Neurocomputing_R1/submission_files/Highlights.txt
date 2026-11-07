@@ -1,0 +1,5 @@
+Training data certify nearest-prototype labels across width and penalty regions.
+A residual identity yields an exact two-endpoint penalty majorant.
+Class-wise bounds certify more queries than the Frobenius comparator.
+A 67-width analysis locates restrictive certification frontiers.
+Independent reconstruction and fresh training reproduce the reported results.

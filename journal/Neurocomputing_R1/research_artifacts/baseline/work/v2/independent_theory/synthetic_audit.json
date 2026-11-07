@@ -1,0 +1,72 @@
+{
+  "audit": "synthetic only; no MNIST/Fashion arrays read",
+  "random_seed": 6700611,
+  "generated_geometries": 60,
+  "endpoint_conditions": 1200,
+  "query_evaluations": 237150,
+  "certified_endpoint_queries": 5271,
+  "certified_query_parameter_checks": 117975,
+  "violations": [],
+  "max_residual_identity_abs_error": 1.4210854715202004e-14,
+  "max_weight_bound_excess": 1.1006960215509138e-16,
+  "pair_bounds_compared": 6976,
+  "strictly_smaller_sharp_pair_bounds": 3290,
+  "edge_cases": [
+    {
+      "case": "opposite_class_tie",
+      "certified": [
+        false
+      ],
+      "nearest_class": [
+        0
+      ],
+      "beta": 0.0,
+      "denominator": 1.0
+    },
+    {
+      "case": "same_class_tie",
+      "certified": [
+        true
+      ],
+      "nearest_class": [
+        0
+      ],
+      "beta": 0.0,
+      "denominator": 1.0
+    },
+    {
+      "case": "absent_prototype_class",
+      "certified": [
+        true
+      ],
+      "nearest_class": [
+        0
+      ],
+      "beta": 0.0,
+      "denominator": 1.0
+    },
+    {
+      "case": "duplicate_centers_positive_lambda",
+      "certified": [
+        false
+      ],
+      "nearest_class": [
+        0
+      ],
+      "beta": 1.0,
+      "denominator": 1.0
+    },
+    {
+      "case": "duplicate_centers_zero_lambda",
+      "certified": [
+        false
+      ],
+      "nearest_class": [
+        0
+      ],
+      "beta": 1.0,
+      "denominator": 0.0
+    }
+  ],
+  "source_sha256": "5e6b0e177f210ff18dc6467a46989ee1e4cc2ff157f9d4b3b132cc541e698b20"
+}

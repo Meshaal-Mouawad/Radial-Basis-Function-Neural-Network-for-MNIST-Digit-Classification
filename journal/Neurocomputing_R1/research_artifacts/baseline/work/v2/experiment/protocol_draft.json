@@ -1,0 +1,108 @@
+{
+  "title": "Uniform faithfulness certificates for class-labelled RBF prototypes",
+  "version": "v2-prospective-candidate-1",
+  "date": "2026-11-06",
+  "status": "candidate-awaiting-lead-freeze",
+  "primary_claim": "For a fixed center set and training data, certify agreement of ridge/SVD RBF decision with the nearest-prototype class simultaneously over 0<sigma<=t and lambda>=lambda0.",
+  "datasets": [
+    "mnist",
+    "fashion_mnist"
+  ],
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "training_n": 20000,
+  "validation_n": 5000,
+  "prototype_budgets": [
+    50,
+    100,
+    200
+  ],
+  "mnist_extra_center_seed_offset": 200000,
+  "prototype_rule": "MNIST preserve prior100,first50subset,append100fromremainingtrainingrowsusingseed+200000. Fashiondraw200usingdefault_rng(seed),prefixbudgets.",
+  "width_multipliers": [
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "absolute_width_also": 1.0,
+  "distance_scale": "median pairwise distances among currenttrainingprototypes / sqrt(2)",
+  "lambda_lower_bounds": [
+    0,
+    1,
+    100
+  ],
+  "width_probe_fractions": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "lambda_probe_rule": {
+    "0": [
+      0,
+      1,
+      100
+    ],
+    "1": [
+      1,
+      10,
+      100
+    ],
+    "100": [
+      100,
+      1000,
+      10000
+    ]
+  },
+  "probe_penalties_union": [
+    0,
+    1,
+    10,
+    100,
+    1000,
+    10000
+  ],
+  "primary_evaluation": {
+    "mnist": "4027 globalunused originaltrainingrows from indexmanifest",
+    "fashion_mnist": "official10000testimages"
+  },
+  "preprocessing": "float64 /255; MATLABcolumn-orderflattening; trainingactivationsunscaled; queryfeaturesmax-normalized perrow; noPCAorlearnedfeatureextractor",
+  "reference_model": "thinSVD; zero penalty pseudoinversecutoffmax(N,K)*eps*smax; positivepenaltyspectralridgefilter; nointercept",
+  "certificates": [
+    "sharp endpoint-max rectangle",
+    "basic looser class-majorant rectangle",
+    "cancellation-aware Frobenius rectangle"
+  ],
+  "certificate_spec": "V=E_C Yc;P=E_non^T Y_non;Q=E^T(EYc);beta=max rowsum(E_C);mu=max(1-beta,0)^2. Pairconstant max(norm((abs(lambda0-1)Vpair+(lambda0+1)Ppair+Qpair)/(mu+lambda0)), norm(Vpair+Ppair)). Applystrictnearest margin 1-sumcompetitorr>norm(r)*pairconstant acrossallcompetitorclasses.",
+  "applicability": "abstain when mu+lambda0==0; abstain near nearest-distance tie",
+  "strict_guard": 1e-10,
+  "strict_guard_rule": "gap > 1e-10*(1+abs(lhs)+abs(rhs))",
+  "nearest_tie_relative": 1e-12,
+  "nearest_tie_rule": "second distance minusminimum >1e-12*max(1,firstdistance,seconddistance)",
+  "heldout_label_policy": "GenerateandhashALL30groupspredictions+certificatemasksbeforeindexingreservedtargetsforevaluationandcomputingtruthmetrics; MNISTfulltraininglabelarrayloadsfortrainingbutreservevaluesnotusedinfittingorselection.",
+  "test_selection": "none; all declaredconditionsreported; no choosing thresholds orhyperparameters fromreserveddata",
+  "true_label_claim": "certificate establishes explanationfaithfulness, nottrueclasscorrectness",
+  "numeric_validation": "allcertifiedlabelscomparedwithfullreadout on9 finiteprobeconfigurations perrectangle; theorem coverscontinuum; nofinitegridsufficiencyclaim",
+  "timing": "single-threadBLAS; descriptivephaseandgrouptiming; no speedupclaim",
+  "uncertainty": "pairedseedconditionoutcomes; sharedtestimages andoverlappingtrainingpools; noindependentobservationsclaim forgridexposures",
+  "archive": "label-freepredictions+weights+masks+classmajorants+indices pergroup, separateevaluationlabels, CSVmetrics,source/protocolhashes, completionmanifest",
+  "data_sha256": {
+    "repository/Code/MNIST_train.mat": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+    "work/v2/design/reserved_training_ids.npy": "d38850e78c5faa4dfafd4c4c53f24d122162980d9717960a6002fb6527646e11",
+    "work/v2/data/fashion_mnist/train-images-idx3-ubyte.gz": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+    "work/v2/data/fashion_mnist/train-labels-idx1-ubyte.gz": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+    "work/v2/data/fashion_mnist/t10k-images-idx3-ubyte.gz": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+    "work/v2/data/fashion_mnist/t10k-labels-idx1-ubyte.gz": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+  },
+  "do_not_execute_until": "lead verifies literaturealignment, mathematicalreview and implementation; freezesprotocol andwritesFREEZE.json withmatchingprotocol/source/certificatehashes",
+  "count_bound": "[(1+lambda0)*eta*sqrt(n_a+n_b)+eta^2*sqrt(k_a+k_b)]/(mu+lambda0); eta=||E||F; all methods samecontinuumrectangle",
+  "bound_order_checks": "assert sharp<=basic<=count constants within1e-10relative guard; countmask subset basicmask subset sharpmask",
+  "prototype_duplicate_policy": "Recorddistinctprototypeimagecountandminimumdistance; retainallselectedprototypes; nooutcome-drivenresampling; abstainifzero certificate denominator; zero-penalty numericalreferenceusestatedSVDpseudoinverse"
+}

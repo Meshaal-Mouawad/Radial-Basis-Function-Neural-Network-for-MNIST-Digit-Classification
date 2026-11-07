@@ -1,0 +1,186 @@
+{
+  "frozen_utc": "2026-11-07T09:06:46.966865+00:00",
+  "heldout_truth_used": false,
+  "groups": [
+    {
+      "dataset": "mnist",
+      "seed": 11,
+      "K": 50,
+      "freeze_sha256": "fdf46dd65050c9e86c55f0f309ffe3272a4f1a31a6fa2fdd18d8d933c27544ab"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 11,
+      "K": 100,
+      "freeze_sha256": "ecd6f773da91577ae7efecfb573d25781400deda5609d8911593c277a1fc997b"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 11,
+      "K": 200,
+      "freeze_sha256": "2d52a09d30bc46f468671858f8048d7144f912dba05b78c5f9abd2d3654d0f5b"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 22,
+      "K": 50,
+      "freeze_sha256": "972e996e48ac475d34713ab6de1abaafbb7a7abe9d0a6cfb205e8ef868b6a9ba"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 22,
+      "K": 100,
+      "freeze_sha256": "3fbcaceb4b72f7d7c2bfcef7bb8313134fb476546e683fd33d378e206992d6a6"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 22,
+      "K": 200,
+      "freeze_sha256": "b39c8af77c8b2c35e4bae2ba2473751de7ee27b4702077521dc41bf0d67729c8"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 33,
+      "K": 50,
+      "freeze_sha256": "4ca115713c4580a1a1733abb3820286ba06fcdcab77ca8d2d7d45690ad2a4a6e"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 33,
+      "K": 100,
+      "freeze_sha256": "d906010281c3e7fa9b25bffc238681aeffdf0daa0e8e109d0beda471d4f32320"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 33,
+      "K": 200,
+      "freeze_sha256": "72364cceb5b131a06a47544f173775dcbc8c37ab97c1ffaf527807a22f34019f"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 44,
+      "K": 50,
+      "freeze_sha256": "33064b431260c908f45f9afc29bc5b7ca2f142670a4fcc953ce6c1d434304b43"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 44,
+      "K": 100,
+      "freeze_sha256": "b6e6fc2e0bf0699588b1b2a4153daf18c5087525296db29c8ef447fc58335514"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 44,
+      "K": 200,
+      "freeze_sha256": "4392824071b8486c8caeab67b243fefa1e07cc2be3c900f79c89ce577080fc31"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 55,
+      "K": 50,
+      "freeze_sha256": "e462c5ba99ccd3b00ab04784d2d426021b36a59f9eaa60a3ad52d8e7f1acab52"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 55,
+      "K": 100,
+      "freeze_sha256": "8ae3fe52aa2fced1f11b2721d34deda6a0c195cce1b881608acd360b6cc3d1f2"
+    },
+    {
+      "dataset": "mnist",
+      "seed": 55,
+      "K": 200,
+      "freeze_sha256": "2d8d81d375e58e3da329b6a7e2d3398830d1f6b20f8f9ad0c15ec2d1fe41b44b"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 11,
+      "K": 50,
+      "freeze_sha256": "9d4cb2e0020ce2476ea48732567a32d6c112fa1eee16725d59a235f5c4f2df59"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 11,
+      "K": 100,
+      "freeze_sha256": "aec87b5941d4f62ce2f442a9e80914b39fa55a6099bd9edabe0a75948069bd93"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 11,
+      "K": 200,
+      "freeze_sha256": "c4a959a382c432a233b58bed819501e7f33c97f6755235db7ba0a17b6ada4148"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 22,
+      "K": 50,
+      "freeze_sha256": "6c0f077cac2bf67c0a0eba3538d80e4b40a5a6fe7ee64eb01a4fc8249b84a536"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 22,
+      "K": 100,
+      "freeze_sha256": "a8f3a5db5d74478093d3cb87d56556f44c9f15556959cadc353e5fa43e15e50f"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 22,
+      "K": 200,
+      "freeze_sha256": "5391ab2d5a531b28761f758220c3f64b7ec235ce9812f93ec0b38fa7d8780d90"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 33,
+      "K": 50,
+      "freeze_sha256": "b41be6afc8c73b0aebc3cb6f068c867ce725732187c11ae44e1b755ed0a33de6"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 33,
+      "K": 100,
+      "freeze_sha256": "777df871d3f43b793d5978e686d232042d4c3b9a7da41e1be21a588aa9bf2e06"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 33,
+      "K": 200,
+      "freeze_sha256": "2db24ed7900ebf2667ed1a3387c8fde33c10e3e6e242633c0841b52db86f0b5e"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 44,
+      "K": 50,
+      "freeze_sha256": "775c70469bb1f77bf9514a44bf9765417ee2e366edfff59aa4531e3a2f96d74f"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 44,
+      "K": 100,
+      "freeze_sha256": "2116d397f4fc32d4c3b61d9e06ef7a49aa39fe52611e4788d1ede15c2019b8e9"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 44,
+      "K": 200,
+      "freeze_sha256": "b16a483799f6bfcb641f30d82a9bb9f2292c3bfe0221bbb3805959a6161269c0"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 55,
+      "K": 50,
+      "freeze_sha256": "fd0d93341b24fb0177a00e493269cb4ddd1e715c58e3129f8c4f238c562b8527"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 55,
+      "K": 100,
+      "freeze_sha256": "af86e7c0a699f8863abef78f7c22d531f95698415680ee52c3efdc9e8484696f"
+    },
+    {
+      "dataset": "fashion_mnist",
+      "seed": 55,
+      "K": 200,
+      "freeze_sha256": "f94e1580f209eceb7c52525a61c746218502a00d5f0fd06a66276808720f2c29"
+    }
+  ]
+}

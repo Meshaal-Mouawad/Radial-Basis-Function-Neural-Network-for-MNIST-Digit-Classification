@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/3c06ccde22f8/work/v4/frontier/run_frontier.py", line 97, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/3c06ccde22f8/work/v4/frontier/run_frontier.py", line 58, in main
+    if wi==gi:assert np.array_equal(masks[wi],frozen_masks[fi]),'Frozen shared-width mask mismatch'
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Frozen shared-width mask mismatch

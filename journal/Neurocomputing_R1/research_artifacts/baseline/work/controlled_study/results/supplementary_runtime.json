@@ -1,0 +1,8 @@
+{
+  "cpu_model_from_proc_cpuinfo": "AMD EPYC 9V74 80-Core Processor",
+  "visible_cpu_count": 9,
+  "BLAS_threads": 1,
+  "lscpu": "Unavailable because container CPU sysfs metadata absent",
+  "python_runtime": "3.12.14",
+  "original_study_source_hash_preserved": true
+}

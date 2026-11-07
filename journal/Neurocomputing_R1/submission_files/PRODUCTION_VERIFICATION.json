@@ -1,0 +1,27 @@
+{
+  "target": "Neurocomputing",
+  "article_type": "full-length original research article",
+  "template": "Official Elsevier elsarticle numbered preprint12pt; publisher-download source",
+  "manuscript_pages": 25,
+  "preserved_math": {
+    "equation": 17,
+    "proof": 5,
+    "theorem": 1,
+    "lemma": 2,
+    "proposition": 2
+  },
+  "figure_pdfs_identical": 5,
+  "figures": 5,
+  "tables": 3,
+  "references": 15,
+  "ai_declaration_count": 1,
+  "font_and_page_geometry": "checked",
+  "author_contact_source": "Prior submitted JSSOFTWARE-D-26-02929.pdf title page and APF Title_Page_R2.pdf",
+  "funding_competing_interests": "Author confirmed no specific funding/no competing interests in this session",
+  "remaining_verification": [
+    "Current Neurocomputing Guide for Authors HTTP403; exact anonymity/graphical-abstract/upload requirements must be checked in portal",
+    "Neurocomputing MSU title-level participation and credit allocation not verified; use subscription route if funded OA is not offered"
+  ],
+  "source_files_flat": true,
+  "no_external_submission": true
+}

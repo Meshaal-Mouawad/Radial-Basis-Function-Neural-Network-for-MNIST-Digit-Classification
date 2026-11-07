@@ -1,0 +1,37 @@
+{
+  "synthetic_equivalence": [
+    {
+      "lambda": 0.01,
+      "relative_error": 2.262220822932843e-14,
+      "minimum_denominator": 1.0142871144920433
+    },
+    {
+      "lambda": 0.1,
+      "relative_error": 3.3085626079707344e-15,
+      "minimum_denominator": 1.014271097971331
+    },
+    {
+      "lambda": 1.0,
+      "relative_error": 5.454013357376302e-16,
+      "minimum_denominator": 1.0141130254435986
+    },
+    {
+      "lambda": 2.0,
+      "relative_error": 6.591375205293251e-16,
+      "minimum_denominator": 1.0139417256032026
+    },
+    {
+      "lambda": 10.0,
+      "relative_error": 4.623459957501001e-16,
+      "minimum_denominator": 1.0127151470828994
+    },
+    {
+      "lambda": 100.0,
+      "relative_error": 4.3412242684088255e-16,
+      "minimum_denominator": 1.006472696220841
+    }
+  ],
+  "normalization": "PASS",
+  "shape": "PASS",
+  "data_hashes": "PASS"
+}

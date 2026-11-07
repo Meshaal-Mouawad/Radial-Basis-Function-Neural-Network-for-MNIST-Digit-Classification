@@ -1,0 +1,10 @@
+{
+  "result_manifest_files": 98,
+  "result_manifest_mismatches": [],
+  "group_archives_checked": 30,
+  "stored_frontier_indices_equal_mask_derived": true,
+  "nesting_and_hierarchy": true,
+  "certified_stored_prediction_disagreements": 0,
+  "left_censored_query_floor_method_records": 150699,
+  "right_censored_query_floor_method_records": 0
+}

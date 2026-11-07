@@ -1,0 +1,17 @@
+{
+  "finished_utc": "2026-11-06T15:48:05.711341+00:00",
+  "total_seconds": 123.20194277299925,
+  "groups": 30,
+  "certificate_rows": 1890,
+  "endpoint_rows": 630,
+  "certified_probe_violations": 0,
+  "source_hashes": {
+    "frozen_at_utc": "2026-11-06T15:46:01.300467+00:00",
+    "protocol_sha256": "63aa7750d07f2bc74e46e01cf7b1866f487504f64ff325ff94135f122bca36d5",
+    "run_source_sha256": "52e60a9221a6610e2c68c64d06f5781489267dd9852fdc858abdda9796f10065",
+    "certificate_source_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+    "synthetic_checks_sha256": "364efd5f480d1e4c16e1e17645ba69440b4f5a943d1739f4bc8d54e02ba41bc5",
+    "independent_theory_review_sha256": "0cac62664d65076ba3b2f0330c7883984e194a37b14be9cf4f2a71474305bfc9",
+    "authorization": "Lead editor /root explicitly authorized freezing and single execution after independent theorem review and synthetic checks on 2026-11-06."
+  }
+}

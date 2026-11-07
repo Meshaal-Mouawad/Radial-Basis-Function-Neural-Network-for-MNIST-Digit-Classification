@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-07T09:05:07.893043+00:00",
+  "heldout_truth_used": false,
+  "files": {
+    "chosen_endpoints_before_labels.json": "f7b12da06e1dc53ac1a91230f91cca05e285b105176f4af6d4b9da188e05c244",
+    "frontiers_before_labels.npz": "3fb8f9f1b161cf61d8e2a93121d477c3de71c2d2543c5c8140dafc7d029c5afd"
+  },
+  "input_archive_sha256": "fc59ad91fb25abf2dddb25fe49abaab7d0ad69dfa33431e640cfbda5e391b5c6"
+}

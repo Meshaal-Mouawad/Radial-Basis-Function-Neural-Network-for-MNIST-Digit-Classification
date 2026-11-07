@@ -1,0 +1,7 @@
+{
+  "prediction_metric_recomputation": "PASS for all 30 test records",
+  "split_overlap": "PASS all 5 seeds",
+  "centers_training_membership": "PASS all 5 seeds",
+  "auxiliary_weight_archives": "35 conditions reconstructed and checked against original records",
+  "figures": "Both figures inspected; no clipping or label overlap"
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-06",
+  "image_checks": [
+    {
+      "file": "MNIST_train.mat",
+      "download_url": "https://ossci-datasets.s3.amazonaws.com/mnist/train-images-idx3-ubyte.gz",
+      "download_md5_verified": "f68b3c2dcbeaaa9fbdd348bbdeb94873",
+      "download_sha256": "440fcabf73cc546fa21475e81ea370265605f56be210a4024d2ca8f203523609",
+      "canonical_shape": [
+        60000,
+        28,
+        28
+      ],
+      "canonical_image_payload_sha256": "741c988805d008ac6e4c904b69001ba184c24b2c540a4ef403f4c71b676cf757",
+      "mat_image_payload_sha256": "741c988805d008ac6e4c904b69001ba184c24b2c540a4ef403f4c71b676cf757",
+      "mat_spatial_transpose_payload_sha256": "b87116ec7fa06db3ae1c13b532e40757695ea9c1f17bf89af952b85f034f2d9c",
+      "pixel_identical_same_index_direct": true,
+      "pixel_identical_same_index_transpose": false,
+      "labels_inspected": false
+    },
+    {
+      "file": "MNIST_test.mat",
+      "download_url": "https://ossci-datasets.s3.amazonaws.com/mnist/t10k-images-idx3-ubyte.gz",
+      "download_md5_verified": "9fb629c4189551a2d022fa330f9573f3",
+      "download_sha256": "8d422c7b0a1c1c79245a5bcf07fe86e33eeafee792b84584aec276f5a2dbc4e6",
+      "canonical_shape": [
+        10000,
+        28,
+        28
+      ],
+      "canonical_image_payload_sha256": "6d87418db22cc8025d05968bec9bd5c3932904b23485740db143a061a2c9d161",
+      "mat_image_payload_sha256": "6d87418db22cc8025d05968bec9bd5c3932904b23485740db143a061a2c9d161",
+      "mat_spatial_transpose_payload_sha256": "55f08a2e01dedf06eea7a913e00221e165607cda2dd33a06cd8ab0ef842962a7",
+      "pixel_identical_same_index_direct": true,
+      "pixel_identical_same_index_transpose": false,
+      "labels_inspected": false
+    }
+  ],
+  "label_checks": [
+    {
+      "file": "MNIST_train.mat",
+      "download_url": "https://ossci-datasets.s3.amazonaws.com/mnist/train-labels-idx1-ubyte.gz",
+      "download_md5_verified": "d53e105ee54ea40749a09fcbcd1e9432",
+      "download_sha256": "3552534a0a558bbed6aed32b30c495cca23d567ec52cac8be1a0730e8010255c",
+      "labels_n": 60000,
+      "canonical_label_payload_sha256": "1feba77c54802fa5339a11837ea4b2866434b83314ec45192930f1df69120c13",
+      "supplied_label_payload_sha256": "1feba77c54802fa5339a11837ea4b2866434b83314ec45192930f1df69120c13",
+      "labels_byte_identical_same_order": true
+    },
+    {
+      "file": "MNIST_test.mat",
+      "download_url": "https://ossci-datasets.s3.amazonaws.com/mnist/t10k-labels-idx1-ubyte.gz",
+      "download_md5_verified": "ec29112dd5afa0611ce80d1b7f02629c",
+      "download_sha256": "f7ae60f92e00ec6debd23a6088c31dbd2371eca3ffa0defaefb259924204aec6",
+      "labels_n": 10000,
+      "canonical_label_payload_sha256": "ddeff807876a9661a1110d45c266c86239a3a1b7d37da0c3716a7a683c852ff5",
+      "supplied_label_payload_sha256": "ddeff807876a9661a1110d45c266c86239a3a1b7d37da0c3716a7a683c852ff5",
+      "labels_byte_identical_same_order": true
+    }
+  ],
+  "label_check_timing": "Performed only after prospective study completed and its prediction masks were frozen; no changes to fitted study or protocol.",
+  "conclusion": "All supplied MNIST training and test image/label arrays equal official mirror IDX payloads byte-for-byte in the same observation order. MATLAB image axes are moved from(28,28,N)to(N,28,28),withoutspatialtransposition."
+}
