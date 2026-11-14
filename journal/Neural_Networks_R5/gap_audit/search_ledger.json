@@ -1,0 +1,1862 @@
+{
+  "schema_version": "1.0",
+  "title": "R5 bounded frontier and defeating-prior-work challenge",
+  "search_date_local": "2026-11-15",
+  "search_timezone": "Asia/Riyadh",
+  "execution_utc_observed": "2026-11-14T22:10:58Z",
+  "reference_checkpoint": "2026-11-15",
+  "date_explanation": "UTC observation is 01:10:58 on15November2026 in Asia/Riyadh.",
+  "scope": "Focused target-journal-first current-literature challenge for existing R5; no model reruns or manuscript edits; no global novelty assertion.",
+  "inputs": [
+    "upload/Mouawad_Methodology_Research_Gap_Discovery_v1(2).md",
+    "working_R5/source/main.tex",
+    "working_R5/source/ridge_theory.tex",
+    "r5_editorial/review/literature_verification.json"
+  ],
+  "target_journal": "Neural Networks",
+  "search_design": {
+    "years_order": [
+      2026,
+      2025,
+      2024
+    ],
+    "initial_route": "2026 publisher-target queries, then2026/2025/2024 publisher-target query batch; synonymous queries and citation routes expanded outside journal.",
+    "competing_terms": [
+      "nearest-neighbor/potential-function identity",
+      "generalized nearest prototype",
+      "Gaussian coefficient ridge",
+      "kernel parameter stability",
+      "regularization path safe prediction",
+      "residual/spectral bounds",
+      "large-penalty decision limits",
+      "local width interval/penalty tail",
+      "safe RBF training",
+      "three-way decisions",
+      "certified nearest-centroid"
+    ],
+    "screening": "Retain exact or neighboring mathematical/model/mechanism records; keep peripheral retrieved records as metadata rather than pad manuscript references."
+  },
+  "coverage": {
+    "actual_query_batches": 13,
+    "actual_queries": 47,
+    "returned_record_metadata_entries": 195,
+    "returned_metadata_note": "Contains duplicate and peripheral records; not a unique relevant-paper count. Q01 records only3 directly relevant hits, with peripheral results visible in tool transcript.",
+    "curated_distinct_paper_records": 18,
+    "target_journal_curated_records": 7,
+    "target_year_distribution": {
+      "2024": 2,
+      "2025": 2,
+      "2026": 3
+    },
+    "target_year_note": "2026 includes Fan online/article-date2026, issue2027; dates explicitly separated.",
+    "full_text_selected_methods_inspected_this_pass": 5,
+    "full_text_selected_methods_ids": [
+      "NN24-Dagostino",
+      "P25-Saralajew",
+      "P16-Que",
+      "P15-Shibagaki",
+      "X26-PALACE"
+    ],
+    "additional_full_text_intro_only_this_pass": [
+      "P19-Ndiaye"
+    ],
+    "inherited_pivotal_full_text_verification": [
+      "P79-Srihari",
+      "P19-Ndiaye"
+    ],
+    "full_text_count_note": "Availability of full text is not counted as a complete page-by-page review."
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "site.sciencedirect.com/journal/neural-networks 2026 \"radial basis\" prototype"
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"Neural Networks\" 2026 \"prototype\" certification"
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"Neural Networks\" 2026 \"regularization\" \"kernel\""
+        }
+      ],
+      "citation_route": null,
+      "note": "Search result output recorded in thread as turn30search0–9; three directly relevant target-journal records retained here; other returned peripheral records were screened in the tool output.",
+      "returned_record_metadata": [
+        {
+          "title": "Key-value pair-free continual learner via task-specific prompt-prototype",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608026000390",
+          "reference": "turn30search0"
+        },
+        {
+          "title": "Learning-based local RBF neural network with adaptively supported domain for solving partial differential equations",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608026010981",
+          "reference": "turn30search2"
+        },
+        {
+          "title": "Learning discriminative prototypes: Adaptive relation-aware refinement and patch-level contextual feature reweighting for few-shot classification",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0893608026001115",
+          "reference": "turn30search3"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "site.sciencedirect.com/science/article \"Neural Networks\" 2026 \"radial basis function\" \"classification\""
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"Neural Networks\" 2025 \"radial basis\" prototype"
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"Neural Networks\" 2024 \"radial basis\" \"Gaussian\""
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Safe dynamic sparse training of modified RBF networks for joint feature selection and classification",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224009214",
+          "reference": "turn31search0"
+        },
+        {
+          "title": "A novel radial basis function neural network classifier based on three-way decisions",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0952197624019705",
+          "reference": "turn31search1"
+        },
+        {
+          "title": "Mass-Constrained hybrid Gaussian radial basis neural networks: Development, training, and applications to modeling nonlinear dynamic noisy chemical processes",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0098135425000845",
+          "reference": "turn31search2"
+        },
+        {
+          "title": "Learning active subspaces and discovering important features with Gaussian radial basis functions neural networks",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608024002594",
+          "reference": "turn31search3"
+        },
+        {
+          "title": "Learning active subspaces and discovering important features with Gaussian radial basis functions neural networks",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0893608024002594",
+          "reference": "turn31search4"
+        },
+        {
+          "title": "Hierarchical tight strip zonotope set-membership identification algorithm for RBF neural network",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0016003226004618",
+          "reference": "turn31search5"
+        },
+        {
+          "title": "Maximum local density-driven non-overlapping radial basis function support kernel neural network",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0020025524013355",
+          "reference": "turn31search6"
+        },
+        {
+          "title": "Performance comparison of ANN, CNN and RBF in multiclass image classification: batch vs. incremental learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1877050925028571",
+          "reference": "turn31search7"
+        },
+        {
+          "title": "Optimizing shape parameters in RBF methods: A systematic review of techniques, applications, and computational challenges",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1574013725001182",
+          "reference": "turn31search8"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "site.sciencedirect.com/science/article \"neunet.2026\" \"prototype\" \"robust\""
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"neunet.2025\" \"prototype\" \"radial\""
+        },
+        {
+          "q": "site.sciencedirect.com/science/article \"neunet.2024\" \"certificate\" kernel"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Architecture-agnostic knowledge distillation for machine-learning interatomic potentials",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608026011974/pdf",
+          "reference": "turn33search7"
+        },
+        {
+          "title": "GRVFL-MV: Graph random vector functional link based on multi-view learning",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020025525000799",
+          "reference": "turn33search0"
+        },
+        {
+          "title": "Building connectome analysis tools with representation learning on neuronal skeleton and circuit topology",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608025004836",
+          "reference": "turn33search1"
+        },
+        {
+          "title": "Enhancing robustness and efficiency of least square twin SVM via granular computing",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0031320325006818",
+          "reference": "turn33search2"
+        },
+        {
+          "title": "Aggregating intrinsic information to enhance BCI performance through federated learning",
+          "url": "https://www.researchgate.net/publication/377278359_Aggregating_intrinsic_information_to_enhance_BCI_performance_through_federated_learning",
+          "reference": "turn33search3"
+        },
+        {
+          "title": "Enhancing multiview synergy: Robust learning by exploiting the wave loss function with consensus and complementarity principles",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608025003120",
+          "reference": "turn33search4"
+        },
+        {
+          "title": "Building connectome analysis tools with representation learning on neuronal skeleton and circuit topology",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0893608025004836",
+          "reference": "turn33search5"
+        },
+        {
+          "title": "Adaptive multi-granularity trust management scheme for UAV visual sensor security under adversarial attacks",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0167404824004139",
+          "reference": "turn33search6"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "\"Neural Networks\" \"prototype\" \"2025\" interpretability"
+        },
+        {
+          "q": "\"Neural Networks\" \"radial basis\" \"2025\" -site:researchgate.net -site:sciencedirect.com"
+        },
+        {
+          "q": "\"Neural Networks\" \"2026\" \"certified\" prototype"
+        },
+        {
+          "q": "\"Neural Networks\" \"2024\" \"regularization path\""
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Radial Basis Function Networks - MeSH - NCBI",
+          "url": "https://www.ncbi.nlm.nih.gov/mesh/2108088",
+          "reference": "turn34search0"
+        },
+        {
+          "title": "MeSH Browser",
+          "url": "https://meshb.nlm.nih.gov/record/ui?ui=D000098423",
+          "reference": "turn34search1"
+        },
+        {
+          "title": "MeSH Browser",
+          "url": "https://meshb.wip.nlm.nih.gov/record/ui?ui=D000098423",
+          "reference": "turn34search2"
+        },
+        {
+          "title": "RBFleX-NAS: Training-Free Neural Architecture Search Using Radial Basis Function Kernel and Hyperparameter Detection.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40202890/",
+          "reference": "turn34search3"
+        },
+        {
+          "title": "Persistent Excitation of Improved RBF Neural Networks: Neuron Dynamic-Growing Strategy.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40031692/",
+          "reference": "turn34search4"
+        },
+        {
+          "title": "Radial-basis-function neural network for solving the transient probability density function under composite stochastic noise.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40826531/",
+          "reference": "turn34search5"
+        },
+        {
+          "title": "Comprehensive Evaluation of Prototype Neural Networks",
+          "url": "https://link.springer.com/article/10.1007/s13218-025-00900-0",
+          "reference": "turn34search6"
+        },
+        {
+          "title": "Comprehensive evaluation of prototype neural networks",
+          "url": "https://www.dfki.de/en/web/research/projects-and-publications/publication/16674",
+          "reference": "turn34search7"
+        },
+        {
+          "title": "AIMS Mathematics, 10(5): 10852–10865.",
+          "url": "https://riull.ull.es/xmlui/bitstream/handle/915/45989/Relaxed_conditions_for_universal_approximation_by_radial_basis_function_neural_networks_of_Hankel_translates.pdf?sequence=1",
+          "reference": "turn34search48"
+        },
+        {
+          "title": "Solving Inverse Wave Problems Using Spacetime Radial Basis Functions in Neural Networks",
+          "url": "https://www.mdpi.com/2227-7390/13/5/725",
+          "reference": "turn34search8"
+        },
+        {
+          "title": "Certified Neural Networks: from Verification to Synthesis",
+          "url": "https://www.research.unipd.it/handle/11577/3623581",
+          "reference": "turn34search9"
+        },
+        {
+          "title": "Paper page - Comprehensive Evaluation of Prototype Neural Networks",
+          "url": "https://huggingface.co/papers/2507.06819",
+          "reference": "turn34search10"
+        },
+        {
+          "title": "Interpretable Image Classification via Non-parametric Part Prototype Learning",
+          "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_Interpretable_Image_Classification_via_Non-parametric_Part_Prototype_Learning_CVPR_2025_paper.html",
+          "reference": "turn34search11"
+        },
+        {
+          "title": "A Comprehensive Survey on Self-Interpretable Neural Networks | IEEE Journals & Magazine | IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/abstract/document/11275698",
+          "reference": "turn34search12"
+        },
+        {
+          "title": "Interpretable Deep Prototype-Based Neural Networks: Can a 1 Look like a 0?",
+          "url": "https://www.mdpi.com/2079-9292/14/18/3584",
+          "reference": "turn34search13"
+        },
+        {
+          "title": "Radial-basis-function neural network for solving the transient probability density function under composite stochastic noise",
+          "url": "https://journals.aps.org/pre/abstract/10.1103/3nz9-8fhs",
+          "reference": "turn34search14"
+        },
+        {
+          "title": "Designing a novel radial basis neural structure for solving the dynamical hepatitis C virus model",
+          "url": "https://www.nature.com/articles/s41598-025-29644-5",
+          "reference": "turn34search15"
+        },
+        {
+          "title": "Sample-based interpretability of softmax neurons via learned prototypes",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226013019",
+          "reference": "turn34search16"
+        },
+        {
+          "title": "EPFL | Biomedical Imaging Group | Radial Bases",
+          "url": "https://bigwww.epfl.ch/publications/unser2504.html",
+          "reference": "turn34search17"
+        },
+        {
+          "title": "IDEAL: Interpretable-by-Design ALgorithms for learning from foundation feature spaces",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0925231225001365",
+          "reference": "turn34search18"
+        },
+        {
+          "title": "RBFleX-NAS: Training-Free Neural Architecture Search Using Radial Basis Function Kernel and Hyperparameter Detection",
+          "url": "https://repository.sutd.edu.sg/esploro/outputs/journalArticle/RBFleX-NAS-Training-Free-Neural-Architecture-Search-Using/9912658409846",
+          "reference": "turn34search19"
+        },
+        {
+          "title": "Gaussian Radial Basis Function Neural Networks on Time Scales",
+          "url": "https://www.mdpi.com/2227-7390/14/18/3335",
+          "reference": "turn34search20"
+        },
+        {
+          "title": "KI - Künstliche Intelligenz",
+          "url": "https://d-nb.info/1387927450/34",
+          "reference": "turn34search49"
+        },
+        {
+          "title": "Published as a conference paper at MathAI 2025",
+          "url": "https://openreview.net/attachment?id=wBz7H1xBbV&name=pdf",
+          "reference": "turn34search50"
+        },
+        {
+          "title": "Characteristic discriminative prototype network with detailed interpretation for classification",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0031320324006526",
+          "reference": "turn34search21"
+        },
+        {
+          "title": "Comprehensive Evaluation of Prototype Neural Networks",
+          "url": "https://arxiv.org/abs/2507.06819",
+          "reference": "turn34academia51"
+        },
+        {
+          "title": "Journal of Machine Learning Research 25 (2024) 1-24  Submitted 4/23; Revised 8/23; Published 1/24",
+          "url": "https://jmlr.org/papers/volume25/23-0549/23-0549.pdf",
+          "reference": "turn34search52"
+        },
+        {
+          "title": "IDEAL: Interpretable-by-Design ALgorithms for learning from foundation feature spaces",
+          "url": "https://doi.org/10.1016/j.neucom.2025.129464",
+          "reference": "turn34search22"
+        },
+        {
+          "title": "Towards Prototype-Based Self-Explainable Graph Neural Network",
+          "url": "https://pure.psu.edu/en/publications/towards-prototype-based-self-explainable-graph-neural-network/",
+          "reference": "turn34search23"
+        },
+        {
+          "title": "A multiobjective continuation method to compute the regularization path of deep neural networks",
+          "url": "https://doi.org/10.1016/j.mlwa.2025.100625",
+          "reference": "turn34search24"
+        },
+        {
+          "title": "Interpretable Deep Prototype-Based Neural Networks: Can a 1 Look like a 0?",
+          "url": "https://openurl.ebsco.com/contentitem/gcd%3A188326251?crl=c&id=ebsco%3Agcd%3A188326251&jrnl=20799292&sid=ebsco%3Aplink%3Acrawler-gcd",
+          "reference": "turn34search25"
+        },
+        {
+          "title": "Extended Abstract Track 1–12, 2025",
+          "url": "https://openreview.net/pdf/3148a141f599b504f5fd473ce7026c54054c1d87.pdf",
+          "reference": "turn34search53"
+        },
+        {
+          "title": "EPFL | Biomedical Imaging Group | Scaling Path",
+          "url": "https://bigwww.epfl.ch/publications/neumayer2401.html",
+          "reference": "turn34search26"
+        },
+        {
+          "title": "Prototype Learning to Create Refined Interpretable Digital Phenotypes from ECGs",
+          "url": "https://arxiv.org/abs/2508.01521",
+          "reference": "turn34academia54"
+        },
+        {
+          "title": "On the Effect of Initialization: The Scaling Path of 2-Layer Neural Networks",
+          "url": "https://jmlr.org/beta/papers/v25/23-0549.html",
+          "reference": "turn34search27"
+        },
+        {
+          "title": "On the Effect of Initialization: The Scaling Path of 2-Layer Neural Networks",
+          "url": "https://jmlr.org/papers/v25/23-0549.html",
+          "reference": "turn34search28"
+        },
+        {
+          "title": "Under review as a conference paper at ICLR 2026",
+          "url": "https://openreview.net/pdf?id=tAtRvCRPBN",
+          "reference": "turn34search55"
+        },
+        {
+          "title": "On the Effect of Initialization: The Scaling Path of 2-Layer Neural Networks",
+          "url": "https://conftrace.com/papers/214200-on-the-effect-of-initialization-the-scaling-path-of-2-layer-neural-networks",
+          "reference": "turn34search29"
+        },
+        {
+          "title": "Gaussian RBFNet: Gaussian Radial Basis Functions for Fast and Accurate Representation and Reconstruction of Neural Fields",
+          "url": "https://arxiv.org/abs/2503.06762",
+          "reference": "turn34academia56"
+        },
+        {
+          "title": "Neural-network-based regularization methods for inverse problems in imaging",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/gamm.202470004",
+          "reference": "turn34search30"
+        },
+        {
+          "title": "Certified Neural Networks: from Verification to Synthesis",
+          "url": "https://cris.fbk.eu/handle/11582/374107",
+          "reference": "turn34search31"
+        },
+        {
+          "title": "Formal verification and certified training of neural networks",
+          "url": "https://spiral.imperial.ac.uk/entities/publication/6bc0d9b8-a6cb-4302-bc57-f27aa2fcd387",
+          "reference": "turn34search32"
+        },
+        {
+          "title": "SIDE: Sparse Information Disentanglement for Explainable Artificial Intelligence",
+          "url": "https://arxiv.org/abs/2507.19321",
+          "reference": "turn34academia57"
+        },
+        {
+          "title": "Research programme – EventCompute",
+          "url": "https://eventcompute.com/en/programme/",
+          "reference": "turn34search33"
+        },
+        {
+          "title": "Certified Circuits: Stability Guarantees for Mechanistic Circuits",
+          "url": "https://proceedings.mlr.press/v306/anani26a.html",
+          "reference": "turn34search34"
+        },
+        {
+          "title": "A multiobjective continuation method to compute the regularization path of deep neural networks | alphaXiv",
+          "url": "https://www.alphaxiv.org/pl/abs/2308.12044",
+          "reference": "turn34search35"
+        },
+        {
+          "title": "A Multiobjective Continuation Method to Compute the Regularization Path of Deep Neural Networks",
+          "url": "https://www.researchgate.net/publication/385117678_A_Multiobjective_Continuation_Method_to_Compute_the_Regularization_Path_of_Deep_Neural_Networks",
+          "reference": "turn34search36"
+        },
+        {
+          "title": "Optimal Sets and Solution Paths of ReLU Networks",
+          "url": "https://www.alphaxiv.org/abs/2306.00119",
+          "reference": "turn34search37"
+        },
+        {
+          "title": "Scaling Path of 2-Layer Neural Networks | PDF | Continuous Function | Measure (Mathematics)",
+          "url": "https://www.scribd.com/document/939179825/23-0549",
+          "reference": "turn34search38"
+        },
+        {
+          "title": "Xin Cui — Quant • HFT • ML",
+          "url": "https://xincui.me/research?q=Regularization+path",
+          "reference": "turn34search39"
+        },
+        {
+          "title": "On the Effect of Initialization: The Scaling Path of 2-Layer Neural Networks — Lacuna",
+          "url": "https://lacuna.tiptreesystems.com/work/on-the-effect-of-initialization-the-scaling-path-of-2-layer-neural-networks/wrk_f0d2ad7b26b9164537dd6c31803e158c",
+          "reference": "turn34search40"
+        },
+        {
+          "title": "Formal verification of neural networks: what's usable today | AI Assurance Directory",
+          "url": "https://aiassurancedirectory.com/articles/formal-verification-neural-networks-whats-usable-today/",
+          "reference": "turn34search41"
+        },
+        {
+          "title": "Certified but Private: Scalable Zero-Knowledge Proofs for Neural Network Guarantees | Youwei Zhong",
+          "url": "https://www.linkedin.com/posts/youwei-zhong-64102323a_certified-but-private-scalable-zero-knowledge-activity-7509071537077919745-stKP",
+          "reference": "turn34search42"
+        },
+        {
+          "title": "alpha-beta-CROWN/README.md at main · Verified-Intelligence/alpha-beta-CROWN · GitHub",
+          "url": "https://github.com/Verified-Intelligence/alpha-beta-CROWN/blob/main/README.md",
+          "reference": "turn34search43"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Gaussian\" \"nearest\" \"ridge\" \"certificate\" bandwidth"
+        },
+        {
+          "q": "\"radial basis\" \"uniform\" \"regularization\" classification certificate"
+        },
+        {
+          "q": "\"radial basis\" \"nearest neighbor\" \"regularization\" decision equivalence"
+        },
+        {
+          "q": "\"kernel\" \"hyperparameter\" \"prediction\" \"certificate\" regularization bandwidth"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Help for package np",
+          "url": "https://mirror.nju.edu.cn/CRAN/web/packages/np/refman/np.html",
+          "reference": "turn35search0"
+        },
+        {
+          "title": "Help for package np",
+          "url": "https://cloud.r-project.org/web/packages/np/refman/np.html",
+          "reference": "turn35search1"
+        },
+        {
+          "title": "Help for package np",
+          "url": "https://cran.stat.auckland.ac.nz/web/packages/np/refman/np.html",
+          "reference": "turn35search2"
+        },
+        {
+          "title": "NEWS",
+          "url": "https://cran.stat.unipd.it/web/packages/npRmpi/news/news.html",
+          "reference": "turn35search3"
+        },
+        {
+          "title": "Radial basis function networks and complexity regularization in function learning and classification",
+          "url": "https://www.researchgate.net/publication/3887898_Radial_basis_function_networks_and_complexity_regularization_in_function_learning_and_classification",
+          "reference": "turn35search4"
+        },
+        {
+          "title": "Comparison of multivariate classifiers",
+          "url": "https://www.mrc-cbu.cam.ac.uk/personal/nikolaus.kriegeskorte/misaki_decoder_comparison_preprint.pdf",
+          "reference": "turn35search8"
+        },
+        {
+          "title": "Choosing the Metric:",
+          "url": "https://perso.uclouvain.be/michel.verleysen/papers/sci11df.pdf",
+          "reference": "turn35search9"
+        },
+        {
+          "title": "Classification with the nearest neighbor rule in general finite dimensional spaces: necessary and sufficient conditions",
+          "url": "https://www.researchgate.net/publication/267869881_Classification_with_the_nearest_neighbor_rule_in_general_finite_dimensional_spaces_necessary_and_sufficient_conditions",
+          "reference": "turn35search5"
+        },
+        {
+          "title": "A Banach-Space Framework for Proposed (v, w)–s–Convex Response-Curve Certification in Machine Learning",
+          "url": "https://www.mdpi.com/2227-7390/14/12/2209",
+          "reference": "turn35search6"
+        },
+        {
+          "title": "Certified Low-Rank Gaussian Processes via the Noise-Floor Rule",
+          "url": "https://thalens.org/papers/ml_certified_lowrank_gp/",
+          "reference": "turn35search7"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system2",
+      "queries": [
+        {
+          "q": "kernel ridge classification prediction stability hyperparameter interval certificate"
+        },
+        {
+          "q": "Gaussian radial basis classifier nearest prototype equivalence bandwidth ridge"
+        },
+        {
+          "q": "regularization path safe prediction classification bounds kernel parameter"
+        },
+        {
+          "q": "\"RBF\" \"certificate\" \"ridge\""
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "1.3. Kernel ridge regression — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/kernel_ridge.html",
+          "reference": "turn37search0"
+        },
+        {
+          "title": "KernelRidge — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html",
+          "reference": "turn37search1"
+        },
+        {
+          "title": "Adaptive parameter selection for kernel ridge regression",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1063520324000484",
+          "reference": "turn37search2"
+        },
+        {
+          "title": "RBFClassifier",
+          "url": "https://weka.sourceforge.io/doc.packages/RBFNetwork/weka/classifiers/functions/RBFClassifier.html",
+          "reference": "turn37search3"
+        },
+        {
+          "title": "scikit-learn/sklearn/kernel_ridge.py at main · scikit-learn/scikit-learn · GitHub",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/kernel_ridge.py",
+          "reference": "turn37search5"
+        },
+        {
+          "title": "Adaptive parameter selection for kernel ridge regression",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1063520324000484",
+          "reference": "turn37search6"
+        },
+        {
+          "title": "KernelRidge — scikit-learn 1.9.0 documentation - sklearn",
+          "url": "https://sklearn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html",
+          "reference": "turn37search7"
+        },
+        {
+          "title": "SVC — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC",
+          "reference": "turn37search8"
+        },
+        {
+          "title": "The Entire Regularization Path for the Support Vector Machine",
+          "url": "https://dept.stat.lsa.umich.edu/~jizhu/pubs/Hastie-NIPS04.pdf",
+          "reference": "turn37search48"
+        },
+        {
+          "title": "Deterministic Annealing For Clustering, Compression, Classification, Regression, And Related Optimiz - Proceedings of the IEEE",
+          "url": "https://scl.ece.ucsb.edu/sites/scl.ece.ucsb.edu/files/publications/b98_2_0.pdf",
+          "reference": "turn37search49"
+        },
+        {
+          "title": "The Radial Basis Function (RBF) Effect - TAM 1.3.4 documentation",
+          "url": "https://edf-lab.github.io/tam/math/spectrum/RBF.html",
+          "reference": "turn37search9"
+        },
+        {
+          "title": "KernelRidge — scikit-learn 1.10.dev0 documentation",
+          "url": "https://scikit-learn.org/dev/modules/generated/sklearn.kernel_ridge.KernelRidge.html",
+          "reference": "turn37search10"
+        },
+        {
+          "title": "scikit-learn/doc/modules/linear_model.rst at main · scikit-learn/scikit-learn · GitHub",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/doc/modules/linear_model.rst",
+          "reference": "turn37search11"
+        },
+        {
+          "title": "Fully Supervised Training of Gaussian Radial",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=a1b5ce66b857b72dd1b0b6998c870e097cc6de5f&repid=rep1&type=pdf",
+          "reference": "turn37search50"
+        },
+        {
+          "title": "scikit-learn/doc/modules/gaussian_process.rst at main · scikit-learn/scikit-learn · GitHub",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/doc/modules/gaussian_process.rst",
+          "reference": "turn37search12"
+        },
+        {
+          "title": "Facult´e des Sciences Appliqu´ees",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=5c8274da610843e439d1f73e0e6000156ac121b2&repid=rep1&type=pdf",
+          "reference": "turn37search51"
+        },
+        {
+          "title": "Kernel Ridge Cross-Validation | statgpu",
+          "url": "https://statgpu.github.io/en/models/nonparametric/kernel-ridge-cv",
+          "reference": "turn37search13"
+        },
+        {
+          "title": "1.3. Kernel ridge regression — scikit-learn 0.24.2 documentation",
+          "url": "https://scikit-learn.org/0.24/modules/kernel_ridge.html",
+          "reference": "turn37search14"
+        },
+        {
+          "title": "1.7. Gaussian Processes — scikit-learn 1.0.2 documentation",
+          "url": "https://scikit-learn.org/1.0/modules/gaussian_process.html",
+          "reference": "turn37search15"
+        },
+        {
+          "title": "Regularization Path of",
+          "url": "https://papers.neurips.cc/paper/5817-regularization-path-of-cross-validation-error-lower-bounds.pdf",
+          "reference": "turn37search52"
+        },
+        {
+          "title": "# Safe Screening of Non-Support Vectors",
+          "url": "https://proceedings.mlr.press/v28/ogawa13b.pdf",
+          "reference": "turn37search53"
+        },
+        {
+          "title": "Class: KernelRidge - sklearn",
+          "url": "https://sklearn.vercel.app/docs/classes/KernelRidge",
+          "reference": "turn37search16"
+        },
+        {
+          "title": "Classic Machine Learning Methods",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK597496/?report=printable",
+          "reference": "turn37search17"
+        },
+        {
+          "title": "Efficient model selection for predictive pattern mining model by safe pattern pruning",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10724371/",
+          "reference": "turn37search18"
+        },
+        {
+          "title": "What is a Radial Basis Function? | IBM",
+          "url": "https://www.ibm.com/think/topics/radial-basis-function",
+          "reference": "turn37search19"
+        },
+        {
+          "title": "ElasticNetCV — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNetCV.html",
+          "reference": "turn37search20"
+        },
+        {
+          "title": "How to Regularize Your Regression – Machine Learning Blog | ML@CMU | Carnegie Mellon University",
+          "url": "https://blog.ml.cmu.edu/2024/04/12/how-to-regularize-your-regression/",
+          "reference": "turn37search21"
+        },
+        {
+          "title": "1.1. Linear Models — scikit-learn 1.9.0 documentation - sklearn",
+          "url": "https://sklearn.org/stable/modules/linear_model.html",
+          "reference": "turn37search22"
+        },
+        {
+          "title": "An Integrated Framework for Generalized Nearest Prototype Classifier Design",
+          "url": "https://www.researchgate.net/publication/2635825_An_Integrated_Framework_for_Generalized_Nearest_Prototype_Classifier_Design",
+          "reference": "turn37search23"
+        },
+        {
+          "title": "Amelia East - Wainidoko Bluewater & Beyond | LinkedIn",
+          "url": "https://fj.linkedin.com/in/amelia-east-b359ba397",
+          "reference": "turn37search24"
+        },
+        {
+          "title": "Regularization Path of Cross-Validation Error Lower Bounds",
+          "url": "https://www.academia.edu/98469989/Regularization_Path_of_Cross_Validation_Error_Lower_Bounds",
+          "reference": "turn37search25"
+        },
+        {
+          "title": "Plot classification boundaries with different SVM Kernels — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/auto_examples/svm/plot_svm_kernels.html",
+          "reference": "turn37search26"
+        },
+        {
+          "title": "Three learning phases for radial-basis-function networks",
+          "url": "https://www.academia.edu/123945069/Three_learning_phases_for_radial_basis_function_networks",
+          "reference": "turn37search27"
+        },
+        {
+          "title": "RBF SVM parameters — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html",
+          "reference": "turn37search28"
+        },
+        {
+          "title": "Safe Screening of Non-Support Vectors in Pathwise SVM Computation",
+          "url": "https://lacuna.tiptreesystems.com/work/safe-screening-of-non-support-vectors-in-pathwise",
+          "reference": "turn37search29"
+        },
+        {
+          "title": "An Integrated Framework For Generalized Nearest Prototype Classifier Design",
+          "url": "https://www.researchgate.net/publication/2635825_An_Integrated_Framework_For_Generalized_Nearest_Prototype_Classifier_Design",
+          "reference": "turn37search30"
+        },
+        {
+          "title": "1.7. Gaussian Processes — scikit-learn 1.9.0 documentation - sklearn",
+          "url": "https://sklearn.org/stable/modules/gaussian_process.html",
+          "reference": "turn37search31"
+        },
+        {
+          "title": "Normalized Gaussian Radial Basis Function networks",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0925231298000277",
+          "reference": "turn37search32"
+        },
+        {
+          "title": "Using Radial Basis Function Networks for Function Approximation and Classification",
+          "url": "https://onlinelibrary.wiley.com/doi/10.5402/2012/324194",
+          "reference": "turn37search33"
+        },
+        {
+          "title": "1.16. Probability calibration — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/calibration",
+          "reference": "turn37search34"
+        },
+        {
+          "title": "An approximation of the Gaussian RBF kernel for efficient classification with SVMs",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S016786551630215X",
+          "reference": "turn37search35"
+        },
+        {
+          "title": "Normalized Gaussian Radial Basis Function networks",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231298000277",
+          "reference": "turn37search36"
+        },
+        {
+          "title": "Upper Confidence Bounds for the Prediction Error of Kernel Ridge Regression via Gaussian Refitting",
+          "url": "https://arxiv.org/abs/2607.28846",
+          "reference": "turn37academia54"
+        },
+        {
+          "title": "Conformalized Kernel Ridge Regression",
+          "url": "https://arxiv.org/abs/1609.05959",
+          "reference": "turn37academia55"
+        },
+        {
+          "title": "discopt.solvers.surrogate — discopt",
+          "url": "https://kitchingroup.cheme.cmu.edu/discopt/autoapi/discopt/solvers/surrogate/index.html",
+          "reference": "turn37search37"
+        },
+        {
+          "title": "Failure and success of the spectral bias prediction for Kernel Ridge Regression: the case of low-dimensional data",
+          "url": "https://arxiv.org/abs/2202.03348",
+          "reference": "turn37academia56"
+        },
+        {
+          "title": "Regularization via Mass Transportation",
+          "url": "https://arxiv.org/abs/1710.10016",
+          "reference": "turn37academia57"
+        },
+        {
+          "title": "History | UUBRidge",
+          "url": "https://uubridge.info/history-2/",
+          "reference": "turn37search38"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"An Integrated Framework\" \"Generalized Nearest Prototype\" classifier"
+        },
+        {
+          "q": "\"RBF\" \"regularization path\" \"bandwidth\""
+        },
+        {
+          "q": "\"classification\" \"hyperparameter\" \"certification\" kernel ridge"
+        },
+        {
+          "q": "\"Neural Networks\" \"radial basis\" \"2025\" site:sciencedirect.com/science/article/pii/S0893608"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "An Integrated Framework For Generalized Nearest Prototype Classifier Design",
+          "url": "https://www.researchgate.net/publication/2635825_An_Integrated_Framework_For_Generalized_Nearest_Prototype_Classifier_Design",
+          "reference": "turn38search0"
+        },
+        {
+          "title": "dblp: An Integrated Framework for Generalized Nearest Prototype Classifier Design.",
+          "url": "https://dblp1.uni-trier.de/rec/journals/ijufks/KunchevaB98.html",
+          "reference": "turn38search1"
+        },
+        {
+          "title": "Lecture Notes in Artificial Intelligence",
+          "url": "https://www.nzdr.ru/data/media/biblio/kolxoz/Cs/CsLn/A/Artificial%20Neural%20Networks%20in%20Pattern%20Recognition%2C%202%20conf.%2C%20ANNPR%202006%28LNCS4087%2C%20Springer%2C%202006%29%28ISBN%203540379517%29%28306s%29.pdf",
+          "reference": "turn38search11"
+        },
+        {
+          "title": "Ludmila Kuncheva's Home Page",
+          "url": "https://www.lucykuncheva.co.uk/recent_publications.htm",
+          "reference": "turn38search2"
+        },
+        {
+          "title": "A novel radial basis function neural network classifier based on three-way decisions",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0952197624019705",
+          "reference": "turn38search3"
+        },
+        {
+          "title": "A novel radial basis function neural network classifier based on three-way decisions",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0952197624019705",
+          "reference": "turn38search4"
+        },
+        {
+          "title": "KernelRidge — scikit-learn 1.9.1 documentation",
+          "url": "https://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html",
+          "reference": "turn38search5"
+        },
+        {
+          "title": "scikit-learn/sklearn/kernel_ridge.py at main · scikit-learn/scikit-learn · GitHub",
+          "url": "https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/kernel_ridge.py",
+          "reference": "turn38search6"
+        },
+        {
+          "title": "Is data-efficient learning feasible with quantum models?",
+          "url": "https://link.springer.com/article/10.1007/s42484-026-00461-x",
+          "reference": "turn38search7"
+        },
+        {
+          "title": "A Banach-Space Framework for Proposed (v, w)–s–Convex Response-Curve Certification in Machine Learning",
+          "url": "https://www.mdpi.com/2227-7390/14/12/2209",
+          "reference": "turn38search8"
+        },
+        {
+          "title": "GitHub - yeojin-jung/speedcp: Fast conditional conformal prediction with RKHS · GitHub",
+          "url": "https://github.com/yeojin-jung/speedcp",
+          "reference": "turn38search9"
+        },
+        {
+          "title": "A hyper-parameter tuning approach for cost-sensitive support vector machine classifiers",
+          "url": "https://link.springer.com/article/10.1007/s00500-022-06768-8",
+          "reference": "turn38search10"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Adaptive parameter selection for kernel ridge regression\" authors 2024"
+        },
+        {
+          "q": "\"Safe dynamic sparse training of modified RBF networks\" authors"
+        },
+        {
+          "q": "\"Learning-based local RBF neural network\" \"Available online\""
+        },
+        {
+          "q": "\"prototype\" \"Neural Networks\" \"2025\" site:sciencedirect.com/science/article"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Adaptive parameter selection for kernel ridge regression",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1063520324000484",
+          "reference": "turn41search0"
+        },
+        {
+          "title": "Safe dynamic sparse training of modified RBF networks for joint feature selection and classification",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0925231224009214",
+          "reference": "turn41search1"
+        },
+        {
+          "title": "Learning-based local RBF neural network with adaptively supported domain for solving partial differential equations",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608026010981",
+          "reference": "turn41search2"
+        },
+        {
+          "title": "Prototypes as Anchors: Tackling Unseen Noise for online continual learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608025005143",
+          "reference": "turn41search3"
+        },
+        {
+          "title": "Safe dynamic sparse training of modified RBF networks for joint feature selection and classification",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224009214",
+          "reference": "turn41search4"
+        },
+        {
+          "title": "Safe dynamic sparse training of modified RBF networks for joint feature selection and classification",
+          "url": "https://ouci.dntb.gov.ua/en/works/9Gberp3l/",
+          "reference": "turn41search5"
+        },
+        {
+          "title": "Learning-based local RBF neural network with adaptively supported domain for solving partial differential equations.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42759146/",
+          "reference": "turn41search6"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Generalized M-sparse algorithms for constructing fault tolerant RBF networks\""
+        },
+        {
+          "q": "\"Neural Networks\" \"2025\" \"radial basis\" classification -site:researchgate.net"
+        },
+        {
+          "q": "\"kernel ridge\" \"prediction stability\" \"regularization\""
+        }
+      ],
+      "citation_route": "Kuncheva author publication-page integrated-framework link find",
+      "returned_record_metadata": [
+        {
+          "title": "Generalized M-sparse algorithms for constructing fault tolerant RBF networks.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39208461/",
+          "reference": "turn42search0"
+        },
+        {
+          "title": "Generalized M-sparse algorithms for constructing fault tolerant RBF networks",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0893608024005574",
+          "reference": "turn42search1"
+        },
+        {
+          "title": "Generalized M-sparse algorithms for constructing fault tolerant RBF networks",
+          "url": "https://scholars.cityu.edu.hk/en/publications/generalized-imi-sparse-algorithms-for-constructing-fault-tolerant/",
+          "reference": "turn42search2"
+        },
+        {
+          "title": "A novel radial basis function neural network classifier based on three-way decisions",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0952197624019705",
+          "reference": "turn42search3"
+        },
+        {
+          "title": "Performance comparison of ANN, CNN and RBF in multiclass image classification: batch vs. incremental learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1877050925028571",
+          "reference": "turn42search4"
+        },
+        {
+          "title": "ExAutoGP: Enhancing Genomic Prediction Stability and Interpretability with Automated Machine Learning and SHAP",
+          "url": "https://www.mdpi.com/2076-2615/15/8/1172",
+          "reference": "turn42search5"
+        },
+        {
+          "title": "Ludmila Kuncheva's Home Page",
+          "url": "https://www.lucykuncheva.co.uk/recent_publications.htm",
+          "reference": "turn42view0"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"certified\" \"hyperparameter\" \"kernel\" classification"
+        },
+        {
+          "q": "\"certification\" \"regularization path\" prediction"
+        },
+        {
+          "q": "\"RBF\" \"nearest-prototype\" \"agreement\""
+        },
+        {
+          "q": "\"Gaussian\" \"bandwidth\" \"ridge\" \"uniform\" classification theorem"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "[Literature Review] A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+          "url": "https://www.themoonlight.io/en/review/a-closed-form-adaptive-landmark-kernel-for-certified-point-cloud-and-graph-classification",
+          "reference": "turn43search0"
+        },
+        {
+          "title": "Prior-informed machine learning for clinically interpretable medical diagnosis",
+          "url": "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2026.1973664/full",
+          "reference": "turn43search1"
+        },
+        {
+          "title": "A two-stage hierarchical support vector machine framework detects roasted coffee adulterants through principal component analysis of hyperspectral imaging data",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13350853/",
+          "reference": "turn43search2"
+        },
+        {
+          "title": "Prequential E-Values for Selected-GP Near-Optimality Certificates",
+          "url": "https://arxiv.org/abs/2609.39123",
+          "reference": "turn43academia7"
+        },
+        {
+          "title": "Spectral Prototype Attention Domain Adaptation for Hyperspectral Image Classification",
+          "url": "https://www.mdpi.com/2072-4292/17/23/3901",
+          "reference": "turn43search3"
+        },
+        {
+          "title": "Classifying sentences | IBM Cloud Docs",
+          "url": "https://cloud.ibm.com/docs/discovery-data?topic=discovery-data-sentence-classifier",
+          "reference": "turn43search4"
+        },
+        {
+          "title": "Data mining – Confusion Matrix View",
+          "url": "https://www.ibm.com/docs/en/db2/11.1.0?topic=visualizer-confusion-matrix-view",
+          "reference": "turn43search5"
+        },
+        {
+          "title": "Overfitting Behaviour of Gaussian Kernel Ridgeless Regression: Varying Bandwidth or Dimensionality",
+          "url": "https://www.proceedings.com/content/079/079017-1668open.pdf",
+          "reference": "turn43search8"
+        },
+        {
+          "title": "Scaling Machine Learning Systems",
+          "url": "https://harvard-edge.github.io/cs249r_book_dev/vol2/14_robust_ai/14_robust_ai.html",
+          "reference": "turn43search6"
+        },
+        {
+          "title": "IBM Training",
+          "url": "https://www.iise.org/uploadedFiles/Webcasts/Public/DataScience_101-11.09.22.pdf",
+          "reference": "turn43search9"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification\""
+        },
+        {
+          "q": "\"ridge regression\" \"large regularization\" \"nearest\" classifier"
+        },
+        {
+          "q": "\"radial basis\" \"residual\" \"Gershgorin\" classification"
+        },
+        {
+          "q": "\"Gaussian\" \"prototype\" \"penalty\" \"certificate\" classifier"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+          "url": "https://arxiv.org/abs/2605.04046",
+          "reference": "turn45academia6"
+        },
+        {
+          "title": "Akriti — an open ecosystem for topological data analysis in Python – Akriti",
+          "url": "https://akriti.io/",
+          "reference": "turn45search0"
+        },
+        {
+          "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification | alphaXiv",
+          "url": "https://www.alphaxiv.org/audio/2605.04046v1",
+          "reference": "turn45search1"
+        },
+        {
+          "title": "Certified Topological Learning · Sushovan Majhi",
+          "url": "https://www.smajhi.com/research/projects/kernels.html",
+          "reference": "turn45search2"
+        },
+        {
+          "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+          "url": "https://www.researchgate.net/publication/404468205_A_Closed-Form_Adaptive-Landmark_Kernel_for_Certified_Point-Cloud_and_Graph_Classification?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19",
+          "reference": "turn45search3"
+        },
+        {
+          "title": "GitHub - akritihq/akriti · GitHub",
+          "url": "https://github.com/akritihq/akriti",
+          "reference": "turn45search4"
+        },
+        {
+          "title": "Under review as submission to TMLR",
+          "url": "https://openreview.net/pdf/3eae75f0ef390bac3a4aec2e77a081d9fc807fbe.pdf",
+          "reference": "turn45search7"
+        },
+        {
+          "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+          "url": "https://www.catalyzex.com/paper/a-closed-form-adaptive-landmark-kernel-for",
+          "reference": "turn45search5"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Nearest neighbor and potential function\" Srihari White Snabb 1979"
+        },
+        {
+          "q": "\"Gaussian\" \"ridge\" \"limit\" \"kernel vote\" classification"
+        },
+        {
+          "q": "\"radial basis\" \"interval\" \"regularization\" \"classification\" bounds"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Id",
+          "url": "https://citeseerx.ist.psu.edu/document?doi=daed1c1f0021e2b8da67c6dfb32eaf610bfe0791&repid=rep1&type=pdf",
+          "reference": "turn49search9"
+        },
+        {
+          "title": "Identity conditions for nearest-neighbor and potential-function classifiers - MaRDI portal",
+          "url": "https://portal.mardi4nfdi.de/wiki/Identity_conditions_for_nearest-neighbor_and_potential-function_classifiers",
+          "reference": "turn49search0"
+        },
+        {
+          "title": "An algorithm for determining identity of nearest-neighbor and potential function decision rules",
+          "url": "https://www.sciencedirect.com/science/article/pii/0031320380900278",
+          "reference": "turn49search1"
+        },
+        {
+          "title": "IEEE TRANSACTIONS",
+          "url": "https://luc.devroye.org/devroye_wagner_1979_distribution_free_performance_bounds_for_potential_function_rules.pdf",
+          "reference": "turn49search10"
+        },
+        {
+          "title": "1130 Logarithmic Spiral Grids for Ima",
+          "url": "https://history.siggraph.org/wp-content/uploads/2024/08/1979-SIGGRAPH-Locator.pdf",
+          "reference": "turn49search11"
+        },
+        {
+          "title": "Sargur Srihari's Publications",
+          "url": "https://cedar.buffalo.edu/~srihari/papers/index.html",
+          "reference": "turn49search2"
+        },
+        {
+          "title": "Continuous Bayesian Nonparametrics: Gaussian Processes :: Probability & Probabilistic Computing Tutorial",
+          "url": "https://josephausterweil.github.io/probintro/complexity/gaussian-processes/index.html",
+          "reference": "turn49search3"
+        },
+        {
+          "title": "Utilizing Temporal Information in fMRI Decoding: Classifier Using Kernel Regression Methods",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3159769/",
+          "reference": "turn49search4"
+        },
+        {
+          "title": "Radial Basis Function network learning using localized generalization error bound",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020025509002436",
+          "reference": "turn49search5"
+        },
+        {
+          "title": "Bilinear Gaussian Radial Basis Function Networks for classification of repeated measurements",
+          "url": "https://www.diva-portal.org/smash/get/diva2%3A1479389/FULLTEXT01.pdf",
+          "reference": "turn49search12"
+        },
+        {
+          "title": "Interval uncertainty analysis for static response of structures using radial basis functions",
+          "url": "https://scispace.com/papers/interval-uncertainty-analysis-for-static-response-of-41a3p0x68u",
+          "reference": "turn49search6"
+        },
+        {
+          "title": "Symbolic classification, clustering and fuzzy radial basis function network",
+          "url": "https://www.researchgate.net/publication/222232804_Symbolic_classification_clustering_and_fuzzy_radial_basis_function_network",
+          "reference": "turn49search7"
+        },
+        {
+          "title": "Regularization Theory and Neural Networks Architectures",
+          "url": "https://www.academia.edu/13772976/Regularization_Theory_and_Neural_Networks_Architectures",
+          "reference": "turn49search8"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "search_date_local": "2026-11-15",
+      "search_timezone": "Asia/Riyadh",
+      "execution_utc_date": "2026-11-14",
+      "engine": "system1",
+      "queries": [
+        {
+          "q": "\"Approximation by non-symmetric networks for cross-domain learning\""
+        },
+        {
+          "q": "\"Learning discriminative prototypes\" \"Adaptive relation-aware\""
+        },
+        {
+          "q": "\"Prototypes as Anchors: Tackling Unseen Noise\" "
+        },
+        {
+          "q": "\"Neural Networks\" journal aims scope mathematical theoretical"
+        }
+      ],
+      "citation_route": null,
+      "returned_record_metadata": [
+        {
+          "title": "Approximation by non-symmetric networks for cross-domain learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608025001613",
+          "reference": "turn50search0"
+        },
+        {
+          "title": "Learning discriminative prototypes: Adaptive relation-aware refinement and patch-level contextual feature reweighting for few-shot classification",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608026001115",
+          "reference": "turn50search1"
+        },
+        {
+          "title": "Prototypes as Anchors: Tackling Unseen Noise for online continual learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0893608025005143",
+          "reference": "turn50search2"
+        },
+        {
+          "title": "Neural Networks Journal",
+          "url": "https://www.inns.org/neural-networks-journal",
+          "reference": "turn50search3"
+        },
+        {
+          "title": "Learning discriminative prototypes: Adaptive relation-aware refinement and patch-level contextual feature reweighting for few-shot classification.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41638099/",
+          "reference": "turn50search4"
+        },
+        {
+          "title": "Instructions To Authors",
+          "url": "https://www.inns.org/instructions-to-authors",
+          "reference": "turn50search5"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "NN26-Fan",
+      "authors": "Zhenzhou Fan; Min Lei; Ruiping Niu; Letian Wang; Hongen Jia; Peiyao Liu",
+      "title": "Learning-based local RBF neural network with adaptively supported domain for solving partial differential equations",
+      "venue": "Neural Networks",
+      "issue_year": 2027,
+      "online_record_date": "2026-09-15 (PubMed Article date; publisher online date not independently exposed)",
+      "doi": "10.1016/j.neunet.2026.109643",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608026010981",
+      "access": "Publisher indexed abstract/highlights; PubMed publication record",
+      "inspected": "Abstract and highlights; PubMed issue/article dates",
+      "finding": "Learns per-center local support for sparse RBF PDE discretization.",
+      "author_stated_limitations": "No own-study limitations inspected; abstract describes prior support-domain sensitivity.",
+      "inferred_gap": "Its PDE support adaptation is a different object from ridge classifier label preservation.",
+      "relationship": "Current target-journal RBF numerical stability context.",
+      "potential_to_defeat": "Low under inspected abstract; no equivalent classifier theorem shown.",
+      "refs": [
+        "turn41search2",
+        "turn41search6"
+      ],
+      "query_ids": [
+        "Q01",
+        "Q08"
+      ]
+    },
+    {
+      "id": "NN26-LDP",
+      "authors": "Mengjuan Jiang; Fanzhang Li",
+      "title": "Learning discriminative prototypes: Adaptive relation-aware refinement and patch-level contextual feature reweighting for few-shot classification",
+      "venue": "Neural Networks",
+      "issue_year": 2026,
+      "online_record_date": "2026-01-29 (PubMed article date)",
+      "doi": "10.1016/j.neunet.2026.108649",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608026001115",
+      "access": "Publisher indexed abstract, introduction, section previews; PubMed record",
+      "inspected": "Highlights, abstract, introduction/contributions, problem and datasets snippets, conclusion preview",
+      "finding": "Refines class prototypes using inter-class relations and local patch context for few-shot classification.",
+      "author_stated_limitations": "No own-study limitations inspected; introduction identifies prior static-prototype and support-sample shortcomings.",
+      "inferred_gap": "Learned prototype discriminability does not establish conventional coefficient-ridge agreement over a width/penalty continuum.",
+      "relationship": "Current target-journal prototype representation context.",
+      "potential_to_defeat": "Low for the precise theorem; keep in frontier briefing rather than automatically add to manuscript.",
+      "refs": [
+        "turn50search1",
+        "turn50search4"
+      ],
+      "query_ids": [
+        "Q01",
+        "Q13"
+      ]
+    },
+    {
+      "id": "NN26-ProP",
+      "authors": "Haihua Luo; Xuming Ran; Zhengji Li; Huiyan Xue; Tingting Jiang; Jiangrong Shen; Tommi Kärkkäinen; Qi Xu; Fengyu Cong",
+      "title": "Key-value pair-free continual learner via task-specific prompt-prototype",
+      "venue": "Neural Networks",
+      "issue_year": 2026,
+      "doi": "10.1016/j.neunet.2026.108576",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608026000390",
+      "access": "Publisher indexed abstract",
+      "inspected": "Abstract",
+      "finding": "Binds task-specific prompts and prototypes for continual-learning inference.",
+      "author_stated_limitations": "Not inspected.",
+      "inferred_gap": "No coefficient-ridge parameter-region result established in inspected abstract.",
+      "relationship": "Peripheral prototype-learning current context.",
+      "potential_to_defeat": "Low; screened out of pivotal comparison.",
+      "refs": [
+        "turn30search0"
+      ],
+      "query_ids": [
+        "Q01"
+      ]
+    },
+    {
+      "id": "NN25-PAA",
+      "authors": "Shao-Yuan Li; Yu-Xiang Zheng; Sheng-Jun Huang; Songcan Chen; Kangkan Wang",
+      "title": "Prototypes as Anchors: Tackling Unseen Noise for online continual learning",
+      "venue": "Neural Networks",
+      "issue_year": 2025,
+      "doi": "10.1016/j.neunet.2025.107634",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608025005143",
+      "access": "Publisher indexed abstract and introduction",
+      "inspected": "Highlights, abstract, introduction, contribution list",
+      "finding": "Uses prototype similarity denoising and dual-classifier consistency for unseen label noise in continual learning.",
+      "author_stated_limitations": "No own-study limitations inspected; introduction identifies prior seen-closed-set noise assumptions.",
+      "inferred_gap": "The demonstrated consistency mechanism addresses evolving noisy data, not Gaussian readout agreement under hyperparameter variation.",
+      "relationship": "2025 target-journal prototype reliability context.",
+      "potential_to_defeat": "Low for precise region theorem.",
+      "refs": [
+        "turn50search2"
+      ],
+      "query_ids": [
+        "Q08",
+        "Q13"
+      ]
+    },
+    {
+      "id": "NN25-Mhaskar",
+      "authors": "H. N. Mhaskar",
+      "title": "Approximation by non-symmetric networks for cross-domain learning",
+      "venue": "Neural Networks",
+      "issue_year": 2025,
+      "doi": "10.1016/j.neunet.2025.107282",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608025001613",
+      "access": "Publisher indexed abstract and metadata; parent attempted publisher full403 and arXiv HTML DisabledError",
+      "inspected": "Abstract, keywords, no-data statement",
+      "finding": "Derives uniform approximation estimates for families of non-symmetric kernel networks.",
+      "author_stated_limitations": "Not inspected.",
+      "inferred_gap": "Uniform function approximation concerns a different quantified object than fitted label agreement over two hyperparameters.",
+      "relationship": "Recent target-journal mathematical and kernel-network analysis.",
+      "potential_to_defeat": "Low at abstract level. Parent deeper-check outcome: publisher full text403; arXiv HTML DisabledError. Peripheral record, not a central access blocker.",
+      "refs": [
+        "turn50search0"
+      ],
+      "query_ids": [
+        "Q13"
+      ]
+    },
+    {
+      "id": "NN24-Dagostino",
+      "authors": "Danny D'Agostino; Ilija Ilievski; Christine Annette Shoemaker",
+      "title": "Learning active subspaces and discovering important features with Gaussian radial basis functions neural networks",
+      "venue": "Neural Networks",
+      "issue_year": 2024,
+      "doi": "10.1016/j.neunet.2024.106335",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608024002594",
+      "fulltext_url": "https://arxiv.org/html/2307.05639v2",
+      "access": "Publisher record; author full text selected sections",
+      "inspected": "Sections 3/3.1, Eq3 and Eq7; Section4.3 Figure5 discussion; Section5; initial model overview",
+      "finding": "Learns a precision matrix, extracts spectral feature geometry, and empirically examines precision and readout regularizers.",
+      "author_stated_limitations": "No declaration concerning nearest-prototype agreement found in inspected conclusion.",
+      "inferred_gap": "A continuum certificate relative to a fixed selected-prototype label is distinct from its two-regularizer performance search.",
+      "relationship": "Closest recent target-journal Gaussian RBF interpretability and regularization comparator.",
+      "potential_to_defeat": "Defeats a claim that joint geometry/readout parameter exploration itself is novel.",
+      "refs": [
+        "turn31search3",
+        "turn51view0",
+        "turn53view0",
+        "turn52view1",
+        "turn52view2"
+      ],
+      "query_ids": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "NN24-Msparse",
+      "authors": "Author names not extracted in this bounded pass",
+      "title": "Generalized M-sparse algorithms for constructing fault tolerant RBF networks",
+      "venue": "Neural Networks",
+      "issue_year": 2024,
+      "online_record_date": "2024-08-14 institutional online record; issue December2024",
+      "doi": "10.1016/j.neunet.2024.106633",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0893608024005574",
+      "access": "Publisher indexed abstract/introduction; institutional record",
+      "inspected": "Abstract, introduction, convergence contribution, section roadmap; institutional date record",
+      "finding": "Selects fixed-center nodes and readout weights using a fault-tolerant objective and sparse hard thresholding.",
+      "author_stated_limitations": "No own-study limitations inspected.",
+      "inferred_gap": "Weight-fault training and algorithm convergence do not establish width/ridge nearest-label agreement.",
+      "relationship": "Recent target-journal RBF construction and reliability context.",
+      "potential_to_defeat": "Low; useful to avoid presenting classical RBF analysis as absent from current journal.",
+      "refs": [
+        "turn42search1",
+        "turn42search2"
+      ],
+      "query_ids": [
+        "Q09"
+      ]
+    },
+    {
+      "id": "X25-TWD",
+      "authors": "Tengbiao Li; Junsheng Qiao",
+      "title": "A novel radial basis function neural network classifier based on three-way decisions",
+      "venue": "Engineering Applications of Artificial Intelligence",
+      "issue_year": 2025,
+      "doi": "10.1016/j.engappai.2024.109811",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0952197624019705",
+      "access": "Publisher indexed abstract; direct open403",
+      "inspected": "Abstract and keywords",
+      "finding": "Combines three-way decisions, gradient harmonizing and information granules for imbalanced RBF classification; reports convergence analysis.",
+      "author_stated_limitations": "Not inspected.",
+      "inferred_gap": "Three-way training treatment is different from the logical certified/excluded/unresolved status of an agreement property.",
+      "relationship": "Terminology-collision challenge, not equivalent solution.",
+      "potential_to_defeat": "Low for precise property at inspected access level.",
+      "refs": [
+        "turn42search3"
+      ],
+      "query_ids": [
+        "Q02",
+        "Q07",
+        "Q09"
+      ]
+    },
+    {
+      "id": "X24-Qian",
+      "authors": "Xusheng Qian; Jisu Hu; Yi Zheng; He Huang; Zhiyong Zhou; Yakang Dai",
+      "title": "Safe dynamic sparse training of modified RBF networks for joint feature selection and classification",
+      "venue": "Neurocomputing",
+      "issue_year": 2024,
+      "doi": "10.1016/j.neucom.2024.128150",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925231224009214",
+      "access": "Publisher indexed abstract/introduction/conclusion; direct open403",
+      "inspected": "Abstract, introduction, contribution preview, conclusion and author-credit metadata",
+      "finding": "Anisotropic Gaussian, L1 softmax training with safe pruning that preserves gradient updates.",
+      "author_stated_limitations": "Not inspected.",
+      "inferred_gap": "Its safety target is optimization-update preservation, not prototype-label preservation over coefficient-ridge regions.",
+      "relationship": "Alternative safe-RBF terminology challenge.",
+      "potential_to_defeat": "Low for precise theorem; defeats broad first-safe-RBF language.",
+      "refs": [
+        "turn41search1",
+        "turn41search4"
+      ],
+      "query_ids": [
+        "Q02",
+        "Q08"
+      ]
+    },
+    {
+      "id": "X24-Lin",
+      "authors": "Shao-Bo Lin",
+      "title": "Adaptive parameter selection for kernel ridge regression",
+      "venue": "Applied and Computational Harmonic Analysis",
+      "issue_year": 2024,
+      "doi": "10.1016/j.acha.2024.101671",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1063520324000484",
+      "access": "Publisher indexed abstract and introduction snippets; direct open403",
+      "inspected": "Abstract; Lepskii principle and parameter-subdivision snippets",
+      "finding": "Uses spectral structure and fine penalty subdivision to obtain adaptive KRR parameter selection and optimal learning rates.",
+      "author_stated_limitations": "No own-study limitation inspected; snippet identifies prior posterior-choice question.",
+      "inferred_gap": "Statistical rate-optimal penalty selection is a different target from deterministic two-parameter per-query label agreement.",
+      "relationship": "Current spectral parameter-path challenge.",
+      "potential_to_defeat": "Medium conceptual overlap; no exact closure apparent at abstract access.",
+      "refs": [
+        "turn41search0",
+        "turn37search6"
+      ],
+      "query_ids": [
+        "Q06",
+        "Q08"
+      ]
+    },
+    {
+      "id": "X26-Sun",
+      "authors": "Jian Sun; Wenshuai Wang",
+      "title": "Optimizing shape parameters in RBF methods: A systematic review of techniques, applications, and computational challenges",
+      "venue": "Computer Science Review",
+      "issue_year": 2026,
+      "doi": "10.1016/j.cosrev.2025.100842",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1574013725001182",
+      "access": "Publisher indexed abstract",
+      "inspected": "Abstract and publication metadata",
+      "finding": "Reviews shape-parameter selection methods across interpolation, PDEs and machine learning.",
+      "author_stated_limitations": "Abstract reports scalability, noise and theoretical challenges for the reviewed field.",
+      "inferred_gap": "A broad review's stated theoretical gaps cannot by themselves establish this manuscript's precise gap.",
+      "relationship": "Discovery lead, not a proof or an exact novelty comparator.",
+      "potential_to_defeat": "Unresolved reference-chain lead; full reference list not inspected.",
+      "refs": [
+        "turn31search8"
+      ],
+      "query_ids": [
+        "Q02"
+      ]
+    },
+    {
+      "id": "X98-GNPC",
+      "authors": "Ludmila I. Kuncheva; James C. Bezdek",
+      "title": "An Integrated Framework for Generalized Nearest Prototype Classifier Design",
+      "venue": "International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems",
+      "issue_year": 1998,
+      "doi": "10.1142/S0218488598000355",
+      "url": "https://www.worldscientific.com/doi/abs/10.1142/S0218488598000355",
+      "author_record_url": "https://www.lucykuncheva.co.uk/recent_publications.htm",
+      "access": "Author bibliography; discovery abstract on ResearchGate; publisher403; primary body not accessed",
+      "inspected": "Author bibliography entry verifies1998, volume6(5),437–457; discovery abstract only",
+      "finding": "Discovery abstract unifies NN/RBF/Parzen/LVQ through prototype similarity aggregation; primary scientific claim remains unverified.",
+      "author_stated_limitations": "Not inspected.",
+      "inferred_gap": "Potential historical generalization of prototype aggregation; cannot assess exact theorem overlap without body.",
+      "relationship": "Historical alternative-terminology lead.",
+      "potential_to_defeat": "No demonstrated exact closure; optional full-text follow-up if broader classifier-unification language is retained.",
+      "refs": [
+        "turn38search0",
+        "turn42view0",
+        "turn51view3"
+      ],
+      "query_ids": [
+        "Q06",
+        "Q07",
+        "Q09"
+      ]
+    },
+    {
+      "id": "X26-PALACE",
+      "authors": "Sushovan Majhi; Atish Mitra; Žiga Virk; Pramita Bagchi",
+      "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+      "venue": "arXiv preprint; author site says under review at JMLR",
+      "issue_year": 2026,
+      "doi": null,
+      "url": "https://arxiv.org/abs/2605.04046",
+      "fulltext_url": "https://arxiv.org/html/2605.04046v1",
+      "access": "Author full text selected sections",
+      "inspected": "Sections3.1,5.1 Theorem5.1,5.2,6 headers/selected sensitivity entries,7 limitations",
+      "finding": "Sampling-based centroid agreement certificate in a persistence-landmark embedding; its bandwidth is selected by cross-validation.",
+      "author_stated_limitations": "Section7 says certificates apply to nearest-centroid classifier and reports low firing at investigated sample sizes.",
+      "inferred_gap": "Neither a fitted coefficient-ridge RBF region nor equality with an individual selected training prototype is its certificate target.",
+      "relationship": "New certified-landmark/prototype counterexample challenge.",
+      "potential_to_defeat": "Low after theorem inspection; preprint status retained.",
+      "refs": [
+        "turn45academia6",
+        "turn46view4",
+        "turn47view3",
+        "turn48view4"
+      ],
+      "query_ids": [
+        "Q10",
+        "Q11"
+      ]
+    },
+    {
+      "id": "P16-Que",
+      "authors": "Qichao Que; Mikhail Belkin",
+      "title": "Back to the Future: Radial Basis Function Networks Revisited",
+      "venue": "AISTATS/PMLR51",
+      "issue_year": 2016,
+      "doi": null,
+      "url": "https://proceedings.mlr.press/v51/que16.pdf",
+      "access": "Publisher full text selected sections,9 pages available",
+      "inspected": "Introduction; coefficient-vs-RKHS discussion; Theorem1/Corollary1; k-means theorem passage; Table3 and Section5.3",
+      "finding": "Coefficient-regularized RBFs have data-dependent kernel interpretations and statistical bounds.",
+      "author_stated_limitations": "Section5.2 notes full-RBF computational burden; no author-declared region-agreement gap extracted.",
+      "inferred_gap": "Its statistical analysis and finite parameter grids leave the specified query-level uniform agreement property untreated in inspected evidence.",
+      "relationship": "Closest model-family predecessor.",
+      "potential_to_defeat": "High if manuscript conflates its model or claims coefficient-ridge RBF analysis generally new; precise region result survives.",
+      "refs": [
+        "turn46view0",
+        "turn47view0",
+        "turn48view1"
+      ],
+      "query_ids": [
+        "citation route from supplied verified ledger"
+      ]
+    },
+    {
+      "id": "P15-Shibagaki",
+      "authors": "Atsushi Shibagaki; Yoshiki Suzuki; Masayuki Karasuyama; Ichiro Takeuchi",
+      "title": "Regularization Path of Cross-Validation Error Lower Bounds",
+      "venue": "NeurIPS",
+      "issue_year": 2015,
+      "doi": null,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/82b8a3434904411a9fdc43ca87cee70c-Paper.pdf",
+      "access": "Publisher full text selected sections,9 pages available",
+      "inspected": "Section2 setup; Section3.1 Lemma1 and Eq5 score bounds; Section1 Figure1 and interval guarantee",
+      "finding": "Bounds individual binary validation scores from approximate solutions at another penalty and provides validation approximation guarantees over an interval.",
+      "author_stated_limitations": "Section2 explicitly fixes linear binary setup and finite penalty interval; conditional kernelization stated.",
+      "inferred_gap": "Existing fixed-input score bounds precede parameter-region prediction control; Gaussian feature variation and prescribed nearest-label reference remain the differentiating objects.",
+      "relationship": "Strongest direct conceptual parameter-range predecessor.",
+      "potential_to_defeat": "High against broad first parameter-region certificate language.",
+      "refs": [
+        "turn46view2",
+        "turn48view3",
+        "turn53view3"
+      ],
+      "query_ids": [
+        "Q06",
+        "citation route from supplied ledger"
+      ]
+    },
+    {
+      "id": "P19-Ndiaye",
+      "authors": "Eugene Ndiaye; Tam Le; Olivier Fercoq; Joseph Salmon; Ichiro Takeuchi",
+      "title": "Safe Grid Search with Optimal Complexity",
+      "venue": "ICML/PMLR97",
+      "issue_year": 2019,
+      "doi": null,
+      "url": "https://proceedings.mlr.press/v97/ndiaye19a.html",
+      "fulltext_url": "https://proceedings.mlr.press/v97/ndiaye19a/ndiaye19a.pdf",
+      "access": "Publisher full text introduction available; selected-body fetches timed out; supplied prior ledger verifies Sections2–4/Lemma4",
+      "inspected": "This pass: abstract/introduction and fixed-design path motivation; prior supplied audit: Section4/Lemma4",
+      "finding": "Convex regularization path approximation and validation-error bounds with prescribed tuning accuracy.",
+      "author_stated_limitations": "Introduction discusses shortcomings of earlier exact paths; no own-study declaration of the present gap extracted.",
+      "inferred_gap": "Fixed-design penalty paths do not directly supply the manuscript's varying Gaussian design plus nearest-label equality test.",
+      "relationship": "Strong path-certificate predecessor.",
+      "potential_to_defeat": "High against broad path-guarantee novelty.",
+      "refs": [
+        "turn46view1",
+        "turn51view2"
+      ],
+      "query_ids": [
+        "citation route from supplied ledger"
+      ]
+    },
+    {
+      "id": "P79-Srihari",
+      "authors": "Sargur N. Srihari; Lee J. White; Thomas Snabb",
+      "title": "Identity conditions for nearest-neighbor and potential-function classifiers",
+      "venue": "Information Sciences",
+      "issue_year": 1979,
+      "doi": "10.1016/0020-0255(79)90030-6",
+      "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/23481/0000434.pdf?sequence=1",
+      "access": "This pass: repository403; supplied prior ledger confirms primary full-text Sections2–4; discovered indexed primary scan abstract",
+      "inspected": "Inherited verified pp22–23/Sections3–4; current search exact abstract/identity and follow-on1980 primary abstract",
+      "finding": "Finite-scale conditions and algorithm for identical nearest-neighbor and exponential-potential decision surfaces.",
+      "author_stated_limitations": "No author-declared present gap extracted.",
+      "inferred_gap": "Prescribed potential decision surfaces differ from a fixed query's learned ridge readout over bandwidth/penalty regions.",
+      "relationship": "Strongest historical equivalence predecessor.",
+      "potential_to_defeat": "Defeats general first finite-scale nearest/radial agreement framing; already included in R5.",
+      "refs": [
+        "turn49search9",
+        "turn49search1"
+      ],
+      "query_ids": [
+        "Q12",
+        "supplied prior audit"
+      ]
+    },
+    {
+      "id": "P25-Saralajew",
+      "authors": "Sascha Saralajew; Ashish Rana; Thomas Villmann; Ammar Shaker",
+      "title": "A Robust Prototype-Based Network with Interpretable RBF Classifier Foundations",
+      "venue": "AAAI2025 (publication status from supplied bibliography); author arXiv full text",
+      "publication_metadata_note": "AAAI2025 DOI verified in supplied manuscript bibliography and confirmed by parent audit; inherited bibliographic metadata.",
+      "issue_year": 2025,
+      "doi": "10.1609/aaai.v39i19.34233",
+      "url": "https://arxiv.org/html/2412.15499v3",
+      "access": "Author full text selected sections",
+      "inspected": "Section2 nearest-component/weighted-readout explanation; Section3 Theorems1–2 input-perturbation objects; Section5 discussion",
+      "finding": "Shows nearest components need not dominate weighted class scores; constrained probabilistic architecture supplies input robustness bounds.",
+      "author_stated_limitations": "Section5 describes deep-model partial interpretability and expert knowledge needed to interpret components.",
+      "inferred_gap": "Retaining the conventional unconstrained ridge readout and certifying its agreement across width/penalty regions poses a different question.",
+      "relationship": "Closest recent mechanism and architectural-response predecessor.",
+      "potential_to_defeat": "Defeats generic claim nearest-prototype mismatch is newly recognized.",
+      "refs": [
+        "turn51view1",
+        "turn52view3",
+        "turn53view1",
+        "turn52view4"
+      ],
+      "query_ids": [
+        "citation route from supplied ledger"
+      ]
+    }
+  ],
+  "access_events": [
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S1063520324000484",
+      "outcome": "direct open403; indexed publisher abstract inspected"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0952197624019705",
+      "outcome": "direct open403; indexed publisher abstract inspected"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925231224009214",
+      "outcome": "direct open403; indexed publisher abstract/introduction inspected"
+    },
+    {
+      "url": "https://www.worldscientific.com/doi/abs/10.1142/S0218488598000355",
+      "outcome": "403; author metadata confirms identity; scientific body unverified"
+    },
+    {
+      "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/23481/0000434.pdf?sequence=1",
+      "outcome": "403 this pass; prior supplied source audit separately marked as inherited"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v97/ndiaye19a/ndiaye19a.pdf",
+      "outcome": "intro fetched; later body requests timeout; prior supplied body audit retained as inherited"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39208461/",
+      "outcome": "CAPTCHA on direct open; publisher and institutional indexed records inspected"
+    }
+  ],
+  "central_question": "Can endpoint training quantities guarantee a fixed query's conventional coefficient-ridge Gaussian RBF label equals a selected nearest-prototype label simultaneously across (0,t]×[lambda0,infinity), exclude impossible whole regions, and certify suitable local-width tails?",
+  "gate_findings": {
+    "J1": "PASS within bounded verified search;2026,2025,2024 target-journal records mapped at explicit access levels.",
+    "J2": "PASS within bounded verified search; alternative statistical,path,geometric,architectural and certified-centroid solutions challenged the precise target.",
+    "J5": "PASS for the narrowed integrated parameter-region contribution. Strongest predecessors already cover finite-scale nearest/potential identity, coefficient-ridge statistical analysis and parameter-path score control; none of the inspected evidence supplies the exact combined property.",
+    "J9": "PASS at recorded access levels. No abstract-only source is treated as a full-theorem verification. Historical GNPC scientific body remains unverified.",
+    "J10": "PASS for scope relevance: target-journal Gaussian RBF interpretation,regularization,and mathematical kernel analysis are active. This is a scope determination,not an acceptance prediction."
+  },
+  "early_missing_central_paper": "No concrete omitted central paper found. Srihari1979 is already in R5. GNPC1998 and Sun&Wang2026 remain secondary discovery leads,not demonstrated closures.",
+  "candidate_priorities": [
+    {
+      "rank": 1,
+      "candidate": "Integrated full-width/penalty-tail agreement diagnosis",
+      "classification": "residual/implicit gap",
+      "verdict": "CONFIRMED WITHIN VERIFIED SEARCH SCOPE",
+      "reason": "Combines varying Gaussian design, fixed selected-prototype reference, sufficient continuum agreement and strict exclusions.",
+      "decisive_evidence": "Manuscript residual decomposition, spectral floor, two-endpoint penalty envelope and margin theorem; existing stored empirical audits remain protected."
+    },
+    {
+      "rank": 2,
+      "candidate": "Signed endpoint local-width tail certificate",
+      "classification": "subordinate residual gap",
+      "verdict": "CONFIRMED WITHIN VERIFIED SEARCH SCOPE",
+      "reason": "Computable local bands address widths where the limiting vote agrees although a whole-width region is unavailable.",
+      "decisive_evidence": "ridge_theory.tex local-tail theorem and comparison with positive-class-sum bound."
+    },
+    {
+      "rank": 3,
+      "candidate": "Large-penalty limit as standalone novelty",
+      "classification": "closed as a general mathematical insight",
+      "verdict": "ALREADY ADDRESSED",
+      "reason": "Resolvent identity and continuity are standard; manuscript-specific finite thresholds are part of the integrated analysis."
+    },
+    {
+      "rank": 4,
+      "candidate": "General finite-scale equivalence of nearest and radial decisions",
+      "classification": "closed/refuted broad candidate",
+      "verdict": "ALREADY ADDRESSED",
+      "reason": "Srihari1979 directly studies finite-scale decision-surface identity; already cited."
+    }
+  ],
+  "limitations": [
+    "Bounded targeted search,not an exhaustive systematic review or proof of global novelty.",
+    "Recent2026 target sources inspected through indexed publisher previews/records; no new2026 target full theorem body was accessible in this pass.",
+    "GNPC primary body and Sun&Wang review reference-chain were not inspected; neither is promoted to a verified exact overlap.",
+    "No numerical rerun,proof revalidation or source edit was performed by this search task."
+  ]
+}

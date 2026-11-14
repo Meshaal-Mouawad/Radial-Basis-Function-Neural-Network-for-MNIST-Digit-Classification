@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-14",
+  "reviewer": "/root/r5_source_verification",
+  "model_record": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none",
+    "evidence": "Root-confirmed successful spawn arguments, communicated 2026-11-14. Configuration is recorded from spawn arguments; backend model identity was not independently measured.",
+    "agent": "/root/r5_source_verification"
+  },
+  "scope": "Source-attribution consistency of R5 Introduction and Related work, including comparison table. No manuscript edits, proof review, or numerical rerun.",
+  "input_files": {
+    "working_R5/source/main.tex": {
+      "sha256": "1a0d865b5a9bed22be8597f7891f9235a62831e41615ecc321f1c061b5aa8672",
+      "bytes": 57635
+    },
+    "working_R5/source/references.bib": {
+      "sha256": "4d3d47cb7b9f28e5f83ad2fdc7e2b5b3d310abd7ae393bdb9d29f2ac483eb076",
+      "bytes": 6997
+    },
+    "upload/Universal_Literature_Review_Prompt(1).md": {
+      "sha256": "f887ab176ab88e2e252117c30a97a516f80cf9c9d1fb1e35b86cc0f2b66929d1",
+      "bytes": 5438
+    },
+    "r5_editorial/review/literature_verification.md": {
+      "sha256": "e9881cc256d741e62af5a34c137a6a997b01c51d78fe2fcdd5381b45ed51d12e",
+      "bytes": 14421
+    },
+    "r5_editorial/review/literature_verification.json": {
+      "sha256": "ae0caaa98e05f7dcfda7a749c58bbbabe05ea5bc58bdf4a9a7c0a755ffa74bc9",
+      "bytes": 15598
+    },
+    "r5_editorial/review/srihari1979_verified.bib": {
+      "sha256": "8540a2784eadea0d33ed48007df6c1d3dd4e49b3ae21cac03dbb020530040460",
+      "bytes": 407
+    }
+  },
+  "section_sha256": {
+    "introduction": "1097ed1070cf5c2be3e1f12e00528c1680a1501043c76ac2f5995744cb2ffb7a",
+    "related_work": "ce8abceb95d3f6fcaf8d2245c09bd82a20506a2d7d3fc9470ab0f18f7c9e3a88"
+  },
+  "result": "All reviewed substantive source attributions match the verified evidence.",
+  "findings": [],
+  "checks": [
+    {
+      "location": "Introduction, line 44; Related work, line 67",
+      "keys": [
+        "broomhead1988"
+      ],
+      "status": "supported",
+      "basis": "Publisher abstract states nonlinear adaptive interpolation learning reduces to linear equations."
+    },
+    {
+      "location": "Introduction, line 48; Related work, line 65; table row 95",
+      "keys": [
+        "srihari1979"
+      ],
+      "status": "supported",
+      "basis": "Full primary PDF Sections 2–4 explicitly compares nearest-sample and class-summed exponential potentials, finite scale, decision-surface identity, and geometric conditions/algorithm."
+    },
+    {
+      "location": "Introduction, line 48; Related work, line 67; table row 100",
+      "keys": [
+        "saralajew2025"
+      ],
+      "status": "supported",
+      "basis": "Author full text Section 2 explains unconstrained-weight reweighting of near/far components; Section 3 constructs probabilistic CBC extension with robustness analysis."
+    },
+    {
+      "location": "Related work, line 69; table row 101",
+      "keys": [
+        "fazaeli2026"
+      ],
+      "status": "supported at abstract/preview level",
+      "basis": "Publisher abstract/introduction verifies positive/negative learned prototypes, softmax-neuron interpretation, and reported near-boundary training-sample influence."
+    },
+    {
+      "location": "Related work, line 72; table rows 96–97",
+      "keys": [
+        "bugmann1998",
+        "radhakrishnan2023"
+      ],
+      "status": "supported",
+      "basis": "Bugmann primary abstract supports Voronoi-like normalized-response interpretation. Radhakrishnan Theorem 3 gives a 1-NN regime, and the following paragraph explicitly gives the Gaussian narrow-limit analogy."
+    },
+    {
+      "location": "Introduction, line 48; Related work, line 74; table row 99",
+      "keys": [
+        "que2016"
+      ],
+      "status": "supported",
+      "basis": "Publisher full text covers coefficient regularization, training-point centers, data-dependent kernels, and weighted k-means quantization error."
+    },
+    {
+      "location": "Related work, line 76; table rows 98, 102–103",
+      "keys": [
+        "dagostino2024",
+        "wurzberger2024",
+        "noorizadegan2026reliable",
+        "noorizadegan2026partition"
+      ],
+      "status": "supported",
+      "basis": "Relevant author/publisher full-text passages verify learnable precision/spectrum, deep RBF initialization/distance calculation, Gaussian feature-block conditioning, and normalized edge constant reproduction."
+    },
+    {
+      "location": "Related work, line 81; table rows 104–105",
+      "keys": [
+        "voracek2022",
+        "rosenfeld2020"
+      ],
+      "status": "supported at abstract level",
+      "basis": "PMLR primary abstracts identify input-perturbation and training-label-flip certificate objects respectively."
+    },
+    {
+      "location": "Introduction, line 48; Related work, line 83; table rows 106–107",
+      "keys": [
+        "shibagaki2015",
+        "ndiaye2019"
+      ],
+      "status": "supported",
+      "basis": "Publisher full text establishes score/CV bounds from approximate solutions and duality-gap solution regions along regularization paths with fixed design."
+    },
+    {
+      "location": "Related work, line 85",
+      "keys": [
+        "bindel2025"
+      ],
+      "status": "supported",
+      "basis": "Primary course notes explicitly give inverse times residual solution-error identity."
+    }
+  ],
+  "srihari_primary_access": {
+    "successful_ref": "turn23view0",
+    "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/23481/0000434.pdf?sequence=1",
+    "retrieval": "Web open successfully returned published PDF, 11 pages, 294 extracted lines, with full Sections 2–4. Subsequent screenshot and root retrieval requests returned HTTP 403.",
+    "local_pdf": null,
+    "local_pdf_explanation": "No PDF download was performed; verification used the successful primary web extraction.",
+    "relevant_locations": "PDF p1/header: metadata; pp2–3/Section 2: prescribed class potentials and finite scale; pp3–8/Section 3: identity conditions; pp9–10/Section 4: algorithm.",
+    "formal_difference": "Srihari fixes prescribed positive class-associated exponential potentials and analyzes identity of binary input-space decision surfaces. R5 fixes a query, fits signed multiclass coefficients by ridge regression, and certifies agreement throughout bandwidth–penalty regions."
+  },
+  "review_receipt": "Final root-designated R5 candidate reviewed after Bugmann clause removal and introduction mechanism tightening. No attribution correction remains.",
+  "production_refresh": {
+    "delta": "Root-reported production-only change: bibsep 2pt to 0pt; abstract validation comparator names dataset, seed, and prototype budget explicitly.",
+    "verified": "Introduction section, Related work section, and references.bib hashes unchanged. No relevant attribution delta.",
+    "previous_main_sha256": "705fa0bd28d836c0082e757c2919e1ed0cf9afc5b4f2bc2b0eb7effb30afa567",
+    "new_main_sha256": "1a0d865b5a9bed22be8597f7891f9235a62831e41615ecc321f1c061b5aa8672"
+  }
+}

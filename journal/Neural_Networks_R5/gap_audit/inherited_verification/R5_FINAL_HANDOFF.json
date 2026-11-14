@@ -1,0 +1,38 @@
+{
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "editorial_request": "RESOLVED",
+  "original_A_to_I_plan": "CLOSED_IN_R4",
+  "all_editorial_findings_resolved": true,
+  "numerical_evidence": "UNCHANGED_FROM_VERIFIED_R4",
+  "new_training_runs": 0,
+  "new_numerical_analyses": 0,
+  "journal_transfer_submission_complete": false,
+  "pages": 40,
+  "figures": 7,
+  "tables": 12,
+  "references": 18,
+  "gates": {
+    "independent_cold_reader": "PASS",
+    "independent_citation_review": "PASS",
+    "protection": "PASS",
+    "latex_build": "PASS",
+    "all_page_visual_inspection": "PASS",
+    "clean_source_build_and_rendered_comparison": "PASS",
+    "github_exact_scope": "PASS"
+  },
+  "main_sha256": "1a0d865b5a9bed22be8597f7891f9235a62831e41615ecc321f1c061b5aa8672",
+  "pdf_sha256": "6a00a5573e2f46ca85e6913988c766928b8628cb902cd1a2a6f0a5e8262f4041",
+  "github_commit": "059e0204c1fee7b52bae744cda65a7e0b7399d1c",
+  "journal_artifact_hashes": {
+    "Title_Page.pdf": "98b4952d2f6a252bf5a7346498c3b768f3450e132e8e6c21923a67bfa7f894e4",
+    "Declaration_of_Competing_Interest.docx": "fe76da86856a97184af55019b4fcaa4246ba504f0e5eb3e3c1812998be9fa1b5",
+    "Cover_Letter_Neural_Networks_R5.md": "15e06be354631f3e99382c405a19378fb09aa9786a187132ee5e73cdff3dda27",
+    "LaTeX_Source_Neural_Networks_R5.zip": "83576293d3133f8dfd4c9440d0933e4c913433b98939b2b3a06d725a9bb12456",
+    "Declaration_of_Competing_Interest.pdf": "f99cdd50e63ead1f7675a79b81e3bce8d4e8df45c9e6c6285e5ae555f290ea59",
+    "Supplementary_Research_Artifacts_R4.zip": "ee029862791413b993387234efe9ecad5114d99685ef5fd9d4add4eb53d080c8",
+    "Highlights_Neural_Networks_R5.txt": "199dda0ff2e39729ce0e77dc9336b201eed8320567baf6372b16e8ee81bc9b47",
+    "Cover_Letter_Neural_Networks_R5.pdf": "10f01b32e14305ba3295f228ed33eaa3504d1334deb1f1907ee3d41101b53c3e",
+    "Title_Page.docx": "b8fcddb7d48b25f5a99f5d880128ecc3b3075d008e53cc1e0c092e60f25e265a",
+    "RBF_Neural_Networks_Manuscript_R5.pdf": "6a00a5573e2f46ca85e6913988c766928b8628cb902cd1a2a6f0a5e8262f4041"
+  }
+}

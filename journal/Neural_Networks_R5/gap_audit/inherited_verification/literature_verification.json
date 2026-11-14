@@ -1,0 +1,284 @@
+{
+  "date": "2026-11-14",
+  "scope": "Independent R5 editorial attribution verification; no manuscript edits or scientific/numerical rerun.",
+  "inputs": [
+    "working_R4/source/main.tex",
+    "working_R4/source/references.bib",
+    "upload/Universal_Literature_Review_Prompt(1).md"
+  ],
+  "model_record": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none",
+    "evidence": "Root-confirmed successful spawn arguments, communicated 2026-11-14. Configuration is recorded from spawn arguments; backend model identity was not independently measured.",
+    "agent": "/root/r5_source_verification"
+  },
+  "result": "Central retained attributions are supported at the access levels recorded. One relevant historical identity-conditions study was found and is recommended as the single bibliography addition.",
+  "records": [
+    {
+      "key": "broomhead1988",
+      "authors": "D. S. Broomhead; David Lowe",
+      "year": 1988,
+      "access": "Publisher abstract",
+      "url": "https://www.complex-systems.com/abstracts/v02_i03_a05/",
+      "location": "Abstract",
+      "capability": "Adaptive nonlinear interpolation networks whose learning reduces to linear equations.",
+      "relevance": "Supports the separation of nonlinear basis responses from linear output estimation.",
+      "decision": "Retain current attribution.",
+      "refs": [
+        "turn9view1"
+      ]
+    },
+    {
+      "key": "que2016",
+      "authors": "Qichao Que; Mikhail Belkin",
+      "year": 2016,
+      "access": "Publisher full text, selected sections inspected",
+      "url": "https://proceedings.mlr.press/v51/que16.pdf",
+      "location": "pp. 1376 and 1378–1380; Sections 3–4, Theorems 1–2",
+      "capability": "Coefficient-L2 regularization and k-means RBF models admit data-dependent kernel interpretations; weighted k-means error analysis includes quantization loss.",
+      "relevance": "Closest existing theoretical analysis of the coefficient-regularized RBF family.",
+      "decision": "Retain. Distinguish the coefficient penalty from the Gaussian RKHS penalty. The weighted k-means qualification in R4 is accurate.",
+      "refs": [
+        "turn9view0",
+        "turn10view1",
+        "turn12view7",
+        "turn19view5"
+      ]
+    },
+    {
+      "key": "bugmann1998",
+      "authors": "Guido Bugmann",
+      "year": 1998,
+      "access": "Publisher indexed abstract/preview; institutional metadata. Full body not independently accessed.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925231298000277",
+      "location": "Abstract and indexed Section 2 preview",
+      "capability": "Compares normalized and standard RBF networks; describes normalized hidden responses as a Voronoi-like partition whose output values are supplied by output weights.",
+      "relevance": "Predecessor for geometric interpretations of normalized Gaussian responses.",
+      "decision": "Retain Voronoi-like description. Simplify table object to normalized Gaussian RBF responses; learned-center details and one-node dominance are not independently verified from primary body in this pass. Positive common normalization preserving argmax is direct algebra.",
+      "refs": [
+        "turn14search0",
+        "turn14view0",
+        "turn18search2"
+      ]
+    },
+    {
+      "key": "radhakrishnan2023",
+      "authors": "Adityanarayanan Radhakrishnan; Mikhail Belkin; Caroline Uhler",
+      "year": 2023,
+      "access": "Published institutional full text, Theorem 3 and associated explanation inspected",
+      "url": "https://escholarship.org/content/qt0hq66257/qt0hq66257.pdf",
+      "location": "Article p. 4, Theorem 3 and following kernel-ratio explanation",
+      "capability": "Characterizes a 1-NN regime for infinitely wide/deep networks under activation moment conditions; explicitly compares its dominance proof with the narrow Gaussian limit.",
+      "relevance": "Establishes the nearest-neighbour limiting mechanism used to orient the finite-bandwidth question.",
+      "decision": "Retain “a 1-NN regime”; do not say all infinitely wide/deep networks implement 1-NN.",
+      "refs": [
+        "turn11view2",
+        "turn12view4",
+        "turn19view1"
+      ]
+    },
+    {
+      "key": "saralajew2025",
+      "authors": "Sascha Saralajew; Ashish Rana; Thomas Villmann; Ammar Shaker",
+      "year": 2025,
+      "access": "Author full text, Sections 2–3 inspected",
+      "url": "https://arxiv.org/html/2412.15499v3",
+      "location": "Section 2, “On the interpretability of deep PBNs”; Section 3",
+      "capability": "Identifies mismatch between nearest centroids and weighted class scores; extends probabilistic Classification-by-Components to address interpretation issues and derives robustness guarantees.",
+      "relevance": "Direct support for why a nearest prototype need not determine the unconstrained weighted readout.",
+      "decision": "Retain. Attribute readout mismatch specifically to this analysis, rather than making every study in the theme jointly establish it.",
+      "refs": [
+        "turn9view2"
+      ]
+    },
+    {
+      "key": "fazaeli2026",
+      "authors": "Mahsa Fazaeli-Javan; Kamaledin Ghiasi-Shirazi",
+      "year": 2026,
+      "access": "Publisher indexed abstract, introduction and section previews; full body not accessed",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226013019",
+      "doi": "10.1016/j.neucom.2026.133904",
+      "location": "Abstract; introduction contribution list; conclusion preview",
+      "capability": "Uses the existing ±ED-WTA framework to interpret softmax output neurons through positive/negative prototypes and training-sample contributions; reports disproportionate influence from near-boundary samples.",
+      "relevance": "Complementary sample-level explanation of learned softmax decisions.",
+      "decision": "Retain as reported finding, with softmax target explicit. It does not establish the present ridge-region theorem.",
+      "refs": [
+        "turn8search0",
+        "turn14search3"
+      ]
+    },
+    {
+      "key": "shibagaki2015",
+      "authors": "Atsushi Shibagaki; Yoshiki Suzuki; Masayuki Karasuyama; Ichiro Takeuchi",
+      "year": 2015,
+      "access": "Publisher full text, Sections 2–4 inspected",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2015/file/82b8a3434904411a9fdc43ca87cee70c-Paper.pdf",
+      "location": "Section 2 binary linear setup; Section 3.1 score bounds; Section 4 interval approximation guarantee",
+      "capability": "Bounds validation scores at one regularization value from an approximate solution at another, then bounds cross-validation error over a regularization interval.",
+      "relevance": "Direct predecessor for reasoning over parameter ranges and query-score enclosures.",
+      "decision": "Retain current scoped description: regularized binary classification and fixed inputs.",
+      "refs": [
+        "turn11view0",
+        "turn12view6"
+      ]
+    },
+    {
+      "key": "ndiaye2019",
+      "authors": "Eugene Ndiaye; Tam Le; Olivier Fercoq; Joseph Salmon; Ichiro Takeuchi",
+      "year": 2019,
+      "access": "Publisher full text, Sections 2–4 inspected",
+      "url": "https://proceedings.mlr.press/v97/ndiaye19a/ndiaye19a.pdf",
+      "location": "Solution-path framework and Section 4, Lemma 4 (Gap safe region)",
+      "capability": "Builds approximate convex regularization paths with complexity guarantees and bounds validation error using solution regions defined by duality gaps.",
+      "relevance": "Parameter-path certification with a fixed design matrix; connects solution enclosures to validation predictions.",
+      "decision": "Retain. The fixed design versus bandwidth-varying features distinction is accurate.",
+      "refs": [
+        "turn10view0",
+        "turn11view1",
+        "turn12view5"
+      ]
+    },
+    {
+      "key": "noorizadegan2026reliable",
+      "authors": "Amir Noorizadegan; Sifan Wang; Leevan Ling",
+      "year": 2026,
+      "access": "Author full text, Sections 3–4 inspected; publisher indexed abstract and author publication metadata",
+      "url": "https://arxiv.org/pdf/2604.21174",
+      "doi": "10.1016/j.neucom.2026.134771",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0925231226021697",
+      "location": "Sections 3–4; first-layer feature blocks, rank/conditioning diagnostics, practical scale interval",
+      "capability": "Analyzes the first Gaussian-KAN feature layer and conditioning to propose a practical scale interval; evaluates function approximation and physics-informed tasks.",
+      "relevance": "Supporting context for the geometric/numerical role of Gaussian scale.",
+      "decision": "Retain current restrained claims. Use practical design rule if mentioning the interval. Identity is real and matches the three named authors.",
+      "refs": [
+        "turn18view0",
+        "turn19view3",
+        "turn18view1",
+        "turn8search1"
+      ]
+    },
+    {
+      "key": "noorizadegan2026partition",
+      "authors": "Amir Noorizadegan",
+      "year": 2026,
+      "access": "Author full text, Section 2.1 inspected; publisher indexed abstract and institutional publication record",
+      "url": "https://arxiv.org/html/2604.23599v2",
+      "doi": "10.1016/j.neucom.2026.135408",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0925231226028067",
+      "location": "Section 2.1, Eqs. (35)–(43), especially constant reproduction Eq. (41)",
+      "capability": "Normalizes Gaussian edge features over fixed centers to form a partition of unity; reproduces constants exactly and evaluates reduced scale sensitivity.",
+      "relevance": "Complementary representation-normalization context.",
+      "decision": "Retain. Do not imply its edge normalization is the same certificate construction. Publisher and institutional records establish online publication in October 2026.",
+      "refs": [
+        "turn16view1",
+        "turn21view1",
+        "turn8search2",
+        "turn8search3"
+      ]
+    },
+    {
+      "key": "dagostino2024",
+      "authors": "Danny D’Agostino; Ilija Ilievski; Christine Annette Shoemaker",
+      "year": 2024,
+      "access": "Author full text, Sections 2–3.1 inspected; arXiv journal-reference metadata",
+      "url": "https://arxiv.org/html/2307.05639v2",
+      "doi": "10.1016/j.neunet.2024.106335",
+      "location": "Sections 2–3.1",
+      "capability": "Learns a Gaussian precision matrix and extracts active-subspace and feature-importance information from its spectrum.",
+      "relevance": "A distinct explanation based on learned feature geometry.",
+      "decision": "Retain current attribution.",
+      "refs": [
+        "turn16view2",
+        "turn17view1"
+      ]
+    },
+    {
+      "key": "wurzberger2024",
+      "authors": "Fabian Wurzberger; Friedhelm Schwenker",
+      "year": 2024,
+      "access": "Publisher full text, abstract and introduction inspected",
+      "url": "https://www.mdpi.com/1099-4300/26/5/368",
+      "doi": "10.3390/e26050368",
+      "location": "Abstract and introduction",
+      "capability": "Initializes deep RBF networks by k-means/covariance estimation and uses partially connected Mahalanobis-distance calculations.",
+      "relevance": "Learning representation geometry is a complementary setting to fixed centers and scalar width.",
+      "decision": "Retain current attribution.",
+      "refs": [
+        "turn16view3"
+      ]
+    },
+    {
+      "key": "voracek2022",
+      "authors": "Václav Voráček; Matthias Hein",
+      "year": 2022,
+      "access": "Publisher abstract",
+      "url": "https://proceedings.mlr.press/v162/voracek22a.html",
+      "location": "Abstract",
+      "capability": "Certifies input-perturbation robustness for nearest-prototype classifiers with specified decision and threat metrics.",
+      "relevance": "Clarifies that the object varied in a certificate must be stated.",
+      "decision": "Retain current abstract-level description.",
+      "refs": [
+        "turn17view2"
+      ]
+    },
+    {
+      "key": "rosenfeld2020",
+      "authors": "Elan Rosenfeld; Ezra Winston; Pradeep Ravikumar; Zico Kolter",
+      "year": 2020,
+      "access": "Publisher abstract",
+      "url": "https://proceedings.mlr.press/v119/rosenfeld20b.html",
+      "location": "Abstract",
+      "capability": "Uses randomized smoothing to certify predictions against adversarial training-label changes.",
+      "relevance": "Contrasting varying object: training labels rather than hyperparameters.",
+      "decision": "Retain current description.",
+      "refs": [
+        "turn17view3"
+      ]
+    },
+    {
+      "key": "bindel2025",
+      "authors": "David Bindel",
+      "year": 2025,
+      "access": "Author course notes, relevant section inspected",
+      "url": "https://www.cs.cornell.edu/courses/cs6210/2025fa/lec/2025-09-10.html",
+      "location": "Residual-based bounds",
+      "capability": "States the exact inverse-times-residual solution-error identity and norm bound.",
+      "relevance": "Source for the standard linear-algebra step supporting the manuscript-specific residual construction.",
+      "decision": "Retain as course notes, not a scientific novelty comparator.",
+      "refs": [
+        "turn21view0"
+      ]
+    },
+    {
+      "key": "srihari1979",
+      "authors": "Sargur N. Srihari; Lee J. White; Thomas Snabb",
+      "year": 1979,
+      "access": "Published institutional full text, all 11 pages available; Sections 2–4 inspected",
+      "url": "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/23481/0000434.pdf?sequence=1",
+      "doi": "10.1016/0020-0255(79)90030-6",
+      "location": "pp. 22–23 setup; Section 3 geometric identity conditions; Section 4 identity algorithm",
+      "capability": "Compares nearest-sample decisions with class sums of exponential potentials and derives symmetry/weighting conditions and an identity algorithm for binary decision surfaces.",
+      "relevance": "Direct conceptual predecessor for finite-scale equivalence of nearest and aggregate radial decisions.",
+      "decision": "Recommend this single addition. Its target is input-space decision-surface identity with prescribed potentials; the manuscript fixes a query and varies bandwidth/penalty after ridge fitting.",
+      "refs": [
+        "turn23view0"
+      ]
+    }
+  ],
+  "editorial_actions": [
+    "Use Que to establish the actual regularized model, Saralajew for weighted-readout mismatch, and Bugmann/Radhakrishnan for geometric/limiting mechanisms.",
+    "Add Srihari1979 as a finite-scale identity predecessor; do not claim nearest-neighbour/radial-decision equivalence is a newly posed general question.",
+    "Treat Fazaeli as complementary softmax sample-influence explanation; Gaussian-KAN sources as scale/representation context.",
+    "Explain Shibagaki and Ndiaye together as path bounds, then introduce bandwidth-varying design plus the fixed nearest-label reference.",
+    "Replace repeated present-study gap endings with one connected final synthesis."
+  ],
+  "unresolved": [
+    {
+      "key": "bugmann1998",
+      "issue": "Full primary body not independently accessed; restrict to publisher-preview-supported Voronoi interpretation and classification comparison."
+    }
+  ],
+  "new_reference_file": "r5_editorial/review/srihari1979_verified.bib",
+  "excluded_expansion": "The related 1980 Srihari/Snabb/White article was identified at publisher-abstract level. It is not recommended as a second addition because one accessible full-text predecessor suffices."
+}
