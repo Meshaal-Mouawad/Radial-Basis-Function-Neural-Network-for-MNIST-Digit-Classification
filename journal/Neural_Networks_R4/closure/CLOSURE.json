@@ -1,0 +1,20 @@
+{
+  "status": "CLOSED",
+  "scope": "Bounded RBF preservation, insight extraction, R4 integration and independent review plan A-I",
+  "scientific_review": "PASS",
+  "mandatory_fixes": [],
+  "journal_significance_assessment": "BORDERLINE",
+  "journal_submission": "PENDING_SEPARATE_TASK",
+  "manuscript_unchanged": true,
+  "files": {
+    "r4_closure/execution_log.json": "e82f10d81509b4b80fe33473699f20b83282a75ae542d5a28d7795659ecce1d3",
+    "r4_closure/plan_audit.md": "708a6400eec0e33ffd498485332defc38e134ce29c331dfa0ee60b4f3edebeb5",
+    "r4_closure/scientific_review.json": "1c1a809c94c6d0b0789c2ba959360a683a6b4d9d7d3c7a13862c4e4820224d2c",
+    "r4_closure/scientific_review.md": "731e2065bde9162ade9ca9edc5c96b22e4308005bc4ccafd4b28cb2762fd0bfd",
+    "r4_closure/plan_audit.json": "17516f7b15b4a1c11f90a08befaea6f914e70234f2666af5364f45da6d56fc0a",
+    "r4_closure/claim_to_evidence.csv": "82cc80116e345ee0e4362efd96061aefe84f7f043c52a9edcff4cd373f27368e",
+    "r4_closure/F_cost_accounting.csv": "46d45daf33457319cd05d9c175e4197c16a967ea88d403bf198d7d231d2f4be3",
+    "r4_closure/input_evidence_hashes.json": "1ffd278e85e4413a9081a7d629ee4aba1fd03cf9b8c6b60195065a27a12c747c",
+    "r4_closure/build_plan_audit.py": "18a4f9b1e2d62de1fccb3d417f1b42343569c4ec1eac140513a9f196791728db"
+  }
+}

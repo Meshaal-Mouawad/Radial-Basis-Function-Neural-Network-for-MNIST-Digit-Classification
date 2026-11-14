@@ -1,0 +1,96 @@
+{
+  "elapsed_values_are_not_API_usage_or_billing": true,
+  "records": [
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/disagreement/PILOT.json",
+      "receipt_sha256": "2540a382b48c58b2682ccfbce9bbc89c84def77c5ce2e5e701c8b4ba30abf887",
+      "runtime_fields": {
+        "elapsed_seconds": 2.073840306999955,
+        "estimated_remaining_seconds": 29.091089174002263
+      },
+      "stage": "D_F_pilot"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/disagreement/results/COMPLETE.json",
+      "receipt_sha256": "bd852d94549af3f6dc9024ad34d2673f044d66c47ef2655e774a3dc07c80287f",
+      "runtime_fields": {
+        "elapsed_this_run_seconds": 41.00164373200005,
+        "total_group_runtime_seconds": 40.5196231100017
+      },
+      "stage": "D_F_full"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/competitive/results/PILOT.json",
+      "receipt_sha256": "9ad6ad0c526f59480165a24e32ca75c95d589ab35cf46b3cce99c98274dc07ef",
+      "runtime_fields": {
+        "seconds": 1.620927885999663
+      },
+      "stage": "E_G_pilot"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/competitive/results/COMPLETE.json",
+      "receipt_sha256": "72f716fa3fe2c11d903720d7d0a1f9fff1e21f788e82c06cb652f0e9feea8f8f",
+      "runtime_fields": {
+        "runtime_seconds_groups": 109.560918958,
+        "runtime_seconds_this_invocation": 109.65975129800063
+      },
+      "stage": "E_G_full"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/independent/composition_verification.json",
+      "receipt_sha256": "6e0dd835157ca309c37b497761156e1e58aaedca0e3f15174e645b8d326d52c1",
+      "runtime_fields": {
+        "elapsed_seconds": 3.3994988069998726
+      },
+      "stage": "C_independent"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/independent/paths_efficiency_verification.json",
+      "receipt_sha256": "02972010e974d8a1012dd73627d7ba145cba291bab3939e47eaad85f41540c4c",
+      "runtime_fields": {
+        "elapsed_seconds": 36.6220966639994
+      },
+      "stage": "D_F_independent"
+    },
+    {
+      "historical_model": "NOT_RECORDED",
+      "historical_reasoning": "NOT_RECORDED",
+      "receipt": "r4_analysis/independent/competitive_verification.json",
+      "receipt_sha256": "2fa6ce0cae7119cbb436d7ad8786241bc5d8a21795917b813af3b8925a394a97",
+      "runtime_fields": {
+        "elapsed_seconds": 74.32973927600051
+      },
+      "stage": "E_G_independent"
+    },
+    {
+      "model": "gpt-6-astra",
+      "provenance": "lead-agent confirmation of explicit successful spawn arguments",
+      "reasoning": "high",
+      "receipt": "r4_closure/scientific_review.json",
+      "receipt_sha256": "1c1a809c94c6d0b0789c2ba959360a683a6b4d9d7d3c7a13862c4e4820224d2c",
+      "runtime_seconds": null,
+      "runtime_status": "NOT_RECORDED",
+      "stage": "final_independent_scientific_review"
+    },
+    {
+      "activity": "Hash and documentation audit; no numerical rerun, no refit.",
+      "elapsed_script_seconds": 1.3356335100015713,
+      "model": "GPT-6.1 Sol",
+      "provenance": "Current parent instruction",
+      "reasoning": "High",
+      "stage": "closure_audit"
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "files": [
+    {
+      "actual_sha256": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+      "expected_sha256": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+      "path": "evidence/baseline/evidence/baseline/repository/Code/MNIST_train.mat",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+      "expected_sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+      "path": "evidence/baseline/evidence/baseline/work/v2/data/fashion_mnist/t10k-images-idx3-ubyte.gz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+      "expected_sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+      "path": "evidence/baseline/evidence/baseline/work/v2/data/fashion_mnist/train-images-idx3-ubyte.gz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+      "expected_sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+      "path": "evidence/baseline/evidence/baseline/work/v2/data/fashion_mnist/train-labels-idx1-ubyte.gz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d38850e78c5faa4dfafd4c4c53f24d122162980d9717960a6002fb6527646e11",
+      "expected_sha256": "d38850e78c5faa4dfafd4c4c53f24d122162980d9717960a6002fb6527646e11",
+      "path": "evidence/baseline/evidence/baseline/work/v2/design/reserved_training_ids.npy",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+      "expected_sha256": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/certificate.py",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dc8f8f1192c27394f85487043710db3a9b18d51be2c3bca478bf94dfff9dd146",
+      "expected_sha256": "dc8f8f1192c27394f85487043710db3a9b18d51be2c3bca478bf94dfff9dd146",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_evaluation_labels.npy",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "1ae363aaddefdaa45e2f048aca28cc13e5ae66d4446fe87a07e0f5d0681b3472",
+      "expected_sha256": "1ae363aaddefdaa45e2f048aca28cc13e5ae66d4446fe87a07e0f5d0681b3472",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed11_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f470539b162b65fe18218b7616f1071f4c940ba940d5fb05b307176c0abc2c13",
+      "expected_sha256": "f470539b162b65fe18218b7616f1071f4c940ba940d5fb05b307176c0abc2c13",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed11_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "fc59ad91fb25abf2dddb25fe49abaab7d0ad69dfa33431e640cfbda5e391b5c6",
+      "expected_sha256": "fc59ad91fb25abf2dddb25fe49abaab7d0ad69dfa33431e640cfbda5e391b5c6",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed11_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f",
+      "expected_sha256": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed22_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "0a724af3a492d91875181aad53a125a06588af21600b698ec4c1b3f22261deb4",
+      "expected_sha256": "0a724af3a492d91875181aad53a125a06588af21600b698ec4c1b3f22261deb4",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed22_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dbb8ad6bf55478aabbc879dafe4d8c66076656ddb0072b225f3b8a304a6c397c",
+      "expected_sha256": "dbb8ad6bf55478aabbc879dafe4d8c66076656ddb0072b225f3b8a304a6c397c",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed22_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "9aef24822087cd238b599e45234d5cbb87985eee2b88b09af76706bf551f1ea2",
+      "expected_sha256": "9aef24822087cd238b599e45234d5cbb87985eee2b88b09af76706bf551f1ea2",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed33_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "729097152d4be6331911909cb5d831dd26019ab13e25bce892272867a2d96630",
+      "expected_sha256": "729097152d4be6331911909cb5d831dd26019ab13e25bce892272867a2d96630",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed33_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d4a16ca4e87d0a30c04b4c254a016fab5f8450c80342bfaa664e8eb5c23627f9",
+      "expected_sha256": "d4a16ca4e87d0a30c04b4c254a016fab5f8450c80342bfaa664e8eb5c23627f9",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed33_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "a43131e3a017fda6dc185054280fabb9491b20e341807098a76798be75dd6c98",
+      "expected_sha256": "a43131e3a017fda6dc185054280fabb9491b20e341807098a76798be75dd6c98",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed44_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "cbbfb18d5b5e4a0fa1f907411b28db46f2d30e2295abb6baca01e611ee74dad7",
+      "expected_sha256": "cbbfb18d5b5e4a0fa1f907411b28db46f2d30e2295abb6baca01e611ee74dad7",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed44_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "ca51f3ebea112f3756211c91f165bd01e2a913e6658018b720d4f669a83172e4",
+      "expected_sha256": "ca51f3ebea112f3756211c91f165bd01e2a913e6658018b720d4f669a83172e4",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed44_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d2e45ab44010faa8226c8330561548c7a50f766897f3b9d8a2ccfa9a761ff2c7",
+      "expected_sha256": "d2e45ab44010faa8226c8330561548c7a50f766897f3b9d8a2ccfa9a761ff2c7",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed55_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "b15da77892c728c3fcbbcf985ccee87097e62e2689c9d65d87f5eca473d83ccb",
+      "expected_sha256": "b15da77892c728c3fcbbcf985ccee87097e62e2689c9d65d87f5eca473d83ccb",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed55_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "e16ccbc922017a4b57afcbe644bd06063a78bfcebf81f429b0631ae54bb4086a",
+      "expected_sha256": "e16ccbc922017a4b57afcbe644bd06063a78bfcebf81f429b0631ae54bb4086a",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed55_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "919e73ecfdc111e898d1e194ca4dba1c5908719fefb96247762160eb84fb6a9a",
+      "expected_sha256": "919e73ecfdc111e898d1e194ca4dba1c5908719fefb96247762160eb84fb6a9a",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_evaluation_labels.npy",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "31c935de38ad834eafad01fc6f5afdc62dd0f9a4be8e1949c956a274ee9afb97",
+      "expected_sha256": "31c935de38ad834eafad01fc6f5afdc62dd0f9a4be8e1949c956a274ee9afb97",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed11_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f35232aad84ebda9609b46c475b9bd7a4cf2067e0b5a32c37eb673546491d0ff",
+      "expected_sha256": "f35232aad84ebda9609b46c475b9bd7a4cf2067e0b5a32c37eb673546491d0ff",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed11_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "81ab2b81578e47a37842449b4886a40b4a5a7444c96619d79a7d99ad23ddbc69",
+      "expected_sha256": "81ab2b81578e47a37842449b4886a40b4a5a7444c96619d79a7d99ad23ddbc69",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed11_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "590cb8f9d70326088f6ca6a201aa541caf5691311d63e828366988064f136405",
+      "expected_sha256": "590cb8f9d70326088f6ca6a201aa541caf5691311d63e828366988064f136405",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed22_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "bf28141188f35e93e314a2020d803be6f60fc22b52ac27140f116975b6517d8b",
+      "expected_sha256": "bf28141188f35e93e314a2020d803be6f60fc22b52ac27140f116975b6517d8b",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed22_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "38d7bb5dc9a365d93243d25e4792df0288b309f191108689936ca303386e8118",
+      "expected_sha256": "38d7bb5dc9a365d93243d25e4792df0288b309f191108689936ca303386e8118",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed22_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "ba8f0ed0631e2198a8d446433ce6abdb352c8a6599a996cba97da20c96b922b7",
+      "expected_sha256": "ba8f0ed0631e2198a8d446433ce6abdb352c8a6599a996cba97da20c96b922b7",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed33_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "e14ce81c71864cef7278333860bdf63b0be861c8ac1ec68f72b609d4fd88afa5",
+      "expected_sha256": "e14ce81c71864cef7278333860bdf63b0be861c8ac1ec68f72b609d4fd88afa5",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed33_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "525dd1f881648d5abd974e43dc8d588328d7ce2c05c331615321cfe276db5942",
+      "expected_sha256": "525dd1f881648d5abd974e43dc8d588328d7ce2c05c331615321cfe276db5942",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed33_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "327817673f4680110fb3e5ba434c2d4db4c8cec31788997751333c55b431cb4e",
+      "expected_sha256": "327817673f4680110fb3e5ba434c2d4db4c8cec31788997751333c55b431cb4e",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed44_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "753a9e25a328e5891031dd0b1d0809cc9a0b0723f66ac9d3ec262401abaf4368",
+      "expected_sha256": "753a9e25a328e5891031dd0b1d0809cc9a0b0723f66ac9d3ec262401abaf4368",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed44_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3acb2940b037f7f8015d5f4d7a8f9f96aacf197373094f9b221c3226e56e728c",
+      "expected_sha256": "3acb2940b037f7f8015d5f4d7a8f9f96aacf197373094f9b221c3226e56e728c",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed44_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "b925ddb20511c60e2180d734a3bdad74c59799f403a0e2a5c5ce31d57c8ac01d",
+      "expected_sha256": "b925ddb20511c60e2180d734a3bdad74c59799f403a0e2a5c5ce31d57c8ac01d",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed55_K100/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "3563bfa9436a10aa55087e5ea91f031bbc474da040b4ec9727575ac79b6f4dc9",
+      "expected_sha256": "3563bfa9436a10aa55087e5ea91f031bbc474da040b4ec9727575ac79b6f4dc9",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed55_K200/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "8615d55cf1e91129cf3cb263b5e686ce8dd8183cd3906f65eea1b6bdb7d9a178",
+      "expected_sha256": "8615d55cf1e91129cf3cb263b5e686ce8dd8183cd3906f65eea1b6bdb7d9a178",
+      "path": "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed55_K50/predictions_before_labels.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "8230777801135a364f76068107974b5b9a157da7fd4cbb1fec713bf531a65463",
+      "expected_sha256": "8230777801135a364f76068107974b5b9a157da7fd4cbb1fec713bf531a65463",
+      "path": "evidence/new_analysis/limit_diagnostic/INPUT_SHA256.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "7fb4cb742014185db8364d7e2e2700f35cf18fb5bf600927753327b22b682b95",
+      "expected_sha256": "7fb4cb742014185db8364d7e2e2700f35cf18fb5bf600927753327b22b682b95",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/fashion_mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "ff7bc45075f5454e958aa9c9cd39222d8d8463ed53faf7da74b3d3bea1c4344e",
+      "expected_sha256": "ff7bc45075f5454e958aa9c9cd39222d8d8463ed53faf7da74b3d3bea1c4344e",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/fashion_mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d178698d8bf60cdf5f4b2c3ebab8dc99474dbbc9567c1fd2e2a4b2ffd981944d",
+      "expected_sha256": "d178698d8bf60cdf5f4b2c3ebab8dc99474dbbc9567c1fd2e2a4b2ffd981944d",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/fashion_mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "fbe4fe3510c194a567a3448cbcf494e7dd23974b4136e7641c29b42ad211827b",
+      "expected_sha256": "fbe4fe3510c194a567a3448cbcf494e7dd23974b4136e7641c29b42ad211827b",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/fashion_mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "070dafc21a916d8534946137f9769b827db3dbfa01c25221f7f986b78cf3ebff",
+      "expected_sha256": "070dafc21a916d8534946137f9769b827db3dbfa01c25221f7f986b78cf3ebff",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/fashion_mnist_seed55_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "b9d6c5c4aa513a57a982b24e6d52845f3a4a0cf39625d398bded3885175b1ac6",
+      "expected_sha256": "b9d6c5c4aa513a57a982b24e6d52845f3a4a0cf39625d398bded3885175b1ac6",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "2fd6515000c106e898afa4b3698ffecf73a6dfae005bdea40c94abe65be55a97",
+      "expected_sha256": "2fd6515000c106e898afa4b3698ffecf73a6dfae005bdea40c94abe65be55a97",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "9c2a81b55804c7b70c65c518ac0bc977b8b1b6f704f160f05caa664135de4f14",
+      "expected_sha256": "9c2a81b55804c7b70c65c518ac0bc977b8b1b6f704f160f05caa664135de4f14",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "e18c81fc36315d307166328a26e847a3e75be8c84c1fdd9a7be79c805dccdce5",
+      "expected_sha256": "e18c81fc36315d307166328a26e847a3e75be8c84c1fdd9a7be79c805dccdce5",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "5816795f1f33e6d025a06f7c5ee1807762e1a90175405c35bdb91ee69896b482",
+      "expected_sha256": "5816795f1f33e6d025a06f7c5ee1807762e1a90175405c35bdb91ee69896b482",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail/mnist_seed55_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "82a160917f3b783c4a51a69926fded3f200657627d3eb7ca500406764f7e39cf",
+      "expected_sha256": "82a160917f3b783c4a51a69926fded3f200657627d3eb7ca500406764f7e39cf",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d06e93fe416c56f77d2f1c3b749c2314998339cb1979b413d3dfa5b2d39bc831",
+      "expected_sha256": "d06e93fe416c56f77d2f1c3b749c2314998339cb1979b413d3dfa5b2d39bc831",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "cf48ca1bb0b8d1aac10fc5d71b6d525b432b2321312684730472393121dbf9e4",
+      "expected_sha256": "cf48ca1bb0b8d1aac10fc5d71b6d525b432b2321312684730472393121dbf9e4",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "44b28c24fc7e2b19080ebeabe0b96c6d419042e30b8d526186fb7266d04dc82e",
+      "expected_sha256": "44b28c24fc7e2b19080ebeabe0b96c6d419042e30b8d526186fb7266d04dc82e",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "5bcbcef91792d18e867f87bb5095953efc0e70332db99bd840383fa66f0ae575",
+      "expected_sha256": "5bcbcef91792d18e867f87bb5095953efc0e70332db99bd840383fa66f0ae575",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed55_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "cdab448df07d7931b40ddb0152145fd7543ea7e1d8a5a2000e49e782a93f8f6f",
+      "expected_sha256": "cdab448df07d7931b40ddb0152145fd7543ea7e1d8a5a2000e49e782a93f8f6f",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "4c9b8c1ca7dc77bf6905f44e2da16213d2f1ea5542e41c251eee192b755080c9",
+      "expected_sha256": "4c9b8c1ca7dc77bf6905f44e2da16213d2f1ea5542e41c251eee192b755080c9",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "1179522e0811cef7b0bad47fda1e0aa6481626a1299d286ccd10eed7261fbb89",
+      "expected_sha256": "1179522e0811cef7b0bad47fda1e0aa6481626a1299d286ccd10eed7261fbb89",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "ef3ea6b7151e412de73c4b6e1a6618ca0794d1438d142aaadccb4e8fcb3b14f4",
+      "expected_sha256": "ef3ea6b7151e412de73c4b6e1a6618ca0794d1438d142aaadccb4e8fcb3b14f4",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "1c8eb36b2dc7ce7f7b4dbedfd5a207e8f54842b60fe67ccb4a80c5e550dd5d74",
+      "expected_sha256": "1c8eb36b2dc7ce7f7b4dbedfd5a207e8f54842b60fe67ccb4a80c5e550dd5d74",
+      "path": "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed55_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f94c3e411b2e1a36f737d5b5adf24103466a549cc0e7c63a89cd0e82067628ff",
+      "expected_sha256": "f94c3e411b2e1a36f737d5b5adf24103466a549cc0e7c63a89cd0e82067628ff",
+      "path": "next_work/results/selection_diagnostics_classes.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "6e08f77d4900bd25a666c77a745cbd120140a13ef4a95c3512296c219f44466f",
+      "expected_sha256": "6e08f77d4900bd25a666c77a745cbd120140a13ef4a95c3512296c219f44466f",
+      "path": "next_work/results/selection_diagnostics_per_seed.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "74c444f7d2db63161ad4f3758e77a5875c09d656bacfc9e70e5df5180c3e809f",
+      "expected_sha256": "74c444f7d2db63161ad4f3758e77a5875c09d656bacfc9e70e5df5180c3e809f",
+      "path": "next_work/results/selection_diagnostics_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "450dfcce8073c015066a6b9af603b76e23295a85b38465ad8044b85b38d184dc",
+      "expected_sha256": "450dfcce8073c015066a6b9af603b76e23295a85b38465ad8044b85b38d184dc",
+      "path": "r3_analysis/m1_m2/results/fashion_mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f643e3486c88d12a9916bb2aad7cae7fb8cfffd766bd01df60e230c5e3c91878",
+      "expected_sha256": "f643e3486c88d12a9916bb2aad7cae7fb8cfffd766bd01df60e230c5e3c91878",
+      "path": "r3_analysis/m1_m2/results/fashion_mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "74b3e99498823a68787368907161d3aa3ce86ad597b2f007044471366394fa1e",
+      "expected_sha256": "74b3e99498823a68787368907161d3aa3ce86ad597b2f007044471366394fa1e",
+      "path": "r3_analysis/m1_m2/results/fashion_mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "a3120de754dc862425c31b78873f5229f3f86da01ee0dbfb14b9c88655fa8245",
+      "expected_sha256": "a3120de754dc862425c31b78873f5229f3f86da01ee0dbfb14b9c88655fa8245",
+      "path": "r3_analysis/m1_m2/results/fashion_mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "af280576b1406a1b6399e66cf504b34b18ed9fa629d275e02bc485ac345cc6e9",
+      "expected_sha256": "af280576b1406a1b6399e66cf504b34b18ed9fa629d275e02bc485ac345cc6e9",
+      "path": "r3_analysis/m1_m2/results/fashion_mnist_seed55_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d842c8fb33af6dafda5a0257a40760aaa7ea22427b65a8c10e07f223ff3202ab",
+      "expected_sha256": "d842c8fb33af6dafda5a0257a40760aaa7ea22427b65a8c10e07f223ff3202ab",
+      "path": "r3_analysis/m1_m2/results/mnist_seed11_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "2ef4b33a1d28e5b0159595f5c788bcad58db7caa47d1608e5eab70a80f03103b",
+      "expected_sha256": "2ef4b33a1d28e5b0159595f5c788bcad58db7caa47d1608e5eab70a80f03103b",
+      "path": "r3_analysis/m1_m2/results/mnist_seed22_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "34c6436b3411dded2c35a4c46afc6b2d555dfd1716c746fe8a385ea11d4ebee4",
+      "expected_sha256": "34c6436b3411dded2c35a4c46afc6b2d555dfd1716c746fe8a385ea11d4ebee4",
+      "path": "r3_analysis/m1_m2/results/mnist_seed33_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "fb88a949f723790cbef857cbbd86c5af2c232d8a76f75d808ee1670d7e73d2cb",
+      "expected_sha256": "fb88a949f723790cbef857cbbd86c5af2c232d8a76f75d808ee1670d7e73d2cb",
+      "path": "r3_analysis/m1_m2/results/mnist_seed44_K100.npz",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "07889fc6463a4a2f55fb601a34064425fe8873a8234ff84e6b2ae92d14910790",
+      "expected_sha256": "07889fc6463a4a2f55fb601a34064425fe8873a8234ff84e6b2ae92d14910790",
+      "path": "r3_analysis/m1_m2/results/mnist_seed55_K100.npz",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Individual inputs required by R4 C-G plus hash-linked historical input manifest; hashes recomputed at audit time.",
+  "status": "PASS"
+}
