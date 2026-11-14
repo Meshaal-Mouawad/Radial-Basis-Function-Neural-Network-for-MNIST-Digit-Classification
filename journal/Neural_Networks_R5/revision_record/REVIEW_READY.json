@@ -1,0 +1,24 @@
+{
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "editorial_request": "RESOLVED",
+  "original_A_to_I_plan": "CLOSED_IN_R4",
+  "all_editorial_findings_resolved": true,
+  "numerical_evidence": "UNCHANGED_FROM_VERIFIED_R4",
+  "new_training_runs": 0,
+  "new_numerical_analyses": 0,
+  "journal_transfer_submission_complete": false,
+  "pages": 40,
+  "figures": 7,
+  "tables": 12,
+  "references": 18,
+  "gates": {
+    "independent_cold_reader": "PASS",
+    "independent_citation_review": "PASS",
+    "protection": "PASS",
+    "latex_build": "PASS",
+    "all_page_visual_inspection": "PASS",
+    "clean_source_build_and_rendered_comparison": "PASS"
+  },
+  "main_sha256": "1a0d865b5a9bed22be8597f7891f9235a62831e41615ecc321f1c061b5aa8672",
+  "pdf_sha256": "6a00a5573e2f46ca85e6913988c766928b8628cb902cd1a2a6f0a5e8262f4041"
+}

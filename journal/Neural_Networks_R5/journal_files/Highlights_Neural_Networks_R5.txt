@@ -1,0 +1,5 @@
+- Training-derived tests certify agreement across RBF parameter regions.
+- Strict limiting votes provide finite disagreement bounds.
+- Validation-competitive models have zero full-width sufficient coverage.
+- Finite penalty paths exhibit disagreement followed by renewed agreement.
+- Class-balanced diagnostics resolve the composition of certified subsets.

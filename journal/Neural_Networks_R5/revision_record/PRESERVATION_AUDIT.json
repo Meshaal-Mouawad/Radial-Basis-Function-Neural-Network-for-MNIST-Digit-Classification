@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "date": "2026-11-15",
+  "R4_source_checkpoint_unchanged": true,
+  "protected_source_files": {
+    "r4_competitive_table.tex": true,
+    "elsarticle-harv.bst": true,
+    "r4_composition_table.tex": true,
+    "r3_selector_table.tex": true,
+    "r3_overlap_table.tex": true,
+    "Figure_04_Agreement_Accuracy.pdf": true,
+    "new_methods.tex": true,
+    "r4_methods.tex": true,
+    "r3_methods.tex": true,
+    "Figure_07_Selected_Class_Accuracy.svg": true,
+    "ridge_theory.tex": true,
+    "exact_ridge_examples.tex": true,
+    "r3_threshold_table.tex": true,
+    "Figure_05_Certified_Frontier_Accuracy.pdf": true,
+    "r3_results.tex": true,
+    "Figure_06_Agreement_Region_Diagnosis.png": true,
+    "r4_results.tex": true,
+    "elsarticle.dtx": true,
+    "Figure_06_Agreement_Region_Diagnosis.svg": true,
+    "Figure_02_Uniform_Certificate_Mechanism.pdf": true,
+    "Figure_03_Certificate_Coverage.pdf": true,
+    "elsarticle.ins": true,
+    "new_results.tex": true,
+    "r4_probe_table.tex": true,
+    "Figure_07_Selected_Class_Accuracy.png": true,
+    "r4_paths_table.tex": true,
+    "Figure_06_Agreement_Region_Diagnosis.pdf": true,
+    "elsarticle.cls": true,
+    "Figure_01_Two_Decision_Paths.pdf": true,
+    "results.tex": true,
+    "Figure_07_Selected_Class_Accuracy.pdf": true,
+    "frontier_results.tex": true
+  },
+  "main_math_environments": {
+    "equation": {
+      "count": 17,
+      "exact": true
+    },
+    "theorem": {
+      "count": 1,
+      "exact": true
+    },
+    "lemma": {
+      "count": 2,
+      "exact": true
+    },
+    "proposition": {
+      "count": 2,
+      "exact": true
+    },
+    "proof": {
+      "count": 5,
+      "exact": true
+    }
+  },
+  "model_theory_methods_results_discussion_unchanged": true,
+  "limitations_appendices_and_declarations_unchanged": true,
+  "original_17_bib_entries_byte_preserved": true,
+  "new_reference": "srihari1979",
+  "approved_AI_declaration_exact_and_once": true,
+  "pages": 40,
+  "figures": 7,
+  "tables": 12,
+  "references": 18,
+  "abstract_whitespace_word_count": 222,
+  "build_warnings": [],
+  "numerical_supplement_sha256": "ee029862791413b993387234efe9ecad5114d99685ef5fd9d4add4eb53d080c8",
+  "numerical_supplement_bytes": 706024849,
+  "new_training_runs": 0,
+  "new_numerical_analyses": 0,
+  "main_tex_sha256": "1a0d865b5a9bed22be8597f7891f9235a62831e41615ecc321f1c061b5aa8672",
+  "manuscript_pdf_sha256": "6a00a5573e2f46ca85e6913988c766928b8628cb902cd1a2a6f0a5e8262f4041"
+}

@@ -1,0 +1,442 @@
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array,tabularx}
+\usepackage{graphicx,flafter,placeins}
+\biboptions{authoryear,round}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\hypersetup{pdftitle={Training-Derived Regions of Nearest-Prototype Agreement in Gaussian RBF Classifiers},pdfauthor={Meshaal Mouawad}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\tr}{\mathsf{T}}
+\newcommand{\sharpb}{\mathrm{sharp}}
+\newcommand{\basicb}{\mathrm{basic}}
+\newcommand{\frobb}{\mathrm{F}}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{2em}
+\journal{Neural Networks}
+\begin{document}
+\begin{frontmatter}
+\title{Training-Derived Regions of Nearest-Prototype Agreement in Gaussian RBF Classifiers}
+\author[msu]{Meshaal Mouawad\corref{cor1}}
+\ead{mm4922@msstate.edu}
+\cortext[cor1]{Corresponding author.}
+\affiliation[msu]{organization={Department of Electrical and Computer Engineering, Mississippi State University},city={Mississippi State},postcode={39762},state={MS},country={USA}}
+\begin{abstract}
+Gaussian radial basis function classifiers combine similarity responses from multiple prototypes, so their predictions can differ from the label of the nearest prototype. Determining when that label remains a valid summary as bandwidth and regularization change requires a guarantee over a family of fitted classifiers. This study derives such guarantees from the training data. A class-wise residual bound certifies agreement for every positive bandwidth up to a chosen endpoint and every ridge penalty at or above a chosen floor. Limiting class votes provide finite thresholds for disagreement and support a second certificate over local bandwidth bands. Evaluation on MNIST and Fashion-MNIST uses five seeds, three prototype budgets, and 2,880 archived readouts. With 100 prototypes, an endpoint defined by median prototype separation, and a zero penalty floor, the combined disagreement tests exclude full-region agreement for 88.10\% and 84.48\% of queries, respectively. Local bands admit additional certified regions at large penalties. All 328 readouts retaining at least 95\% of the best validation accuracy for their dataset, seed, and prototype budget have zero full-width certificate coverage. The finite penalty paths also reveal returns to agreement after disagreement, and class-conditioned comparisons identify concentrated predictions within certified subsets. These findings provide computable tests of whether proximity remains a valid label summary across a model family and characterize the relationship between guaranteed persistence, finite-parameter agreement, and predictive accuracy.
+\end{abstract}
+\begin{keyword}
+radial basis function classifier \sep nearest prototype \sep Gaussian bandwidth \sep ridge regression \sep uniform certificate \sep parameter region
+\end{keyword}
+\end{frontmatter}
+\section{Introduction}
+A prototype gives a classifier a reference example against which to compare a new input. In a Gaussian radial basis function (RBF) network, distance to each prototype determines a similarity response, and a learned output layer combines those responses into class scores \citep{broomhead1988}. The nearest prototype supplies a simple candidate label for the input; the weighted combination supplies the network's prediction. This study investigates when those two labels agree throughout a range of bandwidths and ridge penalties, using mathematical guarantees and an evaluation on MNIST and Fashion-MNIST.
+
+The question arises when proximity to a labeled training example is used to summarize a fitted decision. Bandwidth determines how broadly each prototype responds, and the ridge penalty controls the coefficients learned from the labeled training sample. Changing either parameter can change the winning class. Agreement at one setting therefore leaves the validity of the same summary at other settings undetermined. A guarantee over a declared parameter region makes the scope of the summary explicit; a disagreement within that region identifies where the requested summary fails.
+
+Prior work supplies several parts of this problem. Srihari and colleagues \citeyearpar{srihari1979} derived conditions for nearest-neighbour and exponential-potential classifiers to have identical decision surfaces. Que and Belkin \citeyearpar{que2016} analyze coefficient-regularized RBF networks through data-dependent kernels and statistical error bounds. Saralajew and colleagues \citeyearpar{saralajew2025} directly examine the mismatch between nearby prototypes and weighted class decisions, then construct a network with an explicit prototype-class relationship. Parameter-range guarantees offer a complementary perspective: Shibagaki and colleagues \citeyearpar{shibagaki2015} and Ndiaye and colleagues \citeyearpar{ndiaye2019} bound validation behavior along regularization paths. These contributions motivate studying label agreement across a conventional RBF family in which both the Gaussian features and the ridge readout change.
+
+The objective is to determine, from fixed training data and selected labeled prototypes, which queries retain their nearest-prototype label throughout a specified bandwidth--penalty region. The analysis returns three possible conclusions. A certified region guarantees agreement for every parameter pair it contains. An excluded region contains a strict disagreement. A region receiving neither conclusion remains unresolved. Figure~\ref{fig:paths} shows the two label calculations whose equality defines this problem. This formulation connects the geometric reference to the complete fitted family and gives an explicit meaning to a certificate's acceptance or abstention.
+
+The first construction covers every positive bandwidth up to an endpoint and every ridge penalty at or above a floor. It compares learned weights with a reference that assigns each prototype to its own class. Training responses, grouped by class, bound the difference between the two sets of weights. A second calculation examines the class votes approached as the penalty grows. At a given bandwidth, a strictly opposing vote gives a finite threshold beyond which agreement fails. When the nearest-prototype class leads those votes throughout a local bandwidth band, a signed bound on the finite-penalty correction gives a further agreement certificate. The resulting full-width and local-band guarantees address two specified geometries of parameter variation.
+
+The empirical analysis uses five seeds and 50, 100, or 200 prototypes for each of two image datasets. It measures where the certificates apply, where strict disagreements exclude a requested region, and how these outcomes relate to fitted accuracy. The evidence reveals a separation between sufficient full-width coverage and competitive prediction: all 328 archived readouts retaining at least 95\% of their group's best validation accuracy have zero such coverage. Local bandwidth bands provide additional guarantees at large penalties. Exact witness overlaps, sampled penalty paths, and matched-coverage class analyses explain how these region-level findings relate to finite decisions and the composition of certified query subsets. Together, the proofs and measurements establish a training-derived analysis of nearest-prototype label persistence and identify its empirical reach in the studied model families.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{Figure_01_Two_Decision_Paths.pdf}
+\caption{Nearest-prototype reference and learned Gaussian radial basis function (RBF) prediction. (A) Squared distances $d_j^2=\norm{x-c_j}_2^2$ from query $x$ to selected prototypes $c_j$ identify a nearest index $j_0$ and its reference class $a$. (B) Training inputs $X$ and labels $Y$ supply Gaussian training features $H_\sigma$ and a ridge readout $W_{\sigma,\lambda}$; query features $h_\sigma(x)$ produce the fitted class $\hat y_{\sigma,\lambda}$. The question mark compares the two output labels. Theorem~\ref{thm:agreement} gives a sufficient condition for their equality throughout a bandwidth--penalty region. This diagram explains the two decision paths.}
+\label{fig:paths}
+\end{figure}
+
+\section{Related work}
+\subsection{From nearest examples to aggregate class decisions}
+Nearest-neighbour and radial-response classifiers use distances in different ways. The first assigns the label of the closest example; the second can aggregate responses from several examples before selecting a class. Srihari, White, and Snabb \citeyearpar{srihari1979} studied this relationship for exponential-potential classifiers. They derived geometric conditions and an algorithm under which the nearest-neighbour rule and a sum of class-associated potentials have identical decision surfaces. Their analysis makes agreement between local proximity and aggregated responses a precise geometric question at finite scale.
+
+Learning the output coefficients introduces a further part of the relationship. In the RBF formulation of Broomhead and Lowe \citeyearpar{broomhead1988}, nonlinear basis responses feed a linear output estimator. Saralajew and colleagues \citeyearpar{saralajew2025} show how unconstrained output coefficients can make more distant components contribute more to a class decision than the nearest components. They construct a probabilistic prototype network with an interpretable prototype-class relationship and analyze its robustness to input perturbations. This addresses the relation through the architecture. The present analysis retains a conventional ridge readout and tests when its fitted decision agrees with a selected training prototype's label.
+
+Training-sample influence supplies a complementary account of the learned decision. Fazaeli-Javan and Ghiasi-Shirazi \citeyearpar{fazaeli2026} represent softmax-neuron decisions through learned prototypes and positive and negative distance-based contributions. They identify supporting and opposing samples and report that a small set of near-boundary samples disproportionately shapes the prototypes and decision boundaries. Such decompositions explain how training observations contribute to a score. In the certificate developed here, labeled observations enter through class-specific response sums, including observations that were not selected as prototypes. The analysis uses those sums to test label agreement over parameter regions.
+
+\subsection{Gaussian scale, regularization, and prototype geometry}
+Gaussian bandwidth controls how strongly responses from different prototypes overlap. Bugmann \citeyearpar{bugmann1998} relates normalized Gaussian RBF responses to a Voronoi-like partition. Radhakrishnan, Belkin, and Uhler \citeyearpar{radhakrishnan2023} prove a nearest-neighbour regime for infinitely wide and deep networks and explicitly connect their kernel-ratio argument to the narrow-bandwidth limit of a Gaussian kernel. Together, these results explain how nearest-example behavior can emerge from radial responses. For the present problem, the next step is to identify finite bandwidth intervals over which the fitted label persists.
+
+The fitted coefficients also depend on regularization. Que and Belkin \citeyearpar{que2016} interpret coefficient-norm-regularized RBF networks through data-dependent kernels and derive statistical error bounds. Their results cover training-point centers and weighted k-means centers, with quantization error entering the latter analysis. This gives a theoretical account of the regularized model's statistical behavior. The present question uses the same coefficient-ridge structure to examine a particular query's label relative to a fixed prototype reference.
+
+Other work studies the geometry learned by Gaussian representations. D'Agostino, Ilievski, and Shoemaker \citeyearpar{dagostino2024} use a learnable precision matrix to extract feature importance and active-subspace information from Gaussian RBF networks. Wurzberger and Schwenker \citeyearpar{wurzberger2024} study deep RBF training through clustering, covariance estimation, and partially connected distance calculations. In Gaussian Kolmogorov--Arnold networks, Noorizadegan, Wang, and Ling \citeyearpar{noorizadegan2026reliable} relate scale and grid geometry to feature-block conditioning. Noorizadegan \citeyearpar{noorizadegan2026partition} normalizes Gaussian edge features through a partition-of-unity construction that reproduces constants and examines scale sensitivity. These studies treat Gaussian geometry as part of the model's mathematical and computational behavior.
+
+Fixing labeled training prototypes and varying one shared width exposes a structure useful for agreement analysis. Every off-diagonal Gaussian response increases with width, and the prototype-to-prototype response block is symmetric. The derivation below uses that symmetry to cancel terms in the readout residual, then uses increasing overlap to bound all smaller widths from an endpoint. This connects the geometric role of bandwidth to a computable condition on the fitted label.
+
+\subsection{Guarantees over changing inputs, labels, and parameters}
+The meaning of a prediction certificate is determined by the object allowed to vary. Voracek and Hein \citeyearpar{voracek2022} derive adversarial guarantees for nearest-prototype classifiers under input perturbations. Rosenfeld and colleagues \citeyearpar{rosenfeld2020} use randomized smoothing to certify predictions against changes to training labels. These constructions specify a family of altered problems and establish a prediction property throughout that family. Here, the family is generated by varying Gaussian bandwidth and ridge penalty with the query, training observations, and prototypes fixed.
+
+Regularization-path methods provide the closest parameter-based comparison. Shibagaki and colleagues \citeyearpar{shibagaki2015} use an approximate fitted solution to bound validation scores at other regularization values and derive cross-validation-error bounds over an interval for regularized binary classification. Ndiaye and colleagues \citeyearpar{ndiaye2019} construct approximate solution paths and use duality-gap safe regions to control validation error along a path with a fixed design matrix. These methods establish guarantees for model selection as the penalty changes. The present construction additionally varies the Gaussian feature matrix with bandwidth and tests equality with a specified prototype label over the resulting two-parameter region.
+
+Residual-based solution bounds supply the mathematical starting point. For a nonsingular linear system, multiplying the residual by the inverse matrix expresses the solution error; Bindel \citeyearpar{bindel2025} presents this standard argument. The derivation below specializes it to selected training prototypes, retains class-specific contributions in a nonnegative majorant, and bounds the error over the complete penalty interval. Limiting class votes then supply a complementary disagreement test and a local-band agreement construction. Table~\ref{tab:prior} summarizes how this query-level parameter-region analysis relates to the geometric, statistical, and robustness results above.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Closest research relationships. The comparison identifies the object studied and the result supplied by each approach.}
+\label{tab:prior}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Work & Object studied & Analytical or explanatory output \\
+\midrule
+\citet{srihari1979} & Nearest-neighbour and class-associated exponential potentials & Conditions and an algorithm for identical decision surfaces \\
+\citet{bugmann1998} & Normalized Gaussian RBF responses & Voronoi-like response partition and classification examples \\
+\citet{radhakrishnan2023} & Infinite-width/depth neural-network kernels & 1-NN regime and Gaussian ratio-dominance analogy \\
+\citet{dagostino2024} & Gaussian RBFs with learned precision matrices & Active-subspace and feature-importance analysis \\
+\citet{que2016} & Coefficient-regularized RBFs and k-means centers & Data-dependent kernels and statistical error bounds \\
+\citet{saralajew2025} & Probabilistic prototype architecture and perturbed inputs & Prototype interpretation and input-robustness analysis \\
+\citet{fazaeli2026} & Learned prototypes in softmax neurons & Supporting and opposing sample influences \\
+\citet{noorizadegan2026reliable} & Gaussian scale and feature-block geometry & Conditioning and reliability analysis \\
+\citet{noorizadegan2026partition} & Normalized Gaussian edge features & Partition-of-unity representation and scale-sensitivity analysis \\
+\citet{voracek2022} & Perturbed inputs to nearest-prototype classifiers & Adversarial prediction guarantees \\
+\citet{rosenfeld2020} & Changed training labels & Label-flip prediction certificates \\
+\citet{shibagaki2015} & Regularized binary classification with fixed inputs & Validation-score and cross-validation-error bounds over a regularization interval \\
+\citet{ndiaye2019} & Regularization path with a fixed design matrix & Solution-path approximation and validation-error bounds \\
+Present method & Width and ridge penalty with fixed data and prototypes & Sufficient agreement regions, strict exclusions, and local penalty-tail certificates \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Model and training-derived quantities}
+\subsection{Purpose and model definition}
+The analysis takes a training set, selected prototypes, a query, and a requested bandwidth--penalty region. Sufficient conditions certify that the entire region predicts the query's nearest-prototype label; strict disagreement tests exclude that property. Cases receiving neither conclusion remain unresolved. The calculation first summarizes overlap among labeled training inputs at the upper bandwidth. It then compares a bound derived from these summaries with the query's separation from competing-class prototypes.
+
+Let $x_i\in\R^d$, $i=1,\ldots,N$, be fixed training inputs, and let $Y\in\{0,1\}^{N\times C}$ contain one-hot labels for $C$ classes. Select $K$ distinct training-row indices as prototypes $c_j$. The selector $S\in\{0,1\}^{N\times K}$ places a one at each selected row, so $S^\tr S=I_K$, and $Y_C=S^\tr Y$ contains prototype labels. Selection concerns distinct rows; different rows may have equal coordinates. For a shared positive bandwidth $\sigma$, the feature matrix is
+\begin{equation}
+ H_\sigma(i,j)=\exp\left[-\frac{\norm{x_i-c_j}_2^2}{2\sigma^2}\right].
+ \label{eq:features}
+\end{equation}
+The readout minimizes the sum-of-squares objective
+\begin{equation}
+ \norm{H_\sigma W-Y}_F^2+\lambda\norm{W}_F^2,\qquad \lambda\geq0,
+ \label{eq:objective}
+\end{equation}
+with no intercept. Write $G_{\sigma,\lambda}=H_\sigma^\tr H_\sigma+\lambda I_K$. When $G_{\sigma,\lambda}$ is positive definite, the solution is
+\begin{equation}
+ W_{\sigma,\lambda}=G_{\sigma,\lambda}^{-1}H_\sigma^\tr Y.
+ \label{eq:readout}
+\end{equation}
+For a query $x$, the feature column $h_\sigma(x)$ is defined by the same Gaussian responses, and the largest entry of $h_\sigma(x)^\tr W_{\sigma,\lambda}$ determines its class. The certificate below supplies a positive eigenvalue bound on its accepted regions, including any accepted region with $\lambda_0=0$.
+
+\subsection{Separating self-response from overlap}
+Each selected prototype has response one at its own training row. Remove these self-responses by defining $E_\sigma=H_\sigma-S$. This matrix is entrywise nonnegative, and every entry is nondecreasing in $\sigma$. Its selected-row block $E_{C,\sigma}=S^\tr E_\sigma$ is symmetric with zero diagonal because all units use the same Euclidean Gaussian width. Let $R$ denote the remaining training rows. At the endpoint $t$, define
+\begin{equation}
+ V_t=E_{C,t}Y_C,\qquad
+ P_t=E_{R,t}^\tr Y_R,\qquad
+ Q_t=E_t^\tr(E_tY_C).
+ \label{eq:terms}
+\end{equation}
+All three are $K\times C$ nonnegative matrices. The matrix $V_t$ groups overlap between prototypes by class; $P_t$ groups responses from the other labeled observations; $Q_t$ records a two-stage overlap correction relative to the prototype-label reference. Their entries increase with $t$, so endpoint values bound the corresponding quantities at every smaller width. The parenthesization of $Q_t$ allows its computation without forming $E_t^\tr E_t$.
+
+The prototype block also supplies a spectral floor. Let
+\begin{equation}
+ B_t=S^\tr H_t=I_K+E_{C,t},\qquad
+ \beta_t=\max_j\sum_{k\ne j}B_t(j,k),\qquad
+ \gamma_t=\bigl[\max(1-\beta_t,0)\bigr]^2.
+ \label{eq:spectral}
+\end{equation}
+Here $\beta_t$ is the largest total off-diagonal prototype response, and $0\leq\gamma_t\leq1$. The clipping precedes the square. Strong overlap may reduce this floor to zero; a positive ridge penalty still supplies a positive denominator for the subsequent bound.
+
+\subsection{An exact readout residual}
+The reference weights $W_0(\lambda)=Y_C/(1+\lambda)$ place a coefficient $1/(1+\lambda)$ on each prototype's own class and zero on its other classes. They provide a tractable comparison with the learned readout. Their normal-equation residual is
+\begin{equation}
+ \mathcal R_{\sigma,\lambda}
+ =H_\sigma^\tr Y-G_{\sigma,\lambda}W_0(\lambda).
+ \label{eq:residualdef}
+\end{equation}
+The following identity separates the three training contributions before any norm bound is applied.
+
+\begin{lemma}[Residual decomposition]
+For the model in Eqs.~\eqref{eq:features}--\eqref{eq:objective},
+\begin{equation}
+ \mathcal R_{\sigma,\lambda}
+ =\frac{\lambda-1}{\lambda+1}V_\sigma
+   +P_\sigma-\frac{Q_\sigma}{\lambda+1}.
+ \label{eq:residual}
+\end{equation}
+When $G_{\sigma,\lambda}$ is invertible, the difference $\Delta W=W_{\sigma,\lambda}-W_0(\lambda)$ equals $G_{\sigma,\lambda}^{-1}\mathcal R_{\sigma,\lambda}$.
+\end{lemma}
+\begin{proof}
+The decomposition $H_\sigma=S+E_\sigma$ gives $H_\sigma^\tr Y=Y_C+V_\sigma+P_\sigma$. Symmetry of $E_{C,\sigma}$ gives
+\[
+ H_\sigma^\tr H_\sigma
+ =I_K+2E_{C,\sigma}+E_\sigma^\tr E_\sigma.
+\]
+Substitution into Eq.~\eqref{eq:residualdef} cancels $Y_C$ and yields Eq.~\eqref{eq:residual}. Since $G_{\sigma,\lambda}W_{\sigma,\lambda}=H_\sigma^\tr Y$, the residual definition gives $G_{\sigma,\lambda}(W_{\sigma,\lambda}-W_0)=\mathcal R_{\sigma,\lambda}$, proving the second statement.
+\end{proof}
+
+Equation~\eqref{eq:residual} retains a cancellation associated with the symmetric prototype block. In particular, the coefficient of $V_\sigma$ vanishes at $\lambda=1$. The next section uses its absolute value to bound class-pair changes while preserving the distinction between prototype and non-prototype contributions.
+
+\section{Uniform nearest-prototype agreement}
+\subsection{A bound for the entire parameter region}
+For different classes $a$ and $b$, write $V_{ab,t}=V_t[:,a]+V_t[:,b]$, and define $P_{ab,t}$ and $Q_{ab,t}$ in the same way. These nonnegative vectors bound the absolute difference between the corresponding class contributions. The first step controls the inverse matrix in the residual identity throughout the region.
+
+\begin{lemma}[Spectral floor]
+For every $0<\sigma\leq t$ and $\lambda\geq0$,
+\begin{equation}
+ \lambda_{\min}(G_{\sigma,\lambda})\geq\gamma_t+\lambda.
+ \label{eq:eigenlower}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The selected rows form $B_\sigma$, so $H_\sigma^\tr H_\sigma\succeq B_\sigma^\tr B_\sigma$. If $\beta_t<1$, symmetry and the Gershgorin bound imply $\lambda_{\min}(B_\sigma)\geq1-\beta_\sigma\geq1-\beta_t>0$. Squaring this bound and adding $\lambda I_K$ proves Eq.~\eqref{eq:eigenlower}. If $\beta_t\geq1$, then $\gamma_t=0$ and positive semidefiniteness of $H_\sigma^\tr H_\sigma$ gives the stated ridge floor.
+\end{proof}
+
+Assume $\gamma_t+\lambda_0>0$. The residual identity, entrywise monotonicity, and Eq.~\eqref{eq:eigenlower} imply
+\begin{equation}
+ (1+\lambda)\norm{\Delta W[:,a]-\Delta W[:,b]}_2
+ \leq\norm{F_{ab}(\lambda;t)}_2,
+ \label{eq:pairperturb}
+\end{equation}
+where the nonnegative vector
+\begin{equation}
+ F_{ab}(\lambda;t)=
+ \frac{|\lambda-1|V_{ab,t}+(\lambda+1)P_{ab,t}+Q_{ab,t}}
+ {\gamma_t+\lambda}
+ \label{eq:majorant}
+\end{equation}
+uses training information only at $t$. Thus width has already been controlled; the remaining task is to bound the norm of this vector for every penalty above the floor.
+
+\begin{proposition}[Two-endpoint penalty envelope]
+For $t>0$, $\lambda_0\geq0$, and $\gamma_t+\lambda_0>0$, define
+\begin{equation}
+ D^{\sharpb}_{ab}(t,\lambda_0)=
+ \max\left\{\norm{F_{ab}(\lambda_0;t)}_2,
+                  \norm{V_{ab,t}+P_{ab,t}}_2\right\}.
+ \label{eq:sharp}
+\end{equation}
+Then $D^{\sharpb}_{ab}$ is the exact supremum of $\norm{F_{ab}(\lambda;t)}_2$ over $\lambda\geq\lambda_0$, and Eq.~\eqref{eq:pairperturb} holds with $D^{\sharpb}_{ab}$ on its right throughout $(0,t]\times[\lambda_0,\infty)$.
+\end{proposition}
+\begin{proof}
+For $\lambda\geq\lambda_0$, the scalar triangle inequality gives
+$|\lambda-1|\leq|\lambda_0-1|+\lambda-\lambda_0$. Set
+$\theta=(\gamma_t+\lambda_0)/(\gamma_t+\lambda)\in(0,1]$. Entrywise,
+\[
+ F_{ab}(\lambda;t)
+ \leq\theta F_{ab}(\lambda_0;t)
+       +(1-\theta)(V_{ab,t}+P_{ab,t}).
+\]
+The Euclidean norm is monotone for nonnegative vectors and convex, so its value is bounded by the larger endpoint norm in Eq.~\eqref{eq:sharp}. The first norm occurs at $\lambda_0$ and the second is approached as $\lambda\to\infty$. Their maximum is therefore the supremum of this majorant. Equation~\eqref{eq:pairperturb} transfers the bound to the class-pair weight difference.
+\end{proof}
+
+The exact maximization in this proposition concerns the chosen nonnegative majorant. It removes a continuous penalty search from evaluating that bound. The nearest-prototype theorem now follows by comparing the resulting weight perturbation with a query margin.
+
+\subsection{From a class-pair bound to a label guarantee}
+Let $j_0$ index a nearest prototype to a query $x$, let its label be $a$, and let $d_j^2=\norm{x-c_j}_2^2$. Normalize all query responses by the positive nearest response. At the upper bandwidth, this produces
+\begin{equation}
+ r_j(t)=\exp\left[-\frac{d_j^2-d_{j_0}^2}{2t^2}\right],\qquad
+ n_t=\norm{r(t)}_2,\qquad
+ L_b(t)=1-\sum_{j:Y_C(j,b)=1}r_j(t).
+ \label{eq:query}
+\end{equation}
+The nearest response equals one. The quantity $L_b(t)$ subtracts the total response of competing-class prototypes and lower-bounds the reference margin against class $b$. It is computed from prototype distances and labels without evaluating a fitted readout.
+
+\begin{theorem}[Agreement on a complete parameter region]
+Suppose $t>0$, $\lambda_0\geq0$, and $\gamma_t+\lambda_0>0$. If
+\begin{equation}
+ L_b(t)>n_tD^{\sharpb}_{ab}(t,\lambda_0)
+ \quad\text{for every }b\ne a,
+ \label{eq:certificate}
+\end{equation}
+then, for every $0<\sigma\leq t$ and every finite $\lambda\geq\lambda_0$, the unique winning class of $h_\sigma(x)^\tr W_{\sigma,\lambda}$ is $a$.
+\label{thm:agreement}
+\end{theorem}
+\begin{proof}
+Dividing $h_\sigma(x)$ by its nearest response multiplies all class scores by the same positive scalar and produces $r(\sigma)$. Squared-distance gaps are nonnegative, so $r_j(\sigma)\leq r_j(t)$ when $\sigma\leq t$. The prototype-reference margin satisfies
+\begin{align*}
+ (1+\lambda)r(\sigma)^\tr\bigl(W_0[:,a]-W_0[:,b]\bigr)
+ &=r(\sigma)^\tr\bigl(Y_C[:,a]-Y_C[:,b]\bigr)\\
+ &\geq 1-\sum_{j:Y_C(j,b)=1}r_j(t)=L_b(t).
+\end{align*}
+The inequality retains the response of prototype $j_0$ and drops the other nonnegative responses from class $a$. By Cauchy--Schwarz and the penalty envelope,
+\[
+ (1+\lambda)\left|r(\sigma)^\tr
+       \bigl(\Delta W[:,a]-\Delta W[:,b]\bigr)\right|
+ \leq \norm{r(\sigma)}_2D^{\sharpb}_{ab}
+ \leq n_tD^{\sharpb}_{ab}.
+\]
+The strict condition in Eq.~\eqref{eq:certificate} consequently leaves a positive learned margin against every competing class throughout the region. Positive query scaling preserves this unique winning class in the original scores.
+\end{proof}
+
+Figure~\ref{fig:mechanism} connects the training-only bound to the query margin and shows the region guaranteed when every class comparison passes. The procedure abstains if the spectral denominator is zero or any strict inequality fails. A nearest tie across classes forces a competing margin to be nonpositive and therefore prevents certification. A class absent from the prototype set remains a competitor: its training labels still contribute through $P_t$. Thus the construction accounts for the full training-label matrix, including classes represented only outside the selected rows.
+
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{Figure_02_Uniform_Certificate_Mechanism.pdf}
+\caption{Uniform nearest-prototype agreement certificate. (A) Prototype overlap $V_t$, non-prototype labeled responses $P_t$, quadratic overlap $Q_t$ in Eq.~\eqref{eq:terms}, and spectral floor $\gamma_t$ in Eq.~\eqref{eq:spectral} determine the class-pair bound $D^{\sharpb}_{ab}(t,\lambda_0)$ in Eq.~\eqref{eq:sharp}. It requires $t>0$, $\lambda_0\geq0$, and $\gamma_t+\lambda_0>0$. Query distances determine the reference class $a$, competing-class margin $L_b(t)$, and response norm $n_t$ in Eq.~\eqref{eq:query}. The strict comparison must pass for every $b\ne a$. (B) A passed test guarantees class $a$ for every $0<\sigma\leq t$ and finite $\lambda\geq\lambda_0$. The shaded region illustrates this mathematical domain; empirical coverage is measured in Fig.~\ref{fig:coverage}.}
+\label{fig:mechanism}
+\end{figure}
+
+\subsection{Comparators and nested certified regions}
+Two bounds with the same region semantics isolate the role of the retained class-wise information and the two-endpoint calculation. Replacing $|\lambda-1|$ by $1+\lambda$ yields
+\begin{equation}
+ D^{\basicb}_{ab}=
+ \norm{\frac{(1+\lambda_0)(V_{ab,t}+P_{ab,t})+Q_{ab,t}}
+ {\gamma_t+\lambda_0}}_2.
+ \label{eq:basic}
+\end{equation}
+For a norm/count comparator, let $\eta_t=\norm{E_t}_F$, let $n_{ab}$ count training labels in $\{a,b\}$, and let $k_{ab}$ count prototype labels in those classes. The cancellation-aware Frobenius bound is
+\begin{equation}
+ D^{\frobb}_{ab}=
+ \frac{(1+\lambda_0)\eta_t\sqrt{n_{ab}}+\eta_t^2\sqrt{k_{ab}}}
+ {\gamma_t+\lambda_0}.
+ \label{eq:frobenius}
+\end{equation}
+Each comparator uses Eq.~\eqref{eq:certificate} with its corresponding bound.
+
+\begin{proposition}[Bound and certificate hierarchy]
+For every applicable endpoint and class pair,
+\begin{equation}
+ D^{\sharpb}_{ab}\leq D^{\basicb}_{ab}\leq D^{\frobb}_{ab}.
+ \label{eq:hierarchy}
+\end{equation}
+At $\lambda_0=0$, the sharp and basic bounds coincide. The queries certified by the Frobenius condition are contained in those certified by the basic condition, which are contained in those certified by the sharp condition.
+\end{proposition}
+\begin{proof}
+The vector in Eq.~\eqref{eq:basic} dominates $F_{ab}(\lambda_0;t)$ because $|\lambda_0-1|\leq1+\lambda_0$. It also dominates $V_{ab,t}+P_{ab,t}$ because $\gamma_t\leq1$. Monotonicity of the norm proves the first inequality, including equality at zero penalty floor. Let $z=Y[:,a]+Y[:,b]$ and $z_C=Y_C[:,a]+Y_C[:,b]$. Symmetry of the prototype block gives $V_{ab,t}+P_{ab,t}=E_t^\tr z$, and $Q_{ab,t}=E_t^\tr E_tz_C$. Therefore
+\[
+ \norm{V_{ab,t}+P_{ab,t}}_2\leq\eta_t\sqrt{n_{ab}},
+ \qquad
+ \norm{Q_{ab,t}}_2\leq\eta_t^2\sqrt{k_{ab}}.
+\]
+The triangle inequality applied to Eq.~\eqref{eq:basic} proves the second inequality. Substitution into the same strict margin test proves inclusion of the certified sets.
+\end{proof}
+
+For a fixed penalty floor, every numerator in the bounds increases with $t$ and $\gamma_t$ decreases. The query norm and competing-class response sums also increase. Hence certification at $t$ implies certification at every smaller upper bandwidth. Raising the penalty floor shrinks the interval defining the exact supremum in Eq.~\eqref{eq:sharp}, so the sharp constant cannot increase. These nested regions permit a search for a certified bandwidth frontier using training quantities. The original endpoint grid measures this behavior at predefined widths; the supplementary analysis uses the same nesting to bracket each query's frontier.
+
+After Gaussian feature construction, forming $V_t$, $P_t$, and $Q_t$ costs $O(NKC)$ arithmetic; preparing all class-pair constants costs $O(KC^2)$. Computing $Q_t$ as $E_t^\tr(E_tY_C)$ avoids the $O(NK^2)$ full training Gram construction. Row-wise accumulation can retain $O(KC+K^2)$ state, excluding inputs and query batches. Once query distances are available, class response sums require $O(K)$ work followed by $C-1$ comparisons. These counts describe the certificate calculation; the experiment retains the full feature matrix to fit comparison models.
+
+\input{ridge_theory.tex}
+
+\section{Evaluation design}
+\subsection{Questions, datasets, and fixed sampling}
+The frozen evaluation measures three properties: the fraction of queries certified over each declared region; the change in coverage between the three analytical bounds; and the relationship between certification, observed nearest-prototype agreement, and class accuracy. Numerical predictions at region endpoints and interior points check the implementation against Theorem~\ref{thm:agreement}. The proof establishes the continuous statement.
+
+The datasets are MNIST handwritten digits \citep{lecun1998} and Fashion-MNIST apparel images \citep{xiao2017fashion}, each with ten classes and $28\times28$ grayscale inputs. Each seed uses 20,000 stratified training images and reserves 5,000 validation images. All pixels are converted to float64, divided by 255, and flattened consistently in MATLAB column order. Euclidean distances use the 784 resulting coordinates. The fixed seeds are 11, 22, 33, 44, and 55.
+
+The MNIST training and validation partitions were retained from an earlier exploratory bandwidth study. Their union across seeds contains 55,973 of the 60,000 official training images. The 4,027 remaining images form a common evaluation set, with no overlap with any retained training or validation partition. The original 10,000-image MNIST test set is excluded from this prospective evaluation. Fashion-MNIST uses stratified training partitions from its official training set and the official 10,000-image test set for evaluation. In the frozen study, validation partitions were retained as disjoint unused partitions and no model selection was performed. Section~\ref{sec:r3-design} subsequently uses those partitions for a post hoc diagnostic of archived readouts. Canonical dataset payloads and local observation order were checked, and the archive retains hashes and index manifests.
+
+Within each seed, the prototype budgets are $K\in\{50,100,200\}$. For MNIST, the earlier 100 randomly selected training prototypes are preserved; the first 50 form the smaller budget, and 100 further training rows are appended using seed $s+200000$. Fashion-MNIST draws 200 training rows using seed $s$ and uses prefixes for the smaller budgets. Prototype coordinates and labels remain fixed across all widths, penalties, and bound comparisons within each dataset--seed--budget group. Duplicate coordinates are recorded and retained. This creates 30 groups with matched comparisons between methods.
+
+\subsection{Parameter regions and fitted references}
+The prototype distance scale is
+\begin{equation}
+ s_C=\frac{\operatorname{median}_{j<k}\norm{c_j-c_k}_2}{\sqrt{2}}.
+ \label{eq:scale}
+\end{equation}
+The seven bandwidth endpoints are the absolute value $t=1$ and $t/s_C\in\{1/16,\allowbreak1/8,\allowbreak1/4,\allowbreak1/2,\allowbreak1,\allowbreak2\}$. Each combines with $\lambda_0\in\{0,1,100\}$ to define a complete region. Thus the experiment contains 630 regions and 1,890 method-specific coverage records. Every declared condition is retained.
+
+For implementation checks, each region is probed at bandwidths $\{t/2,3t/4,t\}$. The penalty probes are $\{0,1,100\}$ when $\lambda_0=0$, $\{1,10,100\}$ when $\lambda_0=1$, and $\{100,1000,10000\}$ when $\lambda_0=100$. The Cartesian product gives nine checks per certified query and region. Fitted references use thin singular value decomposition (SVD). Positive penalties apply the filter $s/(s^2+\lambda)$ to each singular value $s$; zero penalty uses a pseudoinverse with cutoff $\max(N,K)\epsilon s_{\max}$, where $\epsilon$ is float64 machine precision. Numerical ranks are retained. Gaussian training features are unscaled. Query features use the distance-gap normalization in Eq.~\eqref{eq:query}, preserving decisions and preventing a common nearest-response factor from underflowing.
+
+The implemented certificate requires each margin gap to exceed $10^{-10}(1+|L_b|+|n_tD_{ab}|)$. It also requires the difference between the smallest two squared distances to exceed $10^{-12}\max(1,d_{(1)}^2,d_{(2)}^2)$. Otherwise it abstains. These rules are shared by all three methods. The code checks bound ordering and inclusion of certificate masks and stores the minimum raw class-pair margin for every query-region pair.
+
+\subsection{Measures and execution record}
+For a group with $M$ evaluation queries, coverage is $M^{-1}\sum_{i=1}^M I_i$, where $I_i$ indicates certification. Applicability records whether $\gamma_t+\lambda_0>0$. Observed agreement is the fraction of queries for which a fitted readout and the nearest prototype return the same label; accuracy compares a fitted label with the held-out target. Coverage among observed agreements is reported with the agreeing queries as denominator. These measures distinguish a guarantee obtained from the sufficient condition, direct agreement at a fitted point, and correctness against the dataset label.
+
+The protocol and implementation hashes were frozen on 6 November 2026 before evaluation. Predictions, weights, class-pair bounds, and certificate masks for all 30 groups were generated and hashed before evaluation targets were used for scoring. The loaded MNIST label array supplied training labels; entries corresponding to the reserved evaluation indices were excluded from fitting, selection, and scoring until that prediction freeze. All comparisons preserve the same data, prototypes, and parameter region.
+
+Means and sample standard deviations summarize the five seed outcomes for each fixed condition. Comparisons between methods are paired within a group. Query-region and query-probe totals count repeated uses of the same images and therefore serve as implementation-check denominators. The archived run used Python 3.12.14, NumPy 2.3.5, Linux x86-64, and single-thread limits around the computational loop. Timing records separate shared distances, certificate preparation with query evaluation, and readout factorization.
+
+\subsection{Supplementary bandwidth-frontier analysis}
+The original grid places its positive scaled endpoint at $s_C/16$ and its next endpoint at $s_C/8$. To locate the transition, a post hoc analysis on 7 November 2026 retains all 30 groups, their original indices and prototypes, and all three penalty floors. Its protocol and code were frozen before the supplementary run. It evaluates 67 geometrically spaced widths from $s_C/32$ to $s_C/4$, with 22 intervals per doubling and adjacent ratio $2^{1/22}\simeq1.03201$. The original widths $s_C/16$, $s_C/8$, and $s_C/4$ are included exactly.
+
+For each query, floor, and method, the stored frontier bracket contains the largest passing grid width and the next failing width. Monotonicity of the class-pair bounds and query margins makes acceptance downward closed. The numerical guard preserves this ordering: for a passing comparison, $L>A\geq0$, where $A=n_tD_{ab}$, and the guard is equivalent to $(1-\epsilon)L>(1+\epsilon)A+\epsilon$ with $\epsilon=10^{-10}$. The left side decreases with width and the right side increases. Numerical mask nesting is also checked. Queries already failing at the first width are recorded as left-censored; those passing the final width are recorded as right-censored. Each observed transition is bracketed with an upper-to-lower width ratio no greater than 1.0321.
+
+For each group and floor, sharp masks select three operating points: the largest grid width retaining any certification, at least 50\% coverage, and at least 90\% coverage. Selection uses no evaluation targets. A readout is fitted at each selected width and $\lambda=\lambda_0$; all predictions are frozen before scoring. Accuracy and nearest-prototype agreement use all queries, with certified-subset accuracy retained separately. The comparison reference is the highest observed accuracy among the 16 distinct widths already probed in the frozen study at the same penalty. This reference describes the sampled accuracy range. All five seed results and their paired differences are retained.
+
+\input{new_methods.tex}
+\input{r3_methods.tex}
+\input{r4_methods.tex}
+
+\section{Results}
+\input{results.tex}
+\input{frontier_results.tex}
+\input{new_results.tex}
+\input{r3_results.tex}
+\input{r4_results.tex}
+
+\section{Discussion}
+The combined analysis distinguishes a nearest-prototype summary that is guaranteed across a family from one that the family itself contradicts. The residual certificate controls all widths below an endpoint and every penalty above a floor. The large-penalty obstruction shows when some finite member of that same family must choose a competing class. Their combination adds information to a sufficient certificate's abstention: excluded regions contain a demonstrated disagreement, whereas unresolved regions await a decisive test.
+
+The region diagnostic separates two empirical phenomena. Immediately beyond the certification frontier, almost the entire query set remains unresolved. At broader widths, strict witnesses exclude most requested full-width regions. These observations establish that the first loss of sufficient coverage and widespread identified failure of uniform agreement occur in different bandwidth ranges. A tighter sufficient bound could resolve some of the remaining cases; any sound bound must exclude queries with a strict disagreement witness from its accepted set.
+
+The large-penalty limit explains a source of incompatibility. The scaled readout approaches $Z_\sigma=H_\sigma^\tr Y$, and the query votes $r(\sigma)^\tr Z_\sigma$ aggregate labeled observations through their prototype responses. Non-prototype observations therefore influence the limiting decision even though the reference label belongs to one selected prototype. Increasing regularization can expose a pooled class vote that opposes that reference. The finite threshold in Proposition~\ref{prop:ridge-limit} makes this mechanism a statement about actual finite classifiers. The validation comparison places these sufficient bounds far beyond the competitive sampled penalties. The complete archived paths exhibit both earlier finite disagreements and later returns to agreement, including five alternating signs across six penalties. This distinguishes a guaranteed disagreement tail from the observed sequence of finite decisions. \ref{app:exact-ridge-examples} supplies exact constructed cases for strict reversal and tied-limit behavior.
+
+The local-width theorem uses the same limiting mechanism constructively. Positive vote margins across a bandwidth band, together with a signed enclosure of the resolvent correction, certify a penalty tail with a finite floor. The measured coverage at broader widths establishes that this region geometry can certify additional nearest-label behavior. The matched-coverage experiment places its selected-set accuracy above random selection and ordinary score margins. Agreement-gated distance selection is more accurate in three of the four comparisons. The MNIST endpoint at $t=s_C$ and $\lambda=10\norm{A_t}_2$ has a constant class-1 readout, and its certified set equals the entire endpoint-agreement pool. The class-specific reconstruction makes this composition explicit: the MNIST certified subset at that endpoint has 10\% selected-class macro accuracy across ten represented true classes. On Fashion-MNIST, the stronger selector distributes correct accepted predictions across more classes and selects substantially different queries at equal coverage. These measurements separate continuous persistence, selected-subset accuracy, and class-balanced retention.
+
+Exact overlap analysis further identifies the source of incremental exclusions. Near $t=s_C$, the original limiting witnesses add many cases to the original finite probes, and almost all of those additions are covered once the archived local-tail models are included. At $2s_C$, limiting witnesses retain a larger unique set on Fashion-MNIST, where the archive has fewer high-penalty finite models. Complementarity is therefore a measurable relation between the analytical witness and a specified finite sampling design. The limiting calculation provides a training-derived route to the exclusion; finite readouts expose many of the same disagreements. The fixed replay order sharpens this comparison: expanded high-penalty probes recover at least 95\% of the original limiting-witness cases within mean 15.6 and 20.2 checks at $t=s_C$, whereas the original finite probes fail to reach that target in every seed.
+
+The original bound comparisons explain which information matters within the full-width construction. Class-wise overlap retains the distribution of training responses by label, whereas the Frobenius comparator compresses them into one norm and class counts. The larger certified sets establish the effect of this retained structure under identical data and query margins. The exact two-endpoint envelope further improves the analytical bound. Its masks match the basic class-wise masks in the frozen grid, and the denser grid resolves small additional sets near some transitions. The larger empirical change comes from class-wise information; the envelope removes a continuous penalty maximization and supplies a further local gain. Even at the widest original passing endpoint, the Gaussian response at median prototype separation is $2.96\times10^{-32}$, placing the full-width sufficient construction in a near-isolated-prototype regime.
+
+The validation-selected analysis supplies a direct empirical answer about competitive operation. Every model retained by each of the fixed 90\%, 95\%, and 99\% rules has zero sharp full-width coverage. The selected models improve accuracy and cross-seed prediction stability as prototype budget increases, while the full-width certificate remains empty. Thus improved finite-model prediction and certified family persistence follow distinct empirical patterns in the archived grid. The broad region exclusions additionally show that many competitive endpoints belong to families containing a strict nearest-label disagreement.
+
+These results connect established RBF and parameter-path analyses through a specific decision-region object. Coefficient-regularized RBF theory addresses statistical behavior \citep{que2016}; narrow-bandwidth kernel arguments explain nearest-neighbour dominance \citep{radhakrishnan2023}; prototype architectures and learned Gaussian geometry address interpretation through model structure \citep{saralajew2025,dagostino2024}. Regularization-path guarantees control solution or validation behavior as penalties vary \citep{shibagaki2015,ndiaye2019}. Here the varied feature matrix and penalty are analyzed together to establish nearest-prototype label persistence, strict incompatibility, or unresolved status before output fitting. The signed local certificate adds a complementary region construction using the same training geometry.
+
+\section{Conclusion}
+The nearest prototype provides a verifiable label summary for a Gaussian ridge RBF classifier when training-derived conditions establish agreement throughout the requested parameter region. The analysis supplies full-width and local-band agreement guarantees, together with strict exclusions and finite disagreement thresholds. It therefore distinguishes guaranteed persistence, demonstrated failure within a family, and unresolved cases.
+
+The two-dataset evaluation locates these outcomes relative to prediction quality. All 328 readouts meeting the primary validation-competitive rule have zero full-width coverage. Local bands admit additional guarantees, and the finite penalty paths show disagreement followed by renewed agreement. Class-conditioned comparisons explain which queries account for accuracy within certified subsets. The resulting contribution is both a continuous analysis of nearest-prototype agreement and an empirical account of where its guarantees apply. Tighter signed bounds and alternative region geometries provide concrete directions for resolving the remaining frontier.
+
+\section{Limitations}
+The guarantees concern equality with a nearest-prototype label. Class correctness is evaluated separately against held-out targets; human understanding and causal explanatory value were not measured. The model uses fixed labeled training prototypes, one shared Euclidean Gaussian width, the sum-of-squares ridge objective, and no intercept. Learned features, moving prototypes, class-dependent penalties, anisotropic kernels, and input perturbations require corresponding derivations. The analytical complexity statement concerns the proposed accumulation, whereas the experimental implementation retains dense feature matrices and supplies descriptive timing rather than a streaming-memory or speedup benchmark.
+
+The full-width sufficient condition discards information through absolute class-pair majorization, a prototype-block eigenvalue floor, removal of additional same-class query responses, and norm inequalities. The diagnostic examines finitely many limiting widths and archived finite readouts; unresolved queries can contain disagreements at other parameter values. Limiting ties receive no exclusion from the strict test. The local-tail certificate addresses $[s,t]$, and the full-width certificate addresses $(0,t]$; their coverage refers to these different families. Large-penalty local coverage and certified-subset accuracy do not measure all-query predictive performance.
+
+Two ten-class image datasets and randomly selected prototype subsets determine the empirical scope. The post hoc diagnostic, local-tail, reversal-bound, selector, and ordered-probe analyses use the ten $K=100$ groups. Finite-path, validation-competitive, and budget-stability analyses use all 30 original groups. The 90/95/99\% rules describe relative validation accuracy within the archived grid. Sampled first-detection brackets do not identify unique or earliest continuous crossings, and all-sample agreement does not certify unsampled penalties. The sufficient reversal bound supplies an upper threshold for guaranteed disagreement. Ordered-probe prefix counts measure retrospective set recovery; they supply neither a prospective stopping guarantee nor a measured computational speedup. The selector comparisons describe the fixed endpoint models and sample. No predictive or model-selection improvement is established by the certificates. Seeds share evaluation images and have overlapping training pools, so sample standard deviations describe variation across those realizations. Repeated query-region and query-probe checks reuse the same images. Float64 arithmetic and positive guards were used without formally outward-rounded interval arithmetic. The finite probes check implementation behavior, and the proofs establish the continuous statements. The supplementary frontier brackets concern the guarded numerical certificate; the sampled accuracy maximum is a descriptive reference selected using evaluation targets. The present artifact verification reconstructs archived measurements, while the earlier complete-pipeline rerun is documented in the frozen archive.
+
+\appendix
+\section{Duplicate inputs and the small-width reference}
+\label{app:duplicates}
+The reference $W_0(\lambda)$ is also the small-width limit under a specific separation condition. If every selected prototype coordinate occurs only at its selected training row, then $H_\sigma\to S$ as $\sigma\to0$. For fixed finite $\lambda\geq0$, continuity gives $W_{\sigma,\lambda}\to Y_C/(1+\lambda)$. A query with a unique nearest prototype has $r(\sigma)\to e_{j_0}$, so its limiting class is the prototype's label. The finite-region theorem uses the actual overlap terms and its strict condition directly.
+
+A constructed example shows why non-prototype training observations matter. Let training coordinates be $(0,0,0,3)$ with labels $(0,1,1,1)$, and select the first and fourth rows as prototypes. The first prototype has label zero, and two further observations at the same coordinate have label one. As width tends to zero, the readout at penalty one converges to
+\[
+ W\longrightarrow
+ \begin{pmatrix}1/4&1/2\\0&1/2\end{pmatrix}.
+\]
+A query at zero consequently receives class one although its nearest selected prototype has class zero. Here $P_t$ retains the two coincident non-prototype observations, and the certificate abstains. The example explains the role of those training-label contributions; it is a constructed algebraic case.
+
+\section{Synthetic verification of the implementation}
+Two separately written numerical checks tested the derivation before the image evaluation. The first generated 100 small training datasets and evaluated 6,555 query-region cases, including 4,394 certified regions and 163,875 fitted comparisons. It found zero certified-label violations, residual-majorant failures, spectral-bound failures, or sharp-over-basic bound violations at its numerical tolerance. A separate implementation generated 60 further geometries and checked 117,975 certified query-parameter combinations with zero prediction disagreements. Its maximum residual-identity discrepancy was $1.42\times10^{-14}$; all 6,976 finite directed class-pair comparisons satisfied the sharp/basic ordering, with 3,290 strict improvements. The duplicate-input example and nearest-distance tie handling were also exercised. The archived scripts preserve these generated cases and checks separately from the two-dataset evaluation.
+
+An additional independently written check of Proposition~\ref{prop:ridge-limit} and Theorem~\ref{thm:local-tail} generated 250 Gaussian training geometries with 24 observations, six selected prototypes, three classes, and 12 queries per geometry. It verified 15,750 signed interval enclosures, 3,000 resolvent inequalities, 2,930 strict-limit finite reversals, and 33,660 fitted predictions in certified local bands, with zero failures. The exact Gaussian examples in \ref{app:exact-ridge-examples} separately exercise a strict obstruction and a tied limit. The revision supplement retains the independent verification script and its complete output.
+
+\input{exact_ridge_examples.tex}
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Declaration of competing interest}
+The author declares no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{CRediT authorship contribution statement}
+Meshaal Mouawad: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Visualization, Writing -- original draft, Writing -- review and editing.
+
+\section*{Data and code availability}
+The code, indexed data splits, prototype identities, frozen predictions, certificate masks, fitted weights, supplementary bandwidth-frontier records, dependency specifications, and verification scripts are provided in the accompanying Supplementary Research Artifacts archive. Dataset provenance and licenses are retained in the archive. The original MNIST and Fashion-MNIST sources are identified in the evaluation design and archive documentation.
+
+The additional diagnostic and local-tail protocols, code, per-query records, fitted readouts, and independent synthetic checks are provided in the accompanying revision supplement. It also includes the follow-up validation predictions, sufficient-reversal distributions, exact witness-overlap masks, matched-cardinality selection records, class distributions, and independent numerical reconstruction. The all-budget extension adds validation-selected and competitive-set records for every original group, per-class composition, complete signed finite-path margins, fixed-order exclusion increments, paired budget differences, cross-seed overlaps, plots, and independent reconstruction scripts. The frozen original archive and the additional supplement retain separate provenance records.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During preparation of this work, the author used Elsevier LeapSpace, other tools to support literature discovery, manuscript organization, language refinement, and consistency checking. The authors take responsibility for the content of the article.
+
+\bibliographystyle{elsarticle-harv}
+\begingroup\raggedright
+\setlength{\bibsep}{0pt}
+\bibliography{references}
+\endgroup
+\end{document}

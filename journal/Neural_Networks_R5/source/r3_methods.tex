@@ -1,0 +1,25 @@
+\subsection{Threshold relevance, witness overlap, and matched-coverage selectors}
+\label{sec:r3-design}
+Three follow-up diagnostics connect the analytical statements to the archived finite models and selected query sets. Their protocols were recorded before execution on 14 November 2026. They retain all ten $K=100$ groups and use the original images, indices, labels, and readouts. The first diagnostic evaluates the previously unused validation partitions; the other two operate on the fixed evaluation queries.
+
+For a strict limiting reversal against the nearest-prototype class $a$, define the sufficient reversal bound
+\[
+ B(x,\sigma)=\min_{b:\,\delta_b>0}
+ \frac{\norm{r(\sigma)}_2\norm{A_\sigma(Z_\sigma[:,b]-Z_\sigma[:,a])}_2}{\delta_b},
+ \qquad \delta_b=k_b(\sigma,x)-k_a(\sigma,x).
+\]
+Every penalty strictly above $B$ gives a competing fitted score by Proposition~\ref{prop:ridge-limit}. The numerical calculation applies the existing strict-score guard and assigns $B=\infty$ when no competing class passes it. We retain per-query values of $B/\norm{A_\sigma}_2$, within-seed quantiles, and the winning competing class, and verify the finite reversal at $1.001B$ for each finite bound.
+
+To locate these bounds relative to competitive sampled models, we reconstruct the original 96 readouts per group on its 5,000 validation images: 16 widths and penalties $\{0,1,10,100,1000,10000\}$. A sampled pair is called competitive when its validation accuracy is at least 95\% of the highest validation accuracy among those 96 pairs in the same group. At each of the seven original upper widths, $\lambda_{\rm comp}$ is the largest qualifying sampled penalty at that width. We compare $B$ and $\lambda_{\rm comp}$ after dividing both by that width's $\norm{A_\sigma}_2$. Widths with no qualifying readout are recorded as unavailable. This comparison uses new validation scores of archived weights; no model is refitted.
+
+For exact witness overlap, $L_0$ is the union of limiting-vote witnesses at original endpoints within the requested region, and $L_+$ also includes witnesses from the 67-width frontier grid. The finite set $F_0$ uses the original archived probes. The expanded set $F_1$ additionally uses all archived frontier and local-tail readouts that satisfy the region's width and penalty bounds. Both sets use the same strict finite-score guard and numerical-rank condition as Section~\ref{sec:new-design}. We calculate intersections, unions, and differences query by query, including $L_+\setminus F_0$ and $L_+\setminus F_1$. The additional large-penalty local-tail models occur near upper widths $s_C/2$ and $s_C$; the expanded archive therefore has different penalty sampling across widths. Figure~\ref{fig:region-diagnosis} and Table~\ref{tab:region-diagnosis} retain their original $L_0\cup F_0$ definition.
+
+For subset accuracy, every comparator selects exactly the certified cardinality $m$ within each seed at $(\sigma,\lambda)=(t,10\norm{A_t}_2)$, using the certificate for $[0.99t,t]$. If the fixed correctness indicators of the $M$ evaluation queries are $G_i$, a uniformly random size-$m$ subset $S$ has inclusion probability $m/M$ and hence
+\[
+ \mathbb E\!\left[\frac1m\sum_{i\in S}G_i\right]
+ =\frac1m\sum_{i=1}^{M}G_i\frac mM
+ =\frac1M\sum_{i=1}^{M}G_i.
+\]
+Thus the full-query fitted accuracy is the exact matched-size random expectation. Informed selectors rank the top-two raw fitted-score difference, or the squared-distance gap between the nearest differently labeled prototype and the nearest prototype. Agreement-gated versions first restrict the pool to queries whose endpoint fitted label equals the nearest-prototype label, then apply the same ranking. The certificate supplies at least $m$ queries in that pool. Rankings use no evaluation targets; ties resolve by ascending archived query identifier and then row index. Raw Gaussian scores define the primary score margin. Positive query-wise normalization preserves predicted labels and changes cross-query margin rankings, so normalized-margin results are retained as a separate sensitivity comparison.
+
+All subset accuracies use the selected $m$ queries; complete-set percentages use 4,027 MNIST or 10,000 Fashion-MNIST queries per seed. We retain paired accuracy differences, selected true- and predicted-class counts, and exact constant-class references. Means and sample standard deviations summarize the five seeds at each condition. Per-query masks, scores, threshold distributions, validation predictions, protocols, and independent reconstruction checks accompany the numerical supplement.
