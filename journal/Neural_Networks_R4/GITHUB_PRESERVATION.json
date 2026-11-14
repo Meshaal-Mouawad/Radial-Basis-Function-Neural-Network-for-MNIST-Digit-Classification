@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "repository": "https://github.com/Meshaal-Mouawad/Radial-Basis-Function-Neural-Network-for-MNIST-Digit-Classification",
+  "r2_r3_commit": "4636722c375ab6f64f74a297ad5843c3dd20b0d4",
+  "r4_commit": "fd0ed63f1d483d218df7884bc17cfbd6b3ec1e80",
+  "r2_r3_restored_files": 503,
+  "r2_r3_restored_bytes": 426678011,
+  "r2_r3_integrity": "Fresh git fetch and restoration hashes passed",
+  "r4_remote_files": 211,
+  "r4_remote_mismatches": [],
+  "r4_remote_scope": "Integrated manuscript PDF/source, protocols, scripts, small CSV summaries, verification and manifests. Large derived R4 per-query NPZ arrays remain in complete R4 archive and can be regenerated using restored evidence and committed scripts.",
+  "new_repository_created": false,
+  "r4_remote_integrity": "211 files freshly fetched and SHA256 compared; CSV CRLF retained exactly"
+}
