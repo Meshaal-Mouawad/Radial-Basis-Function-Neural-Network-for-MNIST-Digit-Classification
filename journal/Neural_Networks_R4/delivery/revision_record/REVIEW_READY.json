@@ -1,0 +1,32 @@
+{
+  "status": "REVIEW_READY",
+  "internal_author_review": true,
+  "journal_significance_resolved": false,
+  "journal_transfer_submission_complete": false,
+  "new_fits": 0,
+  "gates": {
+    "C_composition": "PASS",
+    "D_finite_paths": "PASS",
+    "E_competitive_regimes": "PASS",
+    "F_probe_accumulation": "PASS",
+    "G_seed_stability": "PASS",
+    "independent_numerical_reconstruction": "PASS",
+    "independent_source_consistency": "PASS",
+    "original_protection": "PASS",
+    "R3_checkpoint_unchanged": "PASS",
+    "latex_compilation": "PASS",
+    "all_41_pdf_pages_inspected": "PASS",
+    "fresh_source_compilation_exact_pixels": "PASS",
+    "fresh_supplement_four_verifiers": "PASS",
+    "complete_archived_evidence_preserved": "PASS",
+    "github_recorded_scope_exact": "PASS"
+  },
+  "delivery_hashes": {
+    "RBF_Neural_Networks_Manuscript_R4.pdf": "523094ad062b89060ee5ee790bc75c021ca995fe0f9b633ad540711b51bdecf4",
+    "Supplementary_Research_Artifacts_R4.zip": "ee029862791413b993387234efe9ecad5114d99685ef5fd9d4add4eb53d080c8",
+    "LaTeX_Source_Neural_Networks_R4.zip": "e3d749a3d7d1c5dad6730b4fecce2b8ef09cd659f7e3748ca9d476d405d32332"
+  },
+  "source_review_sha256": "cfc0c86a3ee88e08f36a2f28f5b25114168adc019bea4970d09770dc37a74d07",
+  "github_receipt_sha256": "bc4d6531ffac7d6e8529dd6311b89e1b00bf980d3f8ccfd5f6aa5e6fa3e2c00c",
+  "scope": "All approved saved-evidence analyses and manuscript production complete. The editor's significance assessment remains open."
+}

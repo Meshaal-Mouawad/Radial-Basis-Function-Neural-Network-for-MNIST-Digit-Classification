@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source_files_sha256": {
+    "working_R4/source/main.tex": "8a57c9d85f75d01bfb6280e2ef539a3dcf179dea4ba2db535a4cbb7c4ed1da20",
+    "working_R4/source/r4_methods.tex": "fc8fa98850aa2f94b611881fed969532dd91ddd5d7f0cd4161b7f7bd0a830119",
+    "working_R4/source/r4_results.tex": "e3db78a58d9e02806b8db095977a2a5316c39234a48df082d1e3f05653fecd6b",
+    "working_R4/source/r4_composition_table.tex": "b57a4444d58ec63cc94d2d779092d3420f071780c7a891c6400ecb3aeabbf644",
+    "working_R4/source/r4_paths_table.tex": "22a9a8ee8703a235a2c6e0a742d4af7b484174a3114ab8b2d1694ac8cfc80e56",
+    "working_R4/source/r4_competitive_table.tex": "06f1b3af6c94f09c5618d24bdc7fcdc93226cba3308219907d49ef14fd3b54e8",
+    "working_R4/source/r4_probe_table.tex": "f90fcac23d04996eb2defee53cac0a2e7195333dca525c226ea3aede1176744a"
+  },
+  "completed_independent_audit_statuses": {
+    "composition_verification.json": "PASS",
+    "competitive_verification.json": "PASS",
+    "paths_efficiency_verification.json": "PASS",
+    "summary_tables_verification.json": "PASS"
+  },
+  "previously_audited_outputs_hash_checked": 148,
+  "previously_audited_output_hash_mismatches": [],
+  "scope": "Read-only source consistency review against completed independent numerical audits; no fits or numerical reconstruction rerun."
+}

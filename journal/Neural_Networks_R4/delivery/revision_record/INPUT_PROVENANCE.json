@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-14",
+  "R3_full_archive_sha256": "9c6a1769dc0f4c9392d93c12ee045531d70fffa36e5bdaa272da52de5870be7a",
+  "R3_full_archive_library_id": "libfile_fde3_f-71dfede02ec4819191adc1b8c63f0738_6246015f02148191b6fb1aaa7040b316",
+  "global_protocol_sha256": "33642ed054a64d819c07ef081fce3c144957c2a9539fdb9464c22bc912ad25a0",
+  "new_fits": 0,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

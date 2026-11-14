@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "manifest",
+      "status": "PASS",
+      "elapsed_seconds": 0.6157876380002563,
+      "log_sha256": "9e850d0764434532fb2aeb4a29933699166249b9dfdbacd3191476e96e2cfb2b"
+    },
+    {
+      "check": "composition",
+      "status": "PASS",
+      "elapsed_seconds": 2.880875715000002,
+      "log_sha256": "527e5aa854ed44fa616f5d2df197a5ea8b70a3f0c65dbc37690968b90fba6843"
+    },
+    {
+      "check": "competitive",
+      "status": "PASS",
+      "elapsed_seconds": 72.71892563100027,
+      "log_sha256": "c13b9fceea333a32d2b5cc448126eb6382d9e4d1974b5bd113de7184f21aa026"
+    },
+    {
+      "check": "paths_efficiency",
+      "status": "PASS",
+      "elapsed_seconds": 35.487657090999164,
+      "log_sha256": "8864c38581a3782be6b73f59a22c30c7ed08b7994831ca253fb82cc4887c3b2a"
+    },
+    {
+      "check": "summary_tables",
+      "status": "PASS",
+      "elapsed_seconds": 0.8690095260008093,
+      "log_sha256": "6e7ac1d8685f4924b7e0ebaf8e2a934169bfebb14a67b6590317fc897ce50d32"
+    }
+  ],
+  "preserved_R2_R3_files_exact": 497,
+  "fresh_extraction": true,
+  "new_fits": 0
+}

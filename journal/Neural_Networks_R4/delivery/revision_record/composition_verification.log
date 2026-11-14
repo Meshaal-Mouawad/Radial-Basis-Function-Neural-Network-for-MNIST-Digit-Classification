@@ -1,0 +1,24 @@
+mnist_seed11_K100 PASS
+mnist_seed22_K100 PASS
+mnist_seed33_K100 PASS
+mnist_seed44_K100 PASS
+mnist_seed55_K100 PASS
+fashion_mnist_seed11_K100 PASS
+fashion_mnist_seed22_K100 PASS
+fashion_mnist_seed33_K100 PASS
+fashion_mnist_seed44_K100 PASS
+fashion_mnist_seed55_K100 PASS
+{
+  "status": "PASS",
+  "source": "Independent raw-image and archived-weight reconstruction; no imports from analysis runner",
+  "settings": 20,
+  "selector_rows": 40,
+  "class_rows": 400,
+  "summary_rows": 8,
+  "prediction_labels": 140270,
+  "new_fits": 0,
+  "comparison": "Every metric and class count matches; mean and sample SD independently recomputed",
+  "mnist_t_sC_class_one_and_identical_sets": true,
+  "script_sha256": "46bb51ab5483334036be36dc4da87a483108319615df9960d32ecb836d52f2f5",
+  "elapsed_seconds": 3.3994988069998726
+}

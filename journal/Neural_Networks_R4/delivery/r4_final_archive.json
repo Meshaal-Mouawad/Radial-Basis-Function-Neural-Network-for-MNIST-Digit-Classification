@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "files": 54,
+  "bytes": 708364070,
+  "sha256": "8f1a2998d199b4258dc86d9953977407dff0672b53f0b966719fa21a5758842e",
+  "full_archive": "/workspace/scratch/3c06ccde22f8/output/RBF_Neural_Networks_Full_Revision_R4_2026-11-14.zip",
+  "ready_gate": "/workspace/scratch/3c06ccde22f8/output/RBF_Neural_Networks_R4/revision_record/REVIEW_READY.json"
+}

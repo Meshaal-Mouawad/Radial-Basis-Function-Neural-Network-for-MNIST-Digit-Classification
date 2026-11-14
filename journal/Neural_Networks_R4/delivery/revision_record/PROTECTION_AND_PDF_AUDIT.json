@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "pages": 41,
+  "figures": 7,
+  "tables": 12,
+  "bibliography_entries": 17,
+  "protected_R2_files": {
+    "results.tex": true,
+    "frontier_results.tex": true,
+    "ridge_theory.tex": true,
+    "exact_ridge_examples.tex": true,
+    "references.bib": true,
+    "Figure_01_Two_Decision_Paths.pdf": true,
+    "Figure_02_Uniform_Certificate_Mechanism.pdf": true,
+    "Figure_03_Certificate_Coverage.pdf": true,
+    "Figure_04_Agreement_Accuracy.pdf": true,
+    "Figure_05_Certified_Frontier_Accuracy.pdf": true,
+    "Figure_06_Agreement_Region_Diagnosis.pdf": true
+  },
+  "protected_main_math": {
+    "equation": {
+      "count": 17,
+      "exact": true
+    },
+    "theorem": {
+      "count": 1,
+      "exact": true
+    },
+    "lemma": {
+      "count": 2,
+      "exact": true
+    },
+    "proposition": {
+      "count": 2,
+      "exact": true
+    },
+    "proof": {
+      "count": 5,
+      "exact": true
+    }
+  },
+  "approved_AI_declaration_exact": true,
+  "R3_baseline_hashes_unchanged": true,
+  "layout_reference_warnings": [],
+  "pdf_sha256": "523094ad062b89060ee5ee790bc75c021ca995fe0f9b633ad540711b51bdecf4",
+  "inspection": "All 41 pages inspected in contact sheets; new pages 31\u201334 individually inspected at full scale. No clipped labels, overflows, unreadable tables or unresolved references."
+}

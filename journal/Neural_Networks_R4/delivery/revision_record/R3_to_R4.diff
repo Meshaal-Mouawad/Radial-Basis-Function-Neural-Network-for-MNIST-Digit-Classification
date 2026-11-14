@@ -1,0 +1,232 @@
+--- R3/main.tex
++++ R4/main.tex
+@@ -34,14 +34,14 @@
+ \cortext[cor1]{Corresponding author.}
+ \affiliation[msu]{organization={Department of Electrical and Computer Engineering, Mississippi State University},city={Mississippi State},postcode={39762},state={MS},country={USA}}
+ \begin{abstract}
+-We establish training-derived conditions that certify or exclude nearest-prototype agreement in Gaussian radial basis function classifiers over continuous bandwidth--penalty regions. A class-wise residual decomposition, prototype-block spectral floor, and exact penalty envelope certify complete regions $(0,t]\times[\lambda_0,\infty)$. A strict competing vote in the large-penalty limit supplies a finite disagreement bound, and a signed interval construction certifies local bandwidth bands with finite penalty floors. A frozen MNIST and Fashion-MNIST study uses five seeds and 50--200 prototypes; subsequent diagnostics retain all ten 100-prototype groups. Immediately beyond the sufficient frontier, more than 99.5\% of query--region pairs remain unresolved. At $t=s_C$, where $s_C$ is the median interprototype distance divided by $\sqrt{2}$, the original witness union excludes 88.10\% and 84.48\% of queries, respectively. Local bands $[0.99t,t]$ at $t=s_C/2$ certify 16.88\% and 40.09\% at a penalty floor $10\|A_t\|_2$, where $A_t$ is the endpoint feature Gram matrix. The certified subsets achieve 69.09\% and 75.27\% endpoint accuracy; matched-coverage agreement-gated distance selection achieves 85.55\% and 79.34\%. At widths with competitive sampled models, every finite sufficient reversal bound exceeds the largest qualifying penalty at the same width. These results characterize the geometry and empirical reach of continuous decision persistence, distinguish missing sufficient guarantees from identified incompatibility, and quantify how analytical exclusions complement finite-model checks.
++We establish training-derived conditions that certify or exclude nearest-prototype agreement in Gaussian radial basis function classifiers over continuous bandwidth--penalty regions. A class-wise residual decomposition, prototype-block spectral floor, and exact penalty envelope certify complete regions $(0,t]\times[\lambda_0,\infty)$. A strict competing vote in the large-penalty limit supplies a finite disagreement bound, and a signed interval construction certifies local bandwidth bands with finite penalty floors. A frozen MNIST and Fashion-MNIST study spans five seeds and 50--200 prototypes. Immediately beyond the sufficient frontier, more than 99.5\% of query--region pairs remain unresolved. At the median-distance bandwidth scale, the original witness union excludes 88.10\% and 84.48\% of queries, respectively. Local bands at half this scale certify 16.88\% and 40.09\% at ten times the endpoint Gram-matrix norm. Matched-coverage class analysis reveals concentrated predictions within some certified subsets. Across all 30 dataset--seed--budget groups, 328 readouts retain at least 95\% of their group's best validation accuracy; all have zero full-width certificate coverage. Exhaustive reconstruction of 3,366,480 query--width paths identifies 190,405 returns to agreement after sampled disagreement. Expanded finite probes recover at least 95\% of the original limiting-witness cases after mean 15.6 and 20.2 checks at the median-distance scale. These results establish computable continuous decision-persistence guarantees and characterize their empirical separation from competitive prediction, finite-path behavior, and selected-set correctness.
+ \end{abstract}
+ \begin{keyword}
+ radial basis function classifier \sep nearest prototype \sep Gaussian bandwidth \sep ridge regression \sep uniform certificate \sep parameter region
+ \end{keyword}
+ \end{frontmatter}
+ \section{Introduction}
+-The label of the nearest prototype does not always describe a Gaussian radial basis function (RBF) classifier's decision. Its learned output layer combines responses from all prototypes, with coefficients determined by the full labeled training sample. We establish training-derived conditions that determine when the nearest-prototype label persists throughout a continuous bandwidth--penalty region, when that persistence is impossible, and which queries remain unresolved. The proofs give both sufficient agreement conditions and finite disagreement thresholds. Experiments on MNIST and Fashion-MNIST show that the loss of sufficient certification occurs well before widespread identified failures of the requested family, and that local width bands admit additional agreement guarantees at large penalties.
++The label of the nearest prototype does not always describe a Gaussian radial basis function (RBF) classifier's decision. Its learned output layer combines responses from all prototypes, with coefficients determined by the full labeled training sample. We establish training-derived conditions that determine when the nearest-prototype label persists throughout a continuous bandwidth--penalty region, when that persistence is impossible, and which queries remain unresolved. The proofs give both sufficient agreement conditions and finite disagreement thresholds. Experiments on MNIST and Fashion-MNIST show that sufficient certification disappears before widespread identified failures of the requested family, local width bands admit additional guarantees at large penalties, and all 328 archived readouts meeting the 95\% validation-competitive rule have zero full-width coverage. The analysis therefore locates both the guaranteed persistence regions and their empirical separation from high-accuracy operating points.
+ 
+ A prototype is a reference input used to measure similarity. Here, prototypes are selected training images. Each Gaussian response decreases with distance from its prototype, and its bandwidth controls how broadly that response extends. Ridge regression learns the coefficients that combine these responses into class scores. The separation between nonlinear basis functions and linear output estimation is central to the RBF formulation of Broomhead and Lowe \citeyearpar{broomhead1988}. It also creates the present decision-summary problem: the largest individual response need not identify the class with the largest weighted score.
+ 
+@@ -51,7 +51,7 @@
+ 
+ We first compare the fitted weights with weights that assign each prototype to its own class. An exact residual decomposition separates prototype overlap, non-prototype labeled responses, and a quadratic overlap correction. A spectral floor and a two-endpoint envelope then bound the effect of that residual throughout $(0,t]\times[\lambda_0,\infty)$. Comparing the bound with a query margin certifies agreement without fitting a readout. The large-penalty test complements this sufficient condition with an exclusion criterion and an explicit finite witness threshold. Their outputs classify each query and requested region as certified, excluded, or unresolved.
+ 
+-The limiting votes also support a second positive construction. A signed interval enclosure controls their finite-penalty correction over a local bandwidth band $[s,t]$, producing a certificate for $[s,t]\times[\Lambda,\infty)$ with a finite floor $\Lambda$. Together, the results provide three analytical capabilities: full-width sufficient certification with ordered class-wise and norm comparators; strict exclusion of impossible full-width regions; and local-width penalty-tail certification. The frozen image study measures the first capability and its bandwidth frontier. Focused post hoc analyses measure the exclusion partition and local certificate on the same 100-prototype groups, reporting region geometry, coverage, fitted agreement, and class accuracy separately. Follow-up comparisons locate sufficient reversal bounds relative to validation-based competitive models, measure exact overlap with all archived finite witnesses, and compare certified subsets with informed selectors at identical coverage. These comparisons connect the parameter-family guarantees to the behavior and accuracy of finite readouts. Figure~\ref{fig:paths} introduces the two decisions whose equality is studied.
++The limiting votes also support a second positive construction. A signed interval enclosure controls their finite-penalty correction over a local bandwidth band $[s,t]$, producing a certificate for $[s,t]\times[\Lambda,\infty)$ with a finite floor $\Lambda$. Together, the results provide three analytical capabilities: full-width sufficient certification with ordered class-wise and norm comparators; strict exclusion of impossible full-width regions; and local-width penalty-tail certification. The frozen image study measures the first capability and its bandwidth frontier. Focused post hoc analyses measure the exclusion partition and local certificate on the same 100-prototype groups, reporting region geometry, coverage, fitted agreement, and class accuracy separately. Follow-up comparisons locate sufficient reversal bounds relative to validation-based competitive models, measure exact overlap with all archived finite witnesses, and compare certified subsets with informed selectors at identical coverage. Class-balanced selection diagnostics identify which queries and classes account for certified-subset accuracy. Exhaustive reconstruction of all 30 original groups then measures observed penalty-path reversals, validation-competitive coverage, and stability across prototype budgets and seeds. A fixed-order replay identifies how finite exclusions accumulate relative to limiting witnesses. Figure~\ref{fig:paths} introduces the two decisions whose equality is studied.
+ 
+ \begin{figure}[!htbp]
+ \centering
+@@ -365,37 +365,41 @@
+ 
+ \input{new_methods.tex}
+ \input{r3_methods.tex}
++\input{r4_methods.tex}
+ 
+ \section{Results}
+ \input{results.tex}
+ \input{frontier_results.tex}
+ \input{new_results.tex}
+ \input{r3_results.tex}
++\input{r4_results.tex}
+ 
+ \section{Discussion}
+ The combined analysis distinguishes a nearest-prototype summary that is guaranteed across a family from one that the family itself contradicts. The residual certificate controls all widths below an endpoint and every penalty above a floor. The large-penalty obstruction shows when some finite member of that same family must choose a competing class. Their combination adds information to a sufficient certificate's abstention: excluded regions contain a demonstrated disagreement, whereas unresolved regions await a decisive test.
+ 
+-The new diagnostic separates two empirical phenomena. Immediately beyond the certification frontier, almost the entire query set remains unresolved. At broader widths, strict witnesses exclude most requested full-width regions. These observations establish that the first loss of sufficient coverage and widespread identified failure of uniform agreement occur in different bandwidth ranges. A tighter sufficient bound could resolve some of the remaining cases; any sound bound must exclude queries with a strict disagreement witness from its accepted set.
+-
+-The large-penalty limit explains a source of incompatibility. The scaled readout approaches $Z_\sigma=H_\sigma^\tr Y$, and the query votes $r(\sigma)^\tr Z_\sigma$ aggregate labeled observations through their prototype responses. Non-prototype observations therefore influence the limiting decision even though the reference label belongs to one selected prototype. Increasing regularization can expose a pooled class vote that opposes that reference. The finite threshold in Proposition~\ref{prop:ridge-limit} makes this mechanism a statement about actual finite classifiers. The validation comparison places these sufficient bounds far beyond the competitive sampled penalties. It locates the guaranteed reversal along the path, with the first empirical crossing remaining a separate quantity. \ref{app:exact-ridge-examples} supplies exact constructed cases for strict reversal and tied-limit behavior.
+-
+-The local-width theorem uses the same limiting mechanism constructively. Positive vote margins across a bandwidth band, together with a signed enclosure of the resolvent correction, certify a penalty tail with a finite floor. The measured coverage at broader widths establishes that this region geometry can certify additional nearest-label behavior. The matched-coverage experiment places its selected-set accuracy above random selection and ordinary score margins. Agreement-gated distance selection is more accurate in three of the four comparisons. The MNIST endpoint at $t=s_C$ and $\lambda=10\norm{A_t}_2$ has a constant class-1 readout, and its certified set equals the entire endpoint-agreement pool. These measurements identify the positive analytical result as a guarantee of persistence across a continuous band and penalty tail, with selected-set composition determining the observed accuracy.
+-
+-Exact overlap analysis further identifies the source of incremental exclusions. Near $t=s_C$, the original limiting witnesses add many cases to the original finite probes, and almost all of those additions are covered once the archived local-tail models are included. At $2s_C$, limiting witnesses retain a larger unique set on Fashion-MNIST, where the archive has fewer high-penalty finite models. Complementarity is therefore a measurable relation between the analytical witness and a specified finite sampling design. The limiting calculation provides a training-derived route to the exclusion; finite readouts can expose many of the same disagreements.
++The region diagnostic separates two empirical phenomena. Immediately beyond the certification frontier, almost the entire query set remains unresolved. At broader widths, strict witnesses exclude most requested full-width regions. These observations establish that the first loss of sufficient coverage and widespread identified failure of uniform agreement occur in different bandwidth ranges. A tighter sufficient bound could resolve some of the remaining cases; any sound bound must exclude queries with a strict disagreement witness from its accepted set.
++
++The large-penalty limit explains a source of incompatibility. The scaled readout approaches $Z_\sigma=H_\sigma^\tr Y$, and the query votes $r(\sigma)^\tr Z_\sigma$ aggregate labeled observations through their prototype responses. Non-prototype observations therefore influence the limiting decision even though the reference label belongs to one selected prototype. Increasing regularization can expose a pooled class vote that opposes that reference. The finite threshold in Proposition~\ref{prop:ridge-limit} makes this mechanism a statement about actual finite classifiers. The validation comparison places these sufficient bounds far beyond the competitive sampled penalties. The complete archived paths exhibit both earlier finite disagreements and later returns to agreement, including five alternating signs across six penalties. This distinguishes a guaranteed disagreement tail from the observed sequence of finite decisions. \ref{app:exact-ridge-examples} supplies exact constructed cases for strict reversal and tied-limit behavior.
++
++The local-width theorem uses the same limiting mechanism constructively. Positive vote margins across a bandwidth band, together with a signed enclosure of the resolvent correction, certify a penalty tail with a finite floor. The measured coverage at broader widths establishes that this region geometry can certify additional nearest-label behavior. The matched-coverage experiment places its selected-set accuracy above random selection and ordinary score margins. Agreement-gated distance selection is more accurate in three of the four comparisons. The MNIST endpoint at $t=s_C$ and $\lambda=10\norm{A_t}_2$ has a constant class-1 readout, and its certified set equals the entire endpoint-agreement pool. The class-specific reconstruction makes this composition explicit: the MNIST certified subset at that endpoint has 10\% selected-class macro accuracy across ten represented true classes. On Fashion-MNIST, the stronger selector distributes correct accepted predictions across more classes and selects substantially different queries at equal coverage. These measurements separate continuous persistence, selected-subset accuracy, and class-balanced retention.
++
++Exact overlap analysis further identifies the source of incremental exclusions. Near $t=s_C$, the original limiting witnesses add many cases to the original finite probes, and almost all of those additions are covered once the archived local-tail models are included. At $2s_C$, limiting witnesses retain a larger unique set on Fashion-MNIST, where the archive has fewer high-penalty finite models. Complementarity is therefore a measurable relation between the analytical witness and a specified finite sampling design. The limiting calculation provides a training-derived route to the exclusion; finite readouts expose many of the same disagreements. The fixed replay order sharpens this comparison: expanded high-penalty probes recover at least 95\% of the original limiting-witness cases within mean 15.6 and 20.2 checks at $t=s_C$, whereas the original finite probes fail to reach that target in every seed.
+ 
+ The original bound comparisons explain which information matters within the full-width construction. Class-wise overlap retains the distribution of training responses by label, whereas the Frobenius comparator compresses them into one norm and class counts. The larger certified sets establish the effect of this retained structure under identical data and query margins. The exact two-endpoint envelope further improves the analytical bound. Its masks match the basic class-wise masks in the frozen grid, and the denser grid resolves small additional sets near some transitions. The larger empirical change comes from class-wise information; the envelope removes a continuous penalty maximization and supplies a further local gain. Even at the widest original passing endpoint, the Gaussian response at median prototype separation is $2.96\times10^{-32}$, placing the full-width sufficient construction in a near-isolated-prototype regime.
+ 
++The validation-selected analysis supplies a direct empirical answer about competitive operation. Every model retained by each of the fixed 90\%, 95\%, and 99\% rules has zero sharp full-width coverage. The selected models improve accuracy and cross-seed prediction stability as prototype budget increases, while the full-width certificate remains empty. Thus improved finite-model prediction and certified family persistence follow distinct empirical patterns in the archived grid. The broad region exclusions additionally show that many competitive endpoints belong to families containing a strict nearest-label disagreement.
++
+ These results connect established RBF and parameter-path analyses through a specific decision-region object. Coefficient-regularized RBF theory addresses statistical behavior \citep{que2016}; narrow-bandwidth kernel arguments explain nearest-neighbour dominance \citep{radhakrishnan2023}; prototype architectures and learned Gaussian geometry address interpretation through model structure \citep{saralajew2025,dagostino2024}. Regularization-path guarantees control solution or validation behavior as penalties vary \citep{shibagaki2015,ndiaye2019}. Here the varied feature matrix and penalty are analyzed together to establish nearest-prototype label persistence, strict incompatibility, or unresolved status before output fitting. The signed local certificate adds a complementary region construction using the same training geometry.
+ 
+ \section{Conclusion}
+-Training-derived quantities can both certify and exclude nearest-prototype agreement in Gaussian ridge RBF families. A class-wise residual, spectral floor, and exact penalty envelope certify complete regions $(0,t]\times[\lambda_0,\infty)$. A strict competing vote in the large-penalty limit excludes such a region and supplies a finite disagreement threshold. A signed interval bound additionally certifies local bands $[s,t]\times[\Lambda,\infty)$. The two-dataset evidence distinguishes the early loss of sufficient certification from widespread broad-width incompatibility and establishes positive local-tail coverage at large penalties. Validation comparisons locate the sufficient reversals beyond the competitive sampled penalties. Exact witness unions quantify the information added to finite-model checks, and matched-coverage selectors identify the role of class composition in certified-subset accuracy. The resulting contribution is a training-derived analysis of decision persistence with certified, excluded, and unresolved outputs. Tighter signed bounds and alternative region geometries provide concrete routes for studying the unresolved frontier.
++Training-derived quantities can both certify and exclude nearest-prototype agreement in Gaussian ridge RBF families. A class-wise residual, spectral floor, and exact penalty envelope certify complete regions $(0,t]\times[\lambda_0,\infty)$. A strict competing vote in the large-penalty limit excludes such a region and supplies a finite disagreement threshold. A signed interval bound additionally certifies local bands $[s,t]\times[\Lambda,\infty)$. The two-dataset evidence separates the early loss of sufficient certification, broad-width incompatibility, and positive local-tail coverage. All 328 validation-competitive models under the primary rule have zero full-width coverage; the finite paths exhibit earlier disagreements and subsequent returns to agreement. Exact witness unions and fixed-order replay quantify the relation between analytical exclusions and finite checks. Class-balanced matched-selection diagnostics explain the observed subset accuracy. The contribution is a computable analysis of continuous decision persistence with certified, excluded, and unresolved outputs, accompanied by an exhaustive assessment of its reach in the archived model families. Tighter signed bounds and alternative region geometries provide concrete routes for studying the unresolved frontier.
+ 
+ \section{Limitations}
+ The guarantees concern equality with a nearest-prototype label. Class correctness is evaluated separately against held-out targets; human understanding and causal explanatory value were not measured. The model uses fixed labeled training prototypes, one shared Euclidean Gaussian width, the sum-of-squares ridge objective, and no intercept. Learned features, moving prototypes, class-dependent penalties, anisotropic kernels, and input perturbations require corresponding derivations. The analytical complexity statement concerns the proposed accumulation, whereas the experimental implementation retains dense feature matrices and supplies descriptive timing rather than a streaming-memory or speedup benchmark.
+ 
+ The full-width sufficient condition discards information through absolute class-pair majorization, a prototype-block eigenvalue floor, removal of additional same-class query responses, and norm inequalities. The diagnostic examines finitely many limiting widths and archived finite readouts; unresolved queries can contain disagreements at other parameter values. Limiting ties receive no exclusion from the strict test. The local-tail certificate addresses $[s,t]$, and the full-width certificate addresses $(0,t]$; their coverage refers to these different families. Large-penalty local coverage and certified-subset accuracy do not measure all-query predictive performance.
+ 
+-Two ten-class image datasets and randomly selected prototype subsets determine the empirical scope. The diagnostic, local-tail, validation-reference, and selector analyses are post hoc and use the ten $K=100$ groups. The 95\% competitive rule describes the archived validation grid, and the sufficient reversal bound supplies an upper threshold for guaranteed disagreement rather than an estimate of its first onset. The selector comparisons describe the fixed endpoint models and sample; a predictive or model-selection benefit at competitive penalties remains an open empirical requirement. Seeds share evaluation images and have overlapping training pools, so sample standard deviations describe variation across those realizations. Repeated query-region and query-probe checks reuse the same images. Float64 arithmetic and positive guards were used without formally outward-rounded interval arithmetic. The finite probes check implementation behavior, and the proofs establish the continuous statements. The supplementary frontier brackets concern the guarded numerical certificate; the sampled accuracy maximum is a descriptive reference selected using evaluation targets. The present artifact verification reconstructs archived measurements, while the earlier complete-pipeline rerun is documented in the frozen archive.
++Two ten-class image datasets and randomly selected prototype subsets determine the empirical scope. The post hoc diagnostic, local-tail, reversal-bound, selector, and ordered-probe analyses use the ten $K=100$ groups. Finite-path, validation-competitive, and budget-stability analyses use all 30 original groups. The 90/95/99\% rules describe relative validation accuracy within the archived grid. Sampled first-detection brackets do not identify unique or earliest continuous crossings, and all-sample agreement does not certify unsampled penalties. The sufficient reversal bound supplies an upper threshold for guaranteed disagreement. Ordered-probe prefix counts measure retrospective set recovery; they supply neither a prospective stopping guarantee nor a measured computational speedup. The selector comparisons describe the fixed endpoint models and sample. No predictive or model-selection improvement is established by the certificates. Seeds share evaluation images and have overlapping training pools, so sample standard deviations describe variation across those realizations. Repeated query-region and query-probe checks reuse the same images. Float64 arithmetic and positive guards were used without formally outward-rounded interval arithmetic. The finite probes check implementation behavior, and the proofs establish the continuous statements. The supplementary frontier brackets concern the guarded numerical certificate; the sampled accuracy maximum is a descriptive reference selected using evaluation targets. The present artifact verification reconstructs archived measurements, while the earlier complete-pipeline rerun is documented in the frozen archive.
+ 
+ \appendix
+ \section{Duplicate inputs and the small-width reference}
+@@ -428,7 +432,7 @@
+ \section*{Data and code availability}
+ The code, indexed data splits, prototype identities, frozen predictions, certificate masks, fitted weights, supplementary bandwidth-frontier records, dependency specifications, and verification scripts are provided in the accompanying Supplementary Research Artifacts archive. Dataset provenance and licenses are retained in the archive. The original MNIST and Fashion-MNIST sources are identified in the evaluation design and archive documentation.
+ 
+-The additional diagnostic and local-tail protocols, code, per-query records, fitted readouts, and independent synthetic checks are provided in the accompanying revision supplement. It also includes the follow-up validation predictions, sufficient-reversal distributions, exact witness-overlap masks, matched-cardinality selection records, class distributions, and independent numerical reconstruction. The frozen original archive and the additional supplement retain separate provenance records.
++The additional diagnostic and local-tail protocols, code, per-query records, fitted readouts, and independent synthetic checks are provided in the accompanying revision supplement. It also includes the follow-up validation predictions, sufficient-reversal distributions, exact witness-overlap masks, matched-cardinality selection records, class distributions, and independent numerical reconstruction. The all-budget extension adds validation-selected and competitive-set records for every original group, per-class composition, complete signed finite-path margins, fixed-order exclusion increments, paired budget differences, cross-seed overlaps, plots, and independent reconstruction scripts. The frozen original archive and the additional supplement retain separate provenance records.
+ 
+ \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+ During preparation of this work, the author used Elsevier LeapSpace, other tools to support literature discovery, manuscript organization, language refinement, and consistency checking. The authors take responsibility for the content of the article.
+--- R3/r4_methods.tex
++++ R4/r4_methods.tex
+@@ -0,0 +1,17 @@
++\subsection{Class composition and retention within matched subsets}
++\label{sec:r4-composition-design}
++The composition analysis compares the signed certificate and the agreement-gated distance selector from Section~\ref{sec:r3-design} at their matched cardinalities. For true class $c$, let $M_c$ be its full evaluation count, $m_c$ its selected count, and $q_c$ its selected correct count. Class retention is $m_c/M_c$, selected-class accuracy is $q_c/m_c$ when $m_c>0$, and accepted recall is $q_c/M_c$. We report selected-class macro accuracy as the mean of $q_c/m_c$ over the represented true classes, retaining their count, and macro accepted recall as the mean of $q_c/M_c$ over all ten classes. These denominators distinguish correctness within a selected class from correctly accepting members of the full class. If $p_c$ is the selected predicted-class proportion, the effective predicted-class count is $\exp(-\sum_{c:p_c>0}p_c\log p_c)$. The within-seed Jaccard index $|S_{\rm cert}\cap S_{\rm gated}|/|S_{\rm cert}\cup S_{\rm gated}|$ measures agreement between selected sets.
++
++The analysis retains all 20 endpoint settings from Section~\ref{sec:r3-selectors}. Five-seed summaries use the same paired models and query identifiers for both selectors. Per-class counts and per-seed metrics are retained before aggregation. An independent reconstruction from the original images and archived weights verifies all 40 selector rows, 400 class records, and 140,270 endpoint prediction labels. The recorded protocol defines these follow-up summaries without changing the selectors or their cardinalities.
++
++\subsection{Finite disagreement paths and ordered witness accumulation}
++\label{sec:r4-path-design}
++We reconstruct the normalized class scores of all 96 archived readouts in every dataset--seed--budget group: 16 widths and six penalties $0,1,10,100,1000,10000$. For each query and width, the signed margin is the largest competing-class score minus the nearest-prototype class score. A margin above $10^{-10}(1+|\text{competing score}|+|\text{reference score}|)$ defines strict disagreement; a margin below the negative guard defines strict agreement. Zero-penalty records also require the archived numerical full-rank condition. The first sampled disagreement is recorded at zero, after zero with its adjacent sampled bracket, or as undetected through 10,000. All later sign changes and returns to strict agreement are retained. Comparisons with $B(x,\sigma)$ use exactly the seven available widths in the $K=100$ groups, retaining missing bound references separately from absence of a strict limiting reversal.
++
++For the same seven upper widths and three floors used in Section~\ref{sec:r3-design}, we accumulate the original finite probes $F_0$ and expanded probes $F_1$ in a fixed order. After filtering to the requested region, widths are sorted ascending; within a width, penalties are sorted ascending with a fixed archive-source tie-break. The checks then interleave across widths: first eligible penalty at each width, then second, and so on. Every step records new and cumulative finite exclusions, overlap with $L_0$ and $L_+$, and their augmented unions. We retain the first prefix recovering 95\% or all of $L_0$, and the first prefix recovering each final exclusion set. These analyses replay stored weights and perform zero new readout fits.
++
++\subsection{Validation-competitive models and budget stability}
++\label{sec:r4-competitive-design}
++The validation analysis covers all 30 original groups: two datasets, five seeds, and $K\in\{50,100,200\}$. Each group's 96 archived readouts is scored on its 5,000 validation observations. We select the largest validation correct count, resolving ties by smaller bandwidth and then smaller penalty. Evaluation targets are scored after fixing the selection. Retained competitive sets use at least 95\% of the group's maximum validation accuracy, with fixed 90\% and 99\% sensitivity thresholds. At every archived pair $(\sigma,\lambda)$, we evaluate the sharp certificate for $(0,\sigma]\times[\lambda,\infty)$ and the union of strict limiting and finite witnesses in that region. This analysis uses all original probe widths up to $\sigma$ for limiting witnesses. The exclusion fraction counts queries whose requested family contains a strict disagreement.
++
++Within each seed, budget comparisons pair the selected models on the same query identifiers. Across seeds, the ten pairs per dataset and budget give descriptive prediction-disagreement rates and Jaccard overlap of correctly classified queries. Per-class recall and predicted-class counts are retained for all 30 selected models. Independent implementations reconstruct the 2,880 model records from raw images and archived weights, verify 14.4 million validation prediction labels and 20,198,880 evaluation labels, and recompute the sharp masks directly from the equations. Separate reconstruction verifies all 3,366,480 query--width path records and 21,630 ordered cumulative exclusion records.
+--- R3/r4_results.tex
++++ R4/r4_results.tex
+@@ -0,0 +1,36 @@
++\subsection{Class-balanced correctness, retention, and selected-set overlap}
++\label{sec:r4-composition-results}
++The class-specific results explain how high selected-subset accuracy can coexist with predictions concentrated in a few classes. Table~\ref{tab:r4-composition} and Figure~\ref{fig:r4-composition} compare equal-class correctness and retention at the same coverage as Table~\ref{tab:r3-selectors}. On MNIST at $t=s_C/2$, the certificate's selected-class macro accuracy is 11.24\%, compared with 44.74\% for gated-distance selection. Their macro accepted recalls are 9.88\% and 12.68\%. At $t=s_C$, both selectors retain the same queries and predict class 1 exclusively: selected-class macro accuracy is 10\% and macro accepted recall is 9.79\%. All ten true classes remain represented in these certified subsets, so the 10\% value is the mean of one class with 100\% selected accuracy and nine classes with zero selected accuracy.
++
++\input{r4_composition_table.tex}
++
++For Fashion-MNIST at $t=s_C/2$, selected-class macro accuracy is 53.36\% under certification and 63.64\% under gated-distance selection; at $t=s_C$, it is 25.49\% and 44.21\%. The latter sets have mean Jaccard 0.313 at identical coverage. The effective predicted-class count rises from 1.71 to 3.73 under gated-distance selection, and macro accepted recall rises from 9.63\% to 12.40\%. Thus the stronger baseline accepts a different group of queries and distributes its correct accepted predictions across more classes. The supplement retains each seed's true-class retention, selected-class accuracy, accepted recall, and selected-set overlap, including absent selected classes.
++
++\begin{figure}[!htbp]
++\centering
++\includegraphics[width=\textwidth]{Figure_07_Selected_Class_Accuracy.pdf}
++\caption{Class-specific accuracy within the matched subsets at $\lambda=10\norm{A_t}_2$, using the certificate for $[0.99t,t]$ and the agreement-gated distance comparator. Bars give the five-seed mean selected-class accuracy; hollow points show individual seeds. A class absent from one selected subset has undefined selected accuracy and contributes no point or value to that class's mean. All ten true classes are represented in every MNIST certificate subset. The constant class-1 MNIST endpoint at $t=s_C$ yields 100\% selected accuracy for class 1 and zero for each other represented class. The corresponding class-retention and accepted-recall plots are supplied in the numerical supplement.}
++\label{fig:r4-composition}
++\end{figure}
++
++\subsection{Observed disagreement and returns along the penalty path}
++\label{sec:r4-path-results}
++Nearest-prototype agreement is nonmonotone along the sampled regularization paths. Table~\ref{tab:r4-paths} reports the complete grid. A later sampled penalty restores strict agreement in 4.02--6.02\% of MNIST paths and 5.39--6.40\% of Fashion-MNIST paths, depending on prototype budget. Across all groups, 190,405 of 3,366,480 audited query--width paths return to strict agreement after an earlier disagreement. The largest observed number of sign changes is five across the six penalties. For example, Fashion-MNIST seed 22 with $K=100$, width $1.5s_C$, and query 50 alternates between strict agreement and disagreement at every sampled penalty; its competing-minus-reference margins are approximately $-0.017925$, $0.040578$, $-0.033922$, $0.009067$, $-0.017918$, and $0.011859$. Every margin in the exhaustive grid lies outside the numerical guard.
++
++\input{r4_paths_table.tex}
++
++The sufficient reversal bound and the first sampled disagreement describe different parts of these paths. At $t=s_C$, all 16,755 finite MNIST bounds and 33,135 finite Fashion-MNIST bounds exceed 10,000. Within those records, 9,714 and 19,154 respectively already disagree at a sampled smaller penalty. A further 878 MNIST and 8,808 Fashion-MNIST records show finite disagreement without a strict limiting reversal at that endpoint. At $t=s_C/2$, all 10,335 MNIST and 5,728 Fashion-MNIST sampled query--penalty pairs above their finite sufficient bounds have positive competing margins. Thus the tail guarantee, sampled onset, and sampled returns are separately recoverable from the same archived family.
++
++\subsection{Coverage at validation-competitive operating points}
++\label{sec:r4-competitive-results}
++Every validation-competitive archived model has zero sharp full-width certificate coverage. The primary 95\% rule retains 328 models across all 30 groups; the 90\% and 99\% rules retain 494 and 116, respectively, with the same zero-coverage result. Table~\ref{tab:r4-competitive} reports the best-validation choice in each group. All 30 select zero penalty, with widths between $0.75s_C$ and $2s_C$. Evaluation accuracy rises from 82.92\% to 91.80\% across the three MNIST budgets and from 76.23\% to 82.13\% on Fashion-MNIST. The requested full-width regions are excluded for 77.30--98.23\% of Fashion-MNIST queries and 87.53--88.24\% of MNIST queries. These exclusions identify the fraction whose nearest-prototype label fails somewhere inside the family attached to the selected operating point.
++
++\input{r4_competitive_table.tex}
++
++Increasing prototype budget improves the evaluation accuracy of the validation-selected readout at each budget step in every seed of both datasets. The paired $K=50$ to $K=200$ gain is $8.88\pm0.41$ percentage points on MNIST and $5.90\pm0.80$ on Fashion-MNIST. Across the ten seed pairs, mean prediction disagreement falls from 14.29\% to 5.95\% on MNIST and from 12.21\% to 8.15\% on Fashion-MNIST. Mean Jaccard overlap of correctly classified queries rises from 0.874 to 0.947 and from 0.885 to 0.922, respectively. The supplement retains every paired value, all class counts, and accuracy--coverage plots for all 2,880 readouts.
++
++\subsection{Accumulation of exclusions under a fixed finite-probe order}
++\label{sec:r4-probe-results}
++Expanded finite probes recover most original limiting-witness cases early in the recorded sequence. At $t=s_C$ and floor zero, $F_1$ reaches 95\% of $L_0$ after mean 15.6 MNIST and 20.2 Fashion-MNIST checks, in all five seeds (Table~\ref{tab:r4-probes}). The original finite set $F_0$ never reaches this target in these ten groups. All $L_0$ cases are recovered by $F_1$ on MNIST after mean 17.6 checks. On Fashion-MNIST, $L_0$ retains a unique set comprising 0.134\% of all queries after the full expanded sequence. The final $F_1$ finite exclusion set is recovered after mean 49.6 of 100.8 eligible checks on MNIST and 107.4 of 107.4 on Fashion-MNIST. The stored step records identify which additional widths and penalties supply each increment.
++
++\input{r4_probe_table.tex}
+--- R3/r4_composition_table.tex
++++ R4/r4_composition_table.tex
+@@ -0,0 +1,24 @@
++\begin{table}[!htbp]
++\centering\small
++\caption{Composition at the same coverage as Table~\ref{tab:r3-selectors}. Selected-class accuracy gives equal weight to each true class represented in the selected set; accepted recall uses all ten full evaluation classes. Entries are five-seed means $\pm$ sample SD. Jaccard compares the two selectors within each seed.}
++\label{tab:r4-composition}
++\begin{tabular}{@{}lrrrr@{}}
++\toprule
++ & \multicolumn{2}{c}{MNIST} & \multicolumn{2}{c}{Fashion-MNIST}\\
++\cmidrule(lr){2-3}\cmidrule(lr){4-5}
++Measure / selector & $s_C/2$ & $s_C$ & $s_C/2$ & $s_C$\\
++\midrule
++\multicolumn{5}{@{}l}{Selected-class accuracy (\%)}\\
++Certificate & $11.24\pm1.85$ & $10.00\pm0.00$ & $53.36\pm4.76$ & $25.49\pm5.45$\\
++Gated distance & $44.74\pm14.35$ & $10.00\pm0.00$ & $63.64\pm7.69$ & $44.21\pm6.17$\\
++\multicolumn{5}{@{}l}{Macro accepted recall (\%)}\\
++Certificate & $9.88\pm0.17$ & $9.79\pm0.15$ & $30.08\pm2.88$ & $9.63\pm1.44$\\
++Gated distance & $12.68\pm0.62$ & $9.79\pm0.15$ & $31.68\pm2.76$ & $12.40\pm2.37$\\
++\multicolumn{5}{@{}l}{Effective predicted classes}\\
++Certificate & $1.03\pm0.05$ & $1.00\pm0.00$ & $5.35\pm0.90$ & $1.71\pm0.32$\\
++Gated distance & $2.14\pm0.43$ & $1.00\pm0.00$ & $6.43\pm0.92$ & $3.73\pm0.77$\\
++\midrule
++Jaccard & $0.65\pm0.09$ & $1.00\pm0.00$ & $0.70\pm0.07$ & $0.31\pm0.11$\\
++\bottomrule
++\end{tabular}
++\end{table}
+--- R3/r4_paths_table.tex
++++ R4/r4_paths_table.tex
+@@ -0,0 +1,17 @@
++\begin{table}[!htbp]
++\centering\small
++\caption{Strict disagreement along the six sampled penalties $0,1,10,100,1000,10000$. Percentages are five-seed means $\pm$ sample SD across all 16 widths. Each seed contributes 64,432 query--width paths on MNIST or 160,000 on Fashion-MNIST. Initial disagreement and first detection after zero partition the any-disagreement column. Return denotes a later strict agreement after a sampled disagreement.}
++\label{tab:r4-paths}
++\begin{tabular}{@{}llrrrr@{}}
++\toprule
++Dataset & $K$ & Any (\%) & At zero (\%) & First later (\%) & Return (\%)\\
++\midrule
++MNIST & 50 & $31.20\pm1.26$ & $13.74\pm1.60$ & $17.47\pm0.72$ & $6.02\pm0.94$\\
++MNIST & 100 & $27.73\pm1.20$ & $11.18\pm0.86$ & $16.55\pm0.49$ & $4.87\pm0.65$\\
++MNIST & 200 & $25.16\pm0.89$ & $8.81\pm1.02$ & $16.34\pm0.61$ & $4.02\pm0.44$\\
++Fashion-MNIST & 50 & $25.36\pm2.22$ & $15.46\pm2.57$ & $9.90\pm1.68$ & $6.40\pm1.59$\\
++Fashion-MNIST & 100 & $24.85\pm1.36$ & $13.74\pm1.93$ & $11.10\pm1.18$ & $6.01\pm0.95$\\
++Fashion-MNIST & 200 & $23.45\pm0.72$ & $12.06\pm0.67$ & $11.40\pm0.36$ & $5.39\pm0.58$\\
++\bottomrule
++\end{tabular}
++\end{table}
+--- R3/r4_competitive_table.tex
++++ R4/r4_competitive_table.tex
+@@ -0,0 +1,17 @@
++\begin{table}[!htbp]
++\centering\small
++\caption{Validation-selected archived models across all 30 groups. Entries are five-seed means $\pm$ sample SD with the full evaluation set as denominator. All selected models use $\lambda=0$ and have zero sharp full-width coverage. Exclusion concerns the requested region $(0,\sigma]\times[\lambda,\infty)$ attached to the selected endpoint.}
++\label{tab:r4-competitive}
++\begin{tabular}{@{}llrrr@{}}
++\toprule
++Dataset & $K$ & Accuracy (\%) & Nearest agreement (\%) & Region excluded (\%)\\
++\midrule
++MNIST & 50 & $82.92\pm0.46$ & $65.75\pm5.37$ & $87.53\pm0.28$\\
++MNIST & 100 & $88.43\pm0.27$ & $73.94\pm2.43$ & $88.07\pm0.14$\\
++MNIST & 200 & $91.80\pm0.31$ & $79.83\pm2.52$ & $88.24\pm0.14$\\
++Fashion-MNIST & 50 & $76.23\pm0.88$ & $62.72\pm4.74$ & $98.23\pm3.13$\\
++Fashion-MNIST & 100 & $79.38\pm0.63$ & $68.35\pm4.02$ & $93.75\pm8.61$\\
++Fashion-MNIST & 200 & $82.13\pm0.19$ & $73.58\pm1.69$ & $77.30\pm4.81$\\
++\bottomrule
++\end{tabular}
++\end{table}
+--- R3/r4_probe_table.tex
++++ R4/r4_probe_table.tex
+@@ -0,0 +1,15 @@
++\begin{table}[!htbp]
++\centering\small
++\caption{Fixed-order accumulation at $t=s_C$ and penalty floor zero. Checks are archived readout evaluations in the recorded round-robin order. The recovery target is 95\% of the original limiting-witness set $L_0$ within each seed. Means use five seeds; a dash means the target was not reached. The final column has the full query population as denominator.}
++\label{tab:r4-probes}
++\begin{tabular}{@{}llrrrr@{}}
++\toprule
++Dataset & Set & Eligible checks & Reaching target & Checks to target & $L_0$ unique (\%)\\
++\midrule
++MNIST & F0 & 84.0 & 0/5 & --- & 8.026\\
++MNIST & F1 & 100.8 & 5/5 & 15.6 & 0.000\\
++Fashion-MNIST & F0 & 84.0 & 0/5 & --- & 21.458\\
++Fashion-MNIST & F1 & 107.4 & 5/5 & 20.2 & 0.134\\
++\bottomrule
++\end{tabular}
++\end{table}

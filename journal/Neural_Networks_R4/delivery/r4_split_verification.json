@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "original_archive": {
+    "format": "R4 byte-exact split transport v1",
+    "archive": "RBF_Neural_Networks_Full_Revision_R4_2026-11-14.zip",
+    "bytes": 708364070,
+    "sha256": "8f1a2998d199b4258dc86d9953977407dff0672b53f0b966719fa21a5758842e",
+    "parts": [
+      {
+        "file": "RBF_Neural_Networks_Full_Revision_R4_2026-11-14.zip.part001",
+        "bytes": 354182035,
+        "sha256": "c49ab28a6897d735888f92fcd81e9c6b9fccd3440ed91708f508d604a87f0185"
+      },
+      {
+        "file": "RBF_Neural_Networks_Full_Revision_R4_2026-11-14.zip.part002",
+        "bytes": 354182035,
+        "sha256": "5837d2ddbe3afec1885f3f1ae0fbe164e94d4b11b14e3dc94777acf3b34dc775"
+      }
+    ]
+  },
+  "transport": [
+    {
+      "path": "/workspace/scratch/3c06ccde22f8/output/RBF_R4_Archive_Part_1_of_2.zip",
+      "bytes": 354185379,
+      "sha256": "50d3ba4a4da81619b178cfb1aa72243153b786a62499338bc326c29de78067f0"
+    },
+    {
+      "path": "/workspace/scratch/3c06ccde22f8/output/RBF_R4_Archive_Part_2_of_2.zip",
+      "bytes": 354185379,
+      "sha256": "bbe32aa082cac2e2836b9acb21a74d31cee0b51f0ed687d0b1048617b9ee66b6"
+    }
+  ],
+  "fresh_restoration_exact": true,
+  "restore_output": "PASS: reconstructed RBF_Neural_Networks_Full_Revision_R4_2026-11-14.zip; 708364070 bytes; SHA-256 8f1a2998d199b4258dc86d9953977407dff0672b53f0b966719fa21a5758842e",
+  "initial_preparation_failure": "Five-file batch including 708 MB archive returned prepare_uploads failed before transfer/finalization; no IDs returned."
+}

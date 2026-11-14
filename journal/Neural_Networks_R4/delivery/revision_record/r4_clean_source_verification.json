@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "source_manifest_files": 36,
+  "pages": 41,
+  "all_page_text_exact": true,
+  "all_rendered_page_pixels_exact": true,
+  "warnings": []
+}
