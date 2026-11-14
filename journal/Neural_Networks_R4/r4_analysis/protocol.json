@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN",
+  "date": "2026-11-14",
+  "plan_sha256": "406b9bebb6830f8aaf5cf639ddc912975eafcb674bdfcf286c9d9d5c497a0cbb",
+  "stages": [
+    "composition",
+    "finite_disagreement",
+    "competitive_regimes_all30groups",
+    "finite_probe_efficiency",
+    "seed_stability"
+  ],
+  "competitive_rules": [
+    0.9,
+    0.95,
+    0.99
+  ],
+  "primary_rule": 0.95,
+  "fits_authorized": false,
+  "paid_compute": false,
+  "null_results_retained": true,
+  "selection_uses": "validation only",
+  "evaluation": "descriptive all seed outcomes",
+  "review_ready": false
+}

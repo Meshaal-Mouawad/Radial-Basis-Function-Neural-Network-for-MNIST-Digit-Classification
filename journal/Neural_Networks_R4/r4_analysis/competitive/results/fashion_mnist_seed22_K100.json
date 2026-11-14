@@ -1,0 +1,22 @@
+{
+  "group": "fashion_mnist_seed22_K100",
+  "input_sha256": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f",
+  "protocol_sha256": "9a6a1d4d692d790372859bbca04d2dbb184dc2e3ea8ec4afa8d207d59204a1e9",
+  "runner_sha256": "185b94aad7cfdb0a9b5e0eca514bbdce0abdca4f6637f003c62bbe0f90f73c8d",
+  "data_hashes": {
+    "baseline/evidence/baseline/work/v2/data/fashion_mnist/train-images-idx3-ubyte.gz": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+    "baseline/evidence/baseline/work/v2/data/fashion_mnist/t10k-images-idx3-ubyte.gz": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073",
+    "baseline/evidence/baseline/work/v2/data/fashion_mnist/train-labels-idx1-ubyte.gz": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845",
+    "baseline/evidence/baseline/work/v2/experiment/certificate.py": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_evaluation_labels.npy": "dc8f8f1192c27394f85487043710db3a9b18d51be2c3bca478bf94dfff9dd146"
+  },
+  "npz_sha256": "159385d3216653a5d7edab69235323aec5ad1f58a71f541da79fc29c9e3470ed",
+  "seconds": 4.2351991599998655,
+  "reconstructed_prediction_labels": 960000,
+  "validation_score_evaluations": 96,
+  "certificate_original_mask_matches": 21,
+  "prediction_mismatch": 0,
+  "certificate_violations": 0,
+  "certificate_exclusion_intersections": 0,
+  "new_fits": 0
+}

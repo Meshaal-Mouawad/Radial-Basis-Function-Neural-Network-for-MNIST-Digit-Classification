@@ -1,0 +1,8 @@
+dataset,seed,K,probe_width_index,bound_width_index,sigma_over_sC,n,finite_bound_queries,no_finite_bound_queries,observed_disagreement_with_finite_bound,observed_disagreement_without_finite_bound,finite_bound_without_observed_disagreement,first_observed_disagreement_below_bound,finite_bound_above_largest_sampled_penalty,positive_first_penalty_ratio_cases,bound_over_first_positive_penalty_median,bound_over_first_positive_penalty_q90,grid_pairs_above_bound,above_bound_raw_margin_failures,above_bound_not_guarded_disagreement
+mnist,33,100,2,1,0.0625,4027,5,4022,5,0,0,5,0,0,,,15,0,0
+mnist,33,100,6,2,0.125,4027,71,3956,71,0,0,71,0,6,57.969527586889576,117.79076905366674,207,0,0
+mnist,33,100,7,0,0.14000376205202564,4027,139,3888,139,0,0,139,0,39,41.70386813136829,104.7082485924039,393,0,0
+mnist,33,100,9,3,0.25,4027,1412,2615,1411,13,1,1411,82,828,49.04600814953291,204.6361085896219,2871,0,0
+mnist,33,100,11,4,0.5,4027,3225,802,3032,224,193,2582,1072,2299,3.257224755662117,29.867694836057968,2201,0,0
+mnist,33,100,13,5,1.0,4027,3315,712,1932,212,1383,1932,3315,1073,30.561707359915815,3227.2779446453874,0,0,0
+mnist,33,100,15,6,2.0,4027,3315,712,2655,207,660,2655,3315,1737,121.83288422968478,107313.9717969493,0,0,0

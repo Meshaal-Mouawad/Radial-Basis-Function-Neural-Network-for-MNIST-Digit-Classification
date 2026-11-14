@@ -1,0 +1,25 @@
+\subsection{Sufficient reversal bounds relative to competitive sampled models}
+\label{sec:r3-thresholds}
+The new validation comparison locates the sufficient reversals on the same penalty axis as the archived models. All five seeds of both datasets have competitive sampled readouts at $\sigma/s_C\in\{1/2,1,2\}$. At each of these widths, every finite sufficient reversal bound exceeds the largest competitive sampled penalty at the same width. Table~\ref{tab:r3-thresholds} reports the normalized thresholds and competitive maxima. At $\sigma=s_C$, the mean within-seed median bound is $1.056\norm{A_\sigma}_2$ for MNIST and $1.150\norm{A_\sigma}_2$ for Fashion-MNIST. The corresponding competitive maxima range from $3.18\times10^{-5}$ to $3.44\times10^{-5}$ and from $2.91\times10^{-6}$ to $2.98\times10^{-5}$ times $\norm{A_\sigma}_2$, respectively.
+
+\input{r3_threshold_table.tex}
+
+No original upper width below $s_C/2$ qualifies under the validation rule in any seed. Across all seven examined upper widths, the 175,027 finite bound checks at $1.001B$ produce a strictly competing fitted score with zero failures. The bound distributions therefore establish finite exclusion far along the penalty path in these comparisons. The supplement retains all within-seed quantiles and validation-pair scores, including widths without a competitive reference.
+
+\subsection{Incremental exclusions beyond archived finite readouts}
+\label{sec:r3-overlap}
+The original limiting-vote union contributes exclusions beyond the original finite probes. At $t=s_C$ and penalty floor zero, $L_0\setminus F_0$ contains 8.026\% of MNIST and 21.458\% of Fashion-MNIST queries on average. After including every eligible archived finite readout, these unique proportions become 0\% and 0.134\%. Incorporating the dense limiting-width grid changes the latter proportion to 0.148\%, as reported in Table~\ref{tab:r3-overlap}. Exact per-query unions reproduce all 210 original region counts.
+
+\input{r3_overlap_table.tex}
+
+At $t=2s_C$, the dense limiting union retains 12.950\% unique Fashion-MNIST exclusions beyond $F_1$. The archived high-penalty local-tail models cover widths near $s_C/2$ and $s_C$, so the expansion resolves many of the limiting witnesses near those widths and leaves more distinct witnesses at $2s_C$. The incremental exclusion rate consequently measures complementarity to a specified finite sampling design. The training-derived limit test supplies its strict exclusion without fitting those additional models.
+
+\subsection{Matched-coverage accuracy and class composition}
+\label{sec:r3-selectors}
+Certified subsets have higher mean endpoint accuracy than uniform random selection at identical coverage in all four conditions. The advantages are 53.49 and 57.16 percentage points on MNIST at $t=s_C/2$ and $t=s_C$, and 30.21 and 34.79 points on Fashion-MNIST. Table~\ref{tab:r3-selectors} places this enrichment beside informed selection rules. The certificate also exceeds ordinary raw-score and prototype-distance margins in all four mean comparisons. Agreement-gated distance selection achieves higher mean accuracy in three conditions and selects the identical set in the fourth. Its advantages over the certificate are 16.47 points on MNIST at $s_C/2$, and 4.06 and 18.29 points on Fashion-MNIST at $s_C/2$ and $s_C$.
+
+\input{r3_selector_table.tex}
+
+The predicted-class distribution explains the composition of these selected sets. At MNIST $t=s_C$, every endpoint readout predicts class 1 for every query in every seed. The evaluation set contains 474 class-1 targets among 4,027 queries, giving the constant prediction its 11.7705\% accuracy. In each seed, the certificate selects exactly the entire endpoint-agreement pool: queries whose nearest prototype also has class 1. Both gated selectors therefore select the same set and reproduce its mean 68.93\% accuracy. At $t=s_C/2$, class 1 accounts for 95.36\% of full-query predictions and 99.45\% of certified predictions on average.
+
+Fashion-MNIST's full evaluation set has 1,000 targets in each class, giving every constant-class predictor 10\% accuracy. At $t=s_C$, class 7 accounts for 80.94\% of certified predictions; at $t=s_C/2$, the certified predictions span several classes, including class 7 at 30.97\%, class 1 at 23.32\%, and class 0 at 15.93\%. The numerical supplement retains all class counts and paired selector differences. Reconstruction from archived weights reproduces all 140,270 endpoint prediction labels used by these comparisons.

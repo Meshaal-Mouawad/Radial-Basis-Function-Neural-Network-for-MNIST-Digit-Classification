@@ -1,0 +1,9 @@
+{
+  "group": "fashion_mnist_seed44_K200",
+  "runtime_seconds": 2.1164240159996552,
+  "prediction_mismatches": 0,
+  "query_parameter_predictions": 960000,
+  "path_cases": 160000,
+  "original_archive_sha256": "cbbfb18d5b5e4a0fa1f907411b28db46f2d30e2295abb6baca01e611ee74dad7",
+  "new_solves": 0
+}

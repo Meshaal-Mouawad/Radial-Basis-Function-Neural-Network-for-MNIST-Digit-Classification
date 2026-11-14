@@ -1,0 +1,8 @@
+dataset,seed,K,probe_width_index,bound_width_index,sigma_over_sC,n,finite_bound_queries,no_finite_bound_queries,observed_disagreement_with_finite_bound,observed_disagreement_without_finite_bound,finite_bound_without_observed_disagreement,first_observed_disagreement_below_bound,finite_bound_above_largest_sampled_penalty,positive_first_penalty_ratio_cases,bound_over_first_positive_penalty_median,bound_over_first_positive_penalty_q90,grid_pairs_above_bound,above_bound_raw_margin_failures,above_bound_not_guarded_disagreement
+fashion_mnist,22,100,3,1,0.0625,10000,8,9992,8,0,0,8,0,0,,,22,0,0
+fashion_mnist,22,100,6,0,0.12088931875453322,10000,260,9740,260,1,0,260,0,11,18.686401189212532,152.91983159103555,775,0,0
+fashion_mnist,22,100,7,2,0.125,10000,301,9699,301,2,0,300,0,22,31.21879867167909,81.7831422449348,919,0,0
+fashion_mnist,22,100,9,3,0.25,10000,2421,7579,2419,764,2,2322,45,1320,7.842596656300895,70.8041933124738,5013,0,0
+fashion_mnist,22,100,11,4,0.5,10000,4793,5207,4080,1172,713,4048,4324,2409,6.290884457732607,370.465147237466,469,0,0
+fashion_mnist,22,100,13,5,1.0,10000,8157,1843,4152,958,4005,4152,8157,2008,232.38983144594562,31677.869601972292,0,0,0
+fashion_mnist,22,100,15,6,2.0,10000,7935,2065,4631,1315,3304,4631,7935,2672,1360.1151753501842,473253.5935104332,0,0,0

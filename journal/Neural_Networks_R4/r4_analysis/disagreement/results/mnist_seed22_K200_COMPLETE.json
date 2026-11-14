@@ -1,0 +1,9 @@
+{
+  "group": "mnist_seed22_K200",
+  "runtime_seconds": 0.8293193050003538,
+  "prediction_mismatches": 0,
+  "query_parameter_predictions": 386592,
+  "path_cases": 64432,
+  "original_archive_sha256": "bf28141188f35e93e314a2020d803be6f60fc22b52ac27140f116975b6517d8b",
+  "new_solves": 0
+}

@@ -1,0 +1,15 @@
+{
+ "stage":"R4 E competitive operating regions and G descriptive stability",
+ "date":"2026-11-14",
+ "status":"fixed before new reconstruction",
+ "groups":{"datasets":["mnist","fashion_mnist"],"seeds":[11,22,33,44,55],"prototype_budgets":[50,100,200]},
+ "readouts":"All 16 archived widths and 6 penalties per group (96); original frozen weights, no model fitting or tuning",
+ "selection":"Score all readouts on their archived disjoint 5000 validation IDs. Primary set accuracy >= .95 * group-best validation accuracy; fixed sensitivity .90 and .99. Single validation-best pair uses maximum correct count, then ascending numerical width, then ascending penalty. Evaluation truth is indexed only after these selections.",
+ "surface":"Report evaluation accuracy, nearest-reference accuracy, pointwise nearest-label agreement, sharp full-width certificate coverage for (0,sigma] x [lambda,infinity), guarded finite-exclusion union using original probes in that region, strict limiting-vote prefix exclusion over original probe widths within region, their union and unresolved proportion. Region exclusion is not pointwise model disagreement.",
+ "certificate":"Reconstruct unchanged training_terms/constants/query_certificate from original frozen certificate.py for each original probe width and penalty floor. Require exact equality at all 7 original endpoints x 3 original floors, zero certified sampled endpoint disagreements and empty certified/excluded intersection.",
+ "strict_witness":"Normalized query scores; opposing-reference margin > 1e-10*(1+abs(competing)+abs(reference)). Lambda 0 finite witnesses require archived full numerical column rank. Strict limit witnesses use H^T Y at matching width.",
+ "scope":"Validation-best choices and all retained pairs receive evaluation metrics from archived predictions once. All conditions reported including zero-coverage groups. No evaluation-based model selection.",
+ "stability":"Report per-seed validation-best metrics and paired K differences (100-50,200-100,200-50). Compute paired query correctness-set Jaccard, prediction disagreement and class count changes. Compute cross-seed prediction agreement and correctness Jaccard for each dataset/K. Do not treat repeated evaluation images as independent observations or run inferential tests.",
+ "cost":"Single-thread numerical work; one-group pilot and checkpoint each group. Resume only checkpoints matching protocol, runner and input hashes. No paid compute and no new training.",
+ "outputs":"Group NPZ with validation predictions/selection, original endpoint predictions, masks, query IDs and labels; CSV surfaces and sensitivity summaries, validation-best per-seed records, seed-paired stability and class counts, hashes, measured runtime and verification."
+}

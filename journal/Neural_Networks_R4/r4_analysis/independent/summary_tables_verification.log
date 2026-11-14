@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "groups": 30,
+  "validation_best_summary_rows": 6,
+  "competitive_summary_rows": 18,
+  "budget_paired_summary_rows": 6,
+  "retained_model_counts": {
+    "0.9": 494,
+    "0.95": 328,
+    "0.99": 116
+  },
+  "zero_coverage_groups": {
+    "0.9": 30,
+    "0.95": 30,
+    "0.99": 30
+  },
+  "sampled_return_to_agreement_query_width_cases": 190405,
+  "all_query_width_cases": 3366480,
+  "maximum_sampled_sign_changes": 5,
+  "guard_query_width_cases": 0,
+  "invalid_query_width_cases": 0,
+  "script_sha256": "742a58a378e5fd5d3f4de7b531cc2610723b93e5e59a7aa6e10d7b8e3e19ccf6"
+}

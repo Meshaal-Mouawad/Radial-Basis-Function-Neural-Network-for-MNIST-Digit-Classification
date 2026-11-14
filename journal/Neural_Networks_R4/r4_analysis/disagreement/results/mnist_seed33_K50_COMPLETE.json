@@ -1,0 +1,9 @@
+{
+  "group": "mnist_seed33_K50",
+  "runtime_seconds": 0.48080430800018803,
+  "prediction_mismatches": 0,
+  "query_parameter_predictions": 386592,
+  "path_cases": 64432,
+  "original_archive_sha256": "525dd1f881648d5abd974e43dc8d588328d7ce2c05c331615321cfe276db5942",
+  "new_solves": 0
+}

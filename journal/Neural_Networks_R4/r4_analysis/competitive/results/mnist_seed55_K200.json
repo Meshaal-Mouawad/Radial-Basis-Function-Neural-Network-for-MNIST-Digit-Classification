@@ -1,0 +1,21 @@
+{
+  "group": "mnist_seed55_K200",
+  "input_sha256": "3563bfa9436a10aa55087e5ea91f031bbc474da040b4ec9727575ac79b6f4dc9",
+  "protocol_sha256": "9a6a1d4d692d790372859bbca04d2dbb184dc2e3ea8ec4afa8d207d59204a1e9",
+  "runner_sha256": "185b94aad7cfdb0a9b5e0eca514bbdce0abdca4f6637f003c62bbe0f90f73c8d",
+  "data_hashes": {
+    "baseline/evidence/baseline/repository/Code/MNIST_train.mat": "3457a55e8f4cd23188887f785de3f8c0da8bd1c2b0eda2eef76e7d54ba5ecd99",
+    "baseline/evidence/baseline/work/v2/design/reserved_training_ids.npy": "d38850e78c5faa4dfafd4c4c53f24d122162980d9717960a6002fb6527646e11",
+    "baseline/evidence/baseline/work/v2/experiment/certificate.py": "97e4890a185573bed1ff2229cccbcb476e0eb9036084b4807c37e885e3428603",
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_evaluation_labels.npy": "919e73ecfdc111e898d1e194ca4dba1c5908719fefb96247762160eb84fb6a9a"
+  },
+  "npz_sha256": "4277942cb6ec8c28285949b83cc4d4d8fa7eb44ecc5ab53c92cccd673d137488",
+  "seconds": 4.162811701999999,
+  "reconstructed_prediction_labels": 386592,
+  "validation_score_evaluations": 96,
+  "certificate_original_mask_matches": 21,
+  "prediction_mismatch": 0,
+  "certificate_violations": 0,
+  "certificate_exclusion_intersections": 0,
+  "new_fits": 0
+}

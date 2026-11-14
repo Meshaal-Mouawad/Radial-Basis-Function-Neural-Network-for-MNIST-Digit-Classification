@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Incremental limiting-vote exclusions at penalty floor zero. $F_0$ contains original finite probes; $F_1$ also includes archived frontier and local-tail readouts. $L_+$ combines limiting witnesses from the original and dense width grids. Entries are five-seed mean percentages of the full query set, with sample SD in percentage points. Each difference is calculated from exact query masks. All witnesses lie inside the requested region.}
+\label{tab:r3-overlap}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Dataset & $t/s_C$ & $F_0$ & $L_+\setminus F_0$ & $F_1$ & $L_+\setminus F_1$\\
+\midrule
+MNIST & $1/8$ & $1.614\pm0.206$ & $0.000\pm0.000$ & $1.614\pm0.206$ & $0.000\pm0.000$\\
+ & $1/4$ & $36.712\pm3.550$ & $0.050\pm0.046$ & $36.712\pm3.550$ & $0.050\pm0.046$\\
+ & $1/2$ & $79.399\pm2.162$ & $6.000\pm1.507$ & $85.274\pm0.853$ & $0.124\pm0.046$\\
+ & $1$ & $80.070\pm2.205$ & $8.026\pm2.248$ & $88.095\pm0.145$ & $0.000\pm0.000$\\
+ & $2$ & $82.111\pm2.417$ & $6.019\pm2.431$ & $88.130\pm0.130$ & $0.000\pm0.000$\\
+\addlinespace
+Fashion-MNIST & $1/8$ & $2.138\pm0.980$ & $0.006\pm0.009$ & $2.140\pm0.979$ & $0.004\pm0.005$\\
+ & $1/4$ & $34.548\pm4.407$ & $0.144\pm0.038$ & $34.548\pm4.407$ & $0.144\pm0.038$\\
+ & $1/2$ & $58.382\pm2.760$ & $4.890\pm1.475$ & $63.180\pm2.736$ & $0.100\pm0.032$\\
+ & $1$ & $63.022\pm2.384$ & $21.472\pm7.093$ & $84.350\pm5.016$ & $0.148\pm0.079$\\
+ & $2$ & $68.088\pm2.225$ & $30.236\pm2.588$ & $85.374\pm4.913$ & $12.950\pm7.566$\\
+\addlinespace
+\bottomrule
+\end{tabular}
+\end{table}
