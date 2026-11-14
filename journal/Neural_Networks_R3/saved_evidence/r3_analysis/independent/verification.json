@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "method": "Independent reconstruction from preserved R2 image data and archived weights; no runner imports and no new fits",
+  "counts": {
+    "groups": 10,
+    "m3_prediction_labels": 140270,
+    "m3_selector_masks": 120,
+    "m3_per_seed_rows": 140,
+    "m3_class_count_rows": 1400,
+    "m1_validation_prediction_labels": 4800000,
+    "m1_threshold_query_widths": 490945,
+    "m1_finite_reversal_checks": 175027,
+    "m2_region_unions": 210
+  },
+  "maximum_threshold_relative_error": 1.2364442802947906e-10,
+  "all_certified_selector_labels_agree": true,
+  "all_equal_size_masks_match": true,
+  "all_m1_m2_masks_match": true,
+  "normalized_and_raw_scores_preserve_labels": true,
+  "mnist_full_query_predictions_at_t_sC_all_class_one": true,
+  "random_reference": "Exact finite-population expectation; full-query correctness independently reconstructed",
+  "elapsed_seconds": 19.449396114000024,
+  "groups": [
+    {
+      "group": "mnist_seed11_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 705,
+          "accuracy": 66.66666666666666
+        },
+        {
+          "width": 1.0,
+          "certificate": 705,
+          "accuracy": 66.66666666666666
+        }
+      ],
+      "validation_best_accuracy_pct": 86.83999999999999
+    },
+    {
+      "group": "mnist_seed22_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 721,
+          "accuracy": 63.52288488210819
+        },
+        {
+          "width": 1.0,
+          "certificate": 715,
+          "accuracy": 63.21678321678321
+        }
+      ],
+      "validation_best_accuracy_pct": 87.96000000000001
+    },
+    {
+      "group": "mnist_seed33_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 712,
+          "accuracy": 65.87078651685393
+        },
+        {
+          "width": 1.0,
+          "certificate": 712,
+          "accuracy": 65.87078651685393
+        }
+      ],
+      "validation_best_accuracy_pct": 87.1
+    },
+    {
+      "group": "mnist_seed44_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 633,
+          "accuracy": 73.1437598736177
+        },
+        {
+          "width": 1.0,
+          "certificate": 633,
+          "accuracy": 73.1437598736177
+        }
+      ],
+      "validation_best_accuracy_pct": 88.22
+    },
+    {
+      "group": "mnist_seed55_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 627,
+          "accuracy": 76.2360446570973
+        },
+        {
+          "width": 1.0,
+          "certificate": 615,
+          "accuracy": 75.77235772357723
+        }
+      ],
+      "validation_best_accuracy_pct": 88.1
+    },
+    {
+      "group": "fashion_mnist_seed11_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 4695,
+          "accuracy": 73.09904153354633
+        },
+        {
+          "width": 1.0,
+          "certificate": 1553,
+          "accuracy": 58.403090792015455
+        }
+      ],
+      "validation_best_accuracy_pct": 79.22
+    },
+    {
+      "group": "fashion_mnist_seed22_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 3948,
+          "accuracy": 77.25430597771023
+        },
+        {
+          "width": 1.0,
+          "certificate": 1237,
+          "accuracy": 68.39126919967664
+        }
+      ],
+      "validation_best_accuracy_pct": 79.9
+    },
+    {
+      "group": "fashion_mnist_seed33_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 3872,
+          "accuracy": 73.86363636363636
+        },
+        {
+          "width": 1.0,
+          "certificate": 1849,
+          "accuracy": 65.38669551108708
+        }
+      ],
+      "validation_best_accuracy_pct": 79.42
+    },
+    {
+      "group": "fashion_mnist_seed44_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 4195,
+          "accuracy": 72.68176400476759
+        },
+        {
+          "width": 1.0,
+          "certificate": 1435,
+          "accuracy": 62.160278745644604
+        }
+      ],
+      "validation_best_accuracy_pct": 79.5
+    },
+    {
+      "group": "fashion_mnist_seed55_K100",
+      "m3": [
+        {
+          "width": 0.5,
+          "certificate": 3336,
+          "accuracy": 79.46642685851319
+        },
+        {
+          "width": 1.0,
+          "certificate": 1395,
+          "accuracy": 68.88888888888889
+        }
+      ],
+      "validation_best_accuracy_pct": 80.78
+    }
+  ],
+  "script_sha256": "558337954ba39098bf1bb844c1b2a42be512a710a74a40c91f81948341f94975"
+}

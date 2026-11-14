@@ -1,0 +1,21 @@
+{
+  "analysis": "R3 M3 matched-cardinality selective prediction diagnostic",
+  "recorded_before_execution": true,
+  "date": "2026-11-14",
+  "status": "post_hoc_followup_to_archived_R2_findings",
+  "groups": "MNIST and Fashion-MNIST; K=100; seeds 11,22,33,44,55",
+  "settings": "t/s_C in {0.5,1}; sigma=t; lambda=10*||A_t||_2; signed certificate for [0.99t,t] x [lambda,infinity)",
+  "random_reference": "Exact expected accuracy of a uniformly selected subset of m queries is full-query fitted-classifier accuracy. No random trials.",
+  "selectors": {
+    "score_margin": "Top m raw fitted-score top-one minus top-two margins, using exp(-squared_distance/(2*t*t)) @ archived_W. No query-wise renormalization.",
+    "normalized_score_margin": "Sensitivity comparator using scores divided by nearest-prototype Gaussian response, the positive row scaling employed in archived prediction verification.",
+    "prototype_distance_margin": "Top m gaps between minimum squared distance to a differently labelled prototype and nearest squared distance.",
+    "agreement_gated_score_margin": "Restrict to endpoint prediction equal to nearest-prototype label, then top m raw fitted-score margins. Certificate implies all m certified queries belong to this pool.",
+    "agreement_gated_distance_margin": "Same agreement pool, then top m prototype class-distance gaps."
+  },
+  "ties": "Descending ranking score, then ascending archived query ID, then ascending row index. Selection never uses evaluation labels.",
+  "denominators": "Every selector uses the per-seed certificate cardinality m, all seeds retained. Dataset summaries are arithmetic means and sample SD across five seeds; uncertainty from seed variation is not independent query-sample uncertainty.",
+  "class_checks": "Full-query and selected true/predicted class counts; predicted-class entropy and dominant share; majority-query reference max empirical class share, explicitly descriptive. Also report training-modal-class constant predictor accuracy.",
+  "model_reconstruction": "Use archived local-tail readout weights, no new fitting. Reconstruct predictions using raw and row-normalized Gaussian features and require exact agreement with archives.",
+  "outputs": "Per-query scores/masks/predictions, per-seed and summary CSVs, class counts, protocol and source hashes, runtime and checks. Original files remain unchanged."
+}

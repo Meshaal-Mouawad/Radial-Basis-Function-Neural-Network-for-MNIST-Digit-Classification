@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "settings_reconstructed": 20,
+  "selector_rows_verified": 140,
+  "class_count_rows_verified": 1400,
+  "maximum_weight_error": 0.0,
+  "maximum_score_error": 0.0,
+  "manifest_verified": true,
+  "inputs_unchanged": true
+}

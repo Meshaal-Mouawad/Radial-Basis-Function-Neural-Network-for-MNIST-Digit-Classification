@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-11-09T13:15:09.795479+00:00",
+  "status": "before_fitting",
+  "authorization": "Parent explicitly authorized focused positive-ridge fitted validation",
+  "scope": "10 K100 archived groups, t/sC=.5,1; sigma/t=.95,.99,1; lambda=10||A_t||2 and100||A_t||2",
+  "fit": "Direct float64 solve (A_sigma+lambda I)W=B_sigma;120 readouts, no tuning",
+  "metrics": "All-query accuracy and NN label agreement at sigma=t; for both local bands certified fraction, certified subset true correctness, and sampled label agreement at all sampled sigma within band for both penalties",
+  "masks": "Signed-interval Lambda threshold from prior local-tail analysis; frozen before current prediction/label scoring",
+  "labels": "Existing heldout target arrays; all settings reported with no selection",
+  "checks": "Every certified query agrees with nearest-prototype at all sampled widths inside its band; no finite checks interpreted as theorem",
+  "relation": "New numerical validation fitting is separate from no-fitting obstruction and local-bound computation; same data already used in posthoc research"
+}

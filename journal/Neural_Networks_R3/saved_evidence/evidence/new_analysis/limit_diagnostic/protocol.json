@@ -1,0 +1,18 @@
+{
+  "name": "Post hoc unbounded-ridge necessary-condition audit",
+  "recorded_utc": "2026-11-09T13:09:32.417701+00:00",
+  "status": "recorded_before_calculation",
+  "scope": "K=100, both archived datasets, seeds 11,22,33,44,55; first seven original upper-width endpoints; no model fitting or new data",
+  "question": "How much zero certificate coverage is excluded by a large-penalty strict competing-class limit, and how much remains unresolved by this diagnostic?",
+  "endpoint_formula": "row-normalized r_sigma @ (Y_C+V_sigma+P_sigma) equals positive scaling of h_sigma^T H_sigma^T Y",
+  "primary_obstruction": "max competing limit score minus nearest-class limit score > 1e-10*(1+abs(nearest_score)+abs(competing_score))",
+  "ties": "All scores inside guard are unresolved; no tied limit is interpreted as impossibility. Report unguarded argmax for descriptive agreement only.",
+  "finite_witness": "For each floor and endpoint, union all archived fitted predictions with sigma<=t and finite lambda>=floor; disagreement excludes that query rectangle.",
+  "partition": "certified; excluded by guarded limit at any evaluated sigma<=t or archived finite witness; unresolved. Check certified and excluded disjoint. Grid absence of obstruction supplies no uniform guarantee.",
+  "counts_units": "One query per dataset/seed/upper-width/floor rectangle. Percentages within each group, n=4027 or 10000. Summary unweighted mean and sample SD across five seeds. No independent-query or grid replication inference.",
+  "inputs": "Archived indices, prototype labels, V/P terms and all prediction probes; original raw images for query geometry; archived separate evaluation labels for descriptive accuracy only.",
+  "no_selection": "All seeds and original widths reported. No optimizing widths against labels.",
+  "staged_extension": "If stage 1 shows unresolved mass at first failing scaled endpoint >=10% in either dataset mean, extend to archived 67-width range at K100 using recomputed H^T Y only and archived masks. This localizes whether observed loss of coverage is forced near frontier. Stop after K100; no fit and no K50/K200 expansion.",
+  "cost_control": "Single-thread BLAS; stage1 reuse V/P (7); stage2 at most 670 feature evaluations of 20000x100 and 670 matrix products to 10 classes; no factorization.",
+  "provenance": "Existing analyses and their test labels already inspected; this is explicitly post hoc, not preregistered."
+}

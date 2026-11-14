@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "observed": {
+    "original_certificate_records": 1890,
+    "original_endpoint_records": 630,
+    "sharp_certified_query_rectangles": 587703,
+    "frob_certified_query_rectangles": 285286,
+    "query_rectangles_no_method": 4418505,
+    "sharp_probe_checks": 5289327,
+    "all_method_probe_checks": 13146228,
+    "sharp_finite_probe_violations": 0,
+    "inapplicable_rectangles_no_method": 102,
+    "sharp_basic_all_query_masks_equal": true,
+    "deduplicated_query_parameter_checks_within_group": 3585477,
+    "dense_method_coverage_records": 18090,
+    "dense_sharp_basic_conditions": 6030,
+    "dense_strict_sharp_gain_conditions": 35,
+    "dense_total_sharp_gain_query_condition_records": 827,
+    "dense_max_gain_queries": 382
+  },
+  "reported_expected": {
+    "original_certificate_records": 1890,
+    "original_endpoint_records": 630,
+    "sharp_certified_query_rectangles": 587703,
+    "frob_certified_query_rectangles": 285286,
+    "query_rectangles_no_method": 4418505,
+    "sharp_probe_checks": 5289327,
+    "all_method_probe_checks": 13146228,
+    "sharp_finite_probe_violations": 0,
+    "inapplicable_rectangles_no_method": 102,
+    "sharp_basic_all_query_masks_equal": true,
+    "deduplicated_query_parameter_checks_within_group": 3585477,
+    "dense_method_coverage_records": 18090,
+    "dense_sharp_basic_conditions": 6030,
+    "dense_strict_sharp_gain_conditions": 35,
+    "dense_total_sharp_gain_query_condition_records": 827,
+    "dense_max_gain_queries": 382
+  },
+  "units": "counts of repeated query rectangles, method-tagged grid records, or deduplicated within-group query/parameter checks as explicitly named; no sample-size interpretation"
+}

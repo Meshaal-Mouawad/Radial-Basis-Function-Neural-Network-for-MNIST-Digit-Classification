@@ -1,0 +1,8 @@
+{
+  "recorded_utc": "2026-11-09T13:11:54.269131+00:00",
+  "reason": "Audit finite predicted-label disagreement for strict score reversal; ties do not witness impossibility.",
+  "before_recalculation": true,
+  "finite_score_condition": "Reconstruct normalized-query score from archived weights; competing minus nearest > 1e-10*(1+abs(competing)+abs(nearest)); archived zero penalty allowed only at full numerical column rank; positive penalties admitted.",
+  "outputs": "original7_guarded,dense67_guarded; original unguarded outputs preserved as superseded exploratory records",
+  "mathematical_status": "Numerically guarded obstructions; no rigorous outward-rounding claim."
+}

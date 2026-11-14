@@ -1,0 +1,52 @@
+{
+  "runtime_seconds": 10.921476456000164,
+  "timings": [
+    {
+      "group": "mnist_seed11_K100",
+      "seconds": 0.8375594909994106
+    },
+    {
+      "group": "mnist_seed22_K100",
+      "seconds": 0.8502743439985352
+    },
+    {
+      "group": "mnist_seed33_K100",
+      "seconds": 0.8304753069987783
+    },
+    {
+      "group": "mnist_seed44_K100",
+      "seconds": 0.8382556600008684
+    },
+    {
+      "group": "mnist_seed55_K100",
+      "seconds": 0.8303897900004813
+    },
+    {
+      "group": "fashion_mnist_seed11_K100",
+      "seconds": 1.186732308999126
+    },
+    {
+      "group": "fashion_mnist_seed22_K100",
+      "seconds": 1.1955914459995256
+    },
+    {
+      "group": "fashion_mnist_seed33_K100",
+      "seconds": 1.2540272789992741
+    },
+    {
+      "group": "fashion_mnist_seed44_K100",
+      "seconds": 1.3053396589984914
+    },
+    {
+      "group": "fashion_mnist_seed55_K100",
+      "seconds": 1.3691127199999755
+    }
+  ],
+  "protocol_sha256": "11c0bb7bcd2704a60f84a368c3867bc9a342d55bc12026335ee3973cf0a013af",
+  "runner_sha256": "4d64830c0469f3d6fad5e021f7a01d3e82b9c8c0039230f75d7597aa0baf0e87",
+  "groups": 10,
+  "local_bands": 40,
+  "readout_fits": 0,
+  "units": "penalty lambda in original unnormalized sum-of-squares objective; normalized penalty lambda / spectral norm(H_t^T H_t)",
+  "strictness": "margins guarded and thresholds inflated by 1+1e-10 plus 1e-10; no outward-rounded interval arithmetic"
+}

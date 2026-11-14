@@ -1,0 +1,15 @@
+{
+  "name": "R3 post hoc finite-reversal relevance and exact witness overlap",
+  "recorded_utc": "2026-11-14T18:03:37.471866+00:00",
+  "baseline": "R2 immutable package SHA256 0181857c13b77abc7f7c9f7e36837675fc9a9b752edebc72042d46ce6f6c7b85",
+  "groups": "K100; MNIST and Fashion-MNIST; seeds 11,22,33,44,55",
+  "m1_bounds": "At all seven archived upper widths compute minimum over guarded strict competing classes of ||r||2 ||A(Z_b-Z_a)||2/(r^T(Z_b-Z_a)); preserve raw bound, norm(A), normalized bound and best competitor per query. Strict lambda greater than bound is sufficient; bound is not earliest crossing.",
+  "m1_competitive": "Evaluate archived 16 width x 6 penalty readouts on each group previously unused disjoint 5000 validation rows. Competitive = accuracy >=0.95 * group best validation accuracy over all 96 pairs. At each analyzed width compare its bounds with largest competitive sampled penalty at that same width. If no competitive pair exists at width record unavailable. Also provide maximum competitive raw penalty across all widths for context, never interpret as same-width competitive evidence.",
+  "m1_verification": "Reconstruct limit HtY against R2; verify sufficient reversal at 1.001 times each finite bound with spectral resolvent; archive guarded finite comparisons and validation predictions.",
+  "m2_limit_set": "Union all strict R2 limit masks at 7 original upper widths plus 67 dense widths within requested upper width; exact per-query union.",
+  "m2_finite_sets": "F0 = 96 original archived readouts. F1 adds all frontier archived readouts and all 12 local-tail readouts per group. No new fits. Reconstruct strict finite competing-score masks using frozen weights, query normalization and 1e-10*(1+abs(competing)+abs(nearest)) guard. Lambda zero requires stored full numerical rank. Each region includes width<=upper and penalty>=floor.",
+  "m2_regions": "All original upper widths, floors0,1,100; compare endpoint limit, cumulative original limit, cumulative original+dense limit, F0, F1 and each intersection/unique contribution. Preserve original certificate masks; check disjointness.",
+  "numerics": "float64; single BLAS thread; original non-normalized sum-of-squares lambda, query max normalization; strict finite guards unscaled as R2 to preserve comparability.",
+  "aggregation": "Percent within each seed, n4027 MNIST/n10000 Fashion; mean and sample SD across five seeds. Per-seed records authoritative; no pooled independent seed-query inference.",
+  "interpretation": "Post hoc diagnostics with fixed inputs. Competitive reference is validation-based archived-grid reference, no trained-model or hyperparameter claims; no empirical zero turned into theorem."
+}

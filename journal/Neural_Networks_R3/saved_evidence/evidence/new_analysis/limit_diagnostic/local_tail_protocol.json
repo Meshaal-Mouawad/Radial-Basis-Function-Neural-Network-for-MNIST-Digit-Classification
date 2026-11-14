@@ -1,0 +1,44 @@
+{
+  "recorded_utc": "2026-11-09T13:12:46.392829+00:00",
+  "status": "before_computation",
+  "description": "Separate post hoc local-band high-penalty certificate; does not replace original (0,t] certificate",
+  "authorization": "Parent authorized focused K100 local1pct/5pct bands, same archived splits, no refitting",
+  "datasets": [
+    "mnist",
+    "fashion_mnist"
+  ],
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "K": 100,
+  "t_over_sC": [
+    0.5,
+    1.0
+  ],
+  "s_over_t": [
+    0.99,
+    0.95
+  ],
+  "target": "nearest-prototype label",
+  "normalized_penalty_thresholds": [
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    1000000
+  ],
+  "interval_vote_margin": "m_ab=r_s^T B_s,a-r_t^T B_t,b",
+  "simple_rho": "||A_t(B_t,a+B_t,b)||2",
+  "signed_interval_rho": "v=B_a-B_b in [l=B_s,a-B_t,b,u=B_t,a-B_s,b]; zlow=A_s max(l,0)+A_t min(l,0), zup=A_t max(u,0)+A_s min(u,0); rho=||max(abs(zlow),abs(zup))||2",
+  "threshold": "if every competing m_ab exceeds 1e-10*(1+abs(vote_s,a)+abs(vote_t,b)), Lambda=(1+1e-10) max_b ||r_t||2 rho_ab/m_ab+1e-10; all sigma in [s,t] and finite lambda>=Lambda",
+  "normalization": "spectral norm(A_t), computed eigvalsh; also store trace(A_t). Original objective sum of squares, no N scaling.",
+  "denominators": "Complete evaluation query set per seed; summarize unweighted means/sampleSD across five seeds; 40 bands",
+  "no_fitting": "Only H, B=H^TY, A=H^TH, small eigenvalue computation for scale; no readout solution",
+  "censoring": "Queries failing interval margin receive infinite threshold, included as uncertified at all finite thresholds",
+  "numeric_status": "float64 numerical guard; no outward-rounded rigorous arithmetic"
+}

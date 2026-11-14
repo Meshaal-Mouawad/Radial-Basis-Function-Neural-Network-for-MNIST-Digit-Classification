@@ -1,0 +1,70 @@
+{
+  "stage": "original7_guarded",
+  "completed_utc": "2026-11-09T13:11:59.511478+00:00",
+  "runtime_seconds": 4.9022612549997575,
+  "group_timing": [
+    {
+      "group": "mnist_seed11_K100",
+      "seconds": 0.25187901000026613
+    },
+    {
+      "group": "mnist_seed22_K100",
+      "seconds": 0.25886976499896264
+    },
+    {
+      "group": "mnist_seed33_K100",
+      "seconds": 0.25466257599873643
+    },
+    {
+      "group": "mnist_seed44_K100",
+      "seconds": 0.2508203360011976
+    },
+    {
+      "group": "mnist_seed55_K100",
+      "seconds": 0.24659926099957374
+    },
+    {
+      "group": "fashion_mnist_seed11_K100",
+      "seconds": 0.6371601420014485
+    },
+    {
+      "group": "fashion_mnist_seed22_K100",
+      "seconds": 0.6254984959996364
+    },
+    {
+      "group": "fashion_mnist_seed33_K100",
+      "seconds": 0.6246675740003411
+    },
+    {
+      "group": "fashion_mnist_seed44_K100",
+      "seconds": 0.6635048529988126
+    },
+    {
+      "group": "fashion_mnist_seed55_K100",
+      "seconds": 0.640097555000466
+    }
+  ],
+  "groups": 10,
+  "rectangles": 210,
+  "query_width_cases": 490945,
+  "protocol_sha256": "2de7e567ef288cc0d2878d940683d2c3ade4ae5e2a24bcd31880a3b11c061090",
+  "runner_sha256": "136aa789dfc1610280a01edca19faf20b3327101eb2f02777ee5646f5e5286c4",
+  "input_sha256": {
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_seed11_K100/predictions_before_labels.npz": "31c935de38ad834eafad01fc6f5afdc62dd0f9a4be8e1949c956a274ee9afb97",
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_seed22_K100/predictions_before_labels.npz": "590cb8f9d70326088f6ca6a201aa541caf5691311d63e828366988064f136405",
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_seed33_K100/predictions_before_labels.npz": "ba8f0ed0631e2198a8d446433ce6abdb352c8a6599a996cba97da20c96b922b7",
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_seed44_K100/predictions_before_labels.npz": "327817673f4680110fb3e5ba434c2d4db4c8cec31788997751333c55b431cb4e",
+    "baseline/evidence/baseline/work/v2/experiment/results/mnist_seed55_K100/predictions_before_labels.npz": "b925ddb20511c60e2180d734a3bdad74c59799f403a0e2a5c5ce31d57c8ac01d",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed11_K100/predictions_before_labels.npz": "1ae363aaddefdaa45e2f048aca28cc13e5ae66d4446fe87a07e0f5d0681b3472",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed22_K100/predictions_before_labels.npz": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed33_K100/predictions_before_labels.npz": "9aef24822087cd238b599e45234d5cbb87985eee2b88b09af76706bf551f1ea2",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed44_K100/predictions_before_labels.npz": "a43131e3a017fda6dc185054280fabb9491b20e341807098a76798be75dd6c98",
+    "baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed55_K100/predictions_before_labels.npz": "d2e45ab44010faa8226c8330561548c7a50f766897f3b9d8a2ccfa9a761ff2c7"
+  },
+  "maximum_original_HtY_crosscheck_absolute_error": 0.0,
+  "finite_score_guarded": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "certified_excluded_intersection": 0
+}

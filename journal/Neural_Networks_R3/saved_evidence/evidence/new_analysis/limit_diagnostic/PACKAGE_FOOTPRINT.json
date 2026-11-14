@@ -1,0 +1,7 @@
+{
+  "scope": "four canonical scientific stage directories, including their manifests; scripts, protocols, metadata and top-level final manifest are additional",
+  "scientific_stage_files": 60,
+  "scientific_stage_bytes": 191972641,
+  "scientific_stage_MiB": 183.07937717437744,
+  "excluded_exploratory_bytes": 145250416
+}

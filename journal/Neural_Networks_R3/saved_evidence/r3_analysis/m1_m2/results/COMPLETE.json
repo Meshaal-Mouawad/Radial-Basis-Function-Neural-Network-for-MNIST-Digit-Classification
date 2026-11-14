@@ -1,0 +1,137 @@
+{
+  "protocol_sha256": "22a65a03a996dea12278896442ec85ccce09f65ee372b4970fb4e2391918d9d9",
+  "runner_sha256": "9458675b423c129ffe163c47be3dfa17e8f327b4e1e5296283b7511127f49ad2",
+  "runtime_seconds": 18.257975029000022,
+  "new_readout_fits": 0,
+  "archived_validation_evaluations": 960,
+  "groups": [
+    {
+      "group": "mnist_seed11_K100",
+      "seconds": 1.749453692999964,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "mnist_seed22_K100",
+      "seconds": 1.5224134119999917,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 111,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "mnist_seed33_K100",
+      "seconds": 1.2208834740000611,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "mnist_seed44_K100",
+      "seconds": 1.1509871430000658,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 111,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "mnist_seed55_K100",
+      "seconds": 1.2078618010000355,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "fashion_mnist_seed11_K100",
+      "seconds": 1.786703536999994,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 126,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "fashion_mnist_seed22_K100",
+      "seconds": 2.0672274170000264,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 129,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "fashion_mnist_seed33_K100",
+      "seconds": 2.9058116779999636,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "fashion_mnist_seed44_K100",
+      "seconds": 2.1021357740000894,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    },
+    {
+      "group": "fashion_mnist_seed55_K100",
+      "seconds": 1.7822037189999946,
+      "finite_original_pairs": 96,
+      "finite_all_archived_pairs": 114,
+      "prediction_mismatch": 0
+    }
+  ],
+  "finite_reversal_checks": 175027,
+  "finite_reversal_failures": 0,
+  "maximum_HtY_absolute_error": 1.8189894035458565e-12,
+  "inputs": {
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed11_K100/predictions_before_labels.npz": "31c935de38ad834eafad01fc6f5afdc62dd0f9a4be8e1949c956a274ee9afb97",
+    "evidence/baseline/evidence/frontier/results/mnist_seed11_K100/frontiers_before_labels.npz": "48ec297f711cd52010fac38d10a5da008262ca49f1075654f0760e832f3bf088",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed11_K100.npz": "cdab448df07d7931b40ddb0152145fd7543ea7e1d8a5a2000e49e782a93f8f6f",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/mnist_seed11_K100.npz": "2191a0a3dc269ce25aa197b307ba173e7a5074546d1fcb483be2190a5407b7c4",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/mnist_seed11_K100.npz": "914cbf4dc895fb143560b17d8bae976efe3ee1cbe312c942f421597f6a2e1d02",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed22_K100/predictions_before_labels.npz": "590cb8f9d70326088f6ca6a201aa541caf5691311d63e828366988064f136405",
+    "evidence/baseline/evidence/frontier/results/mnist_seed22_K100/frontiers_before_labels.npz": "d57bddfa152c39e2f03329dbe4155898fc17ca9cd567427c1acbb5f702e44214",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed22_K100.npz": "4c9b8c1ca7dc77bf6905f44e2da16213d2f1ea5542e41c251eee192b755080c9",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/mnist_seed22_K100.npz": "16c8869910fc01094e96658ad5b86335f9c92404d77ea3f047f63f3f556d174b",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/mnist_seed22_K100.npz": "e025bb843af90b876c27ccae01c97f8c0f8e7f7d36c35528f4c54abaf65bccff",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed33_K100/predictions_before_labels.npz": "ba8f0ed0631e2198a8d446433ce6abdb352c8a6599a996cba97da20c96b922b7",
+    "evidence/baseline/evidence/frontier/results/mnist_seed33_K100/frontiers_before_labels.npz": "cb1b704116a7ade8dcd05472dc126dd7f037fa74b8e90202ac5ff08ba46221e8",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed33_K100.npz": "1179522e0811cef7b0bad47fda1e0aa6481626a1299d286ccd10eed7261fbb89",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/mnist_seed33_K100.npz": "fe2a754780c87c6738bd392785c22e82d645beedb14db0c71cecb2b608c8125f",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/mnist_seed33_K100.npz": "e3c2df2f668d643530e5ab9488a1b5c71c627b3ddf802f8fdc888f3e8cba8e52",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed44_K100/predictions_before_labels.npz": "327817673f4680110fb3e5ba434c2d4db4c8cec31788997751333c55b431cb4e",
+    "evidence/baseline/evidence/frontier/results/mnist_seed44_K100/frontiers_before_labels.npz": "c1b6c6d81e9993abbd41f5541c15c3649cf3964cc5f8fbf9a38df99db57d23d7",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed44_K100.npz": "ef3ea6b7151e412de73c4b6e1a6618ca0794d1438d142aaadccb4e8fcb3b14f4",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/mnist_seed44_K100.npz": "be2609804010908f9f71e525658d3a3650d5530a03f337101e21e2b576456058",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/mnist_seed44_K100.npz": "2bee9d419d47c50ce7df6d29cbd79e04b19b14f54d69ccfec0d17beb10d5dfe7",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/mnist_seed55_K100/predictions_before_labels.npz": "b925ddb20511c60e2180d734a3bdad74c59799f403a0e2a5c5ce31d57c8ac01d",
+    "evidence/baseline/evidence/frontier/results/mnist_seed55_K100/frontiers_before_labels.npz": "1e4dbc338f60db93525bc6b79d1868bfdf7be54bb73ad923883c945560ddd236",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/mnist_seed55_K100.npz": "1c8eb36b2dc7ce7f7b4dbedfd5a207e8f54842b60fe67ccb4a80c5e550dd5d74",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/mnist_seed55_K100.npz": "0a41203500703d7536d2092f828a0f33789fa412d9c3ecdb76eb9c54ce9d5f75",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/mnist_seed55_K100.npz": "40c7263bdb9245780f74d2fde2066b41cef8af216c817384c53af6842ffc6bf5",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed11_K100/predictions_before_labels.npz": "1ae363aaddefdaa45e2f048aca28cc13e5ae66d4446fe87a07e0f5d0681b3472",
+    "evidence/baseline/evidence/frontier/results/fashion_mnist_seed11_K100/frontiers_before_labels.npz": "df3c6863c5a4e84c1ef5f09e68b67d2cd21608fd638903a85609689d93959e21",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed11_K100.npz": "82a160917f3b783c4a51a69926fded3f200657627d3eb7ca500406764f7e39cf",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/fashion_mnist_seed11_K100.npz": "77c19cbf91343ad1b5635693428bdb3241b3cf418e04c710a9b285f55b38af6d",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/fashion_mnist_seed11_K100.npz": "ccf6b79436b9f253db1a63cd8443d10cb31058a2a82eeb89af01901309023938",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed22_K100/predictions_before_labels.npz": "17ab12a05fdef4c28645ac0ee07b40b35652e765c2d09be6aebb77b7f92ca64f",
+    "evidence/baseline/evidence/frontier/results/fashion_mnist_seed22_K100/frontiers_before_labels.npz": "53e633f9cf5041193c3f8a19c748e0b283322d76bd0134ded7543f0af69118fe",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed22_K100.npz": "d06e93fe416c56f77d2f1c3b749c2314998339cb1979b413d3dfa5b2d39bc831",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/fashion_mnist_seed22_K100.npz": "2ce01eda020c8a790ca23f5469e208c5d58e4c22a7650978f0bf567edfa8ee76",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/fashion_mnist_seed22_K100.npz": "3c1e3155fec6e08852c46d68715cb3670f5f37b4899eeec30276af17a611e77e",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed33_K100/predictions_before_labels.npz": "9aef24822087cd238b599e45234d5cbb87985eee2b88b09af76706bf551f1ea2",
+    "evidence/baseline/evidence/frontier/results/fashion_mnist_seed33_K100/frontiers_before_labels.npz": "bb8a8cc8a50b59531a2b49a9821dfca6dbbe553eb3127ac623ec45cebd3df8ed",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed33_K100.npz": "cf48ca1bb0b8d1aac10fc5d71b6d525b432b2321312684730472393121dbf9e4",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/fashion_mnist_seed33_K100.npz": "4bf942c2061fe9013e5fc271e2de74ca5da47f41f754c8af8dc0be3035e177c3",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/fashion_mnist_seed33_K100.npz": "73dee066c4432bd62d4006d2dd4f39d42fddf37901d67d97049c466f7992f712",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed44_K100/predictions_before_labels.npz": "a43131e3a017fda6dc185054280fabb9491b20e341807098a76798be75dd6c98",
+    "evidence/baseline/evidence/frontier/results/fashion_mnist_seed44_K100/frontiers_before_labels.npz": "96461dd0d4f45b3cace3d49015c5457c4dcbfff93e18a78fae94e05437f083a2",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed44_K100.npz": "44b28c24fc7e2b19080ebeabe0b96c6d419042e30b8d526186fb7266d04dc82e",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/fashion_mnist_seed44_K100.npz": "e9399af387c9dfef0d9aaf49efdc1ebe8c1a4db514acb8ce7099d1576b251ead",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/fashion_mnist_seed44_K100.npz": "23613298ffdb12ec7735b969e11cc2a70a8450044aabe839be67b9125f6bf8c1",
+    "evidence/baseline/evidence/baseline/work/v2/experiment/results/fashion_mnist_seed55_K100/predictions_before_labels.npz": "d2e45ab44010faa8226c8330561548c7a50f766897f3b9d8a2ccfa9a761ff2c7",
+    "evidence/baseline/evidence/frontier/results/fashion_mnist_seed55_K100/frontiers_before_labels.npz": "7b5731fadda29edebac4669a195406ab82f09b0407b1e044e0d2fd9986ef542a",
+    "evidence/new_analysis/limit_diagnostic/local_tail_validation/fashion_mnist_seed55_K100.npz": "5bcbcef91792d18e867f87bb5095953efc0e70332db99bd840383fa66f0ae575",
+    "evidence/new_analysis/limit_diagnostic/original7_guarded/fashion_mnist_seed55_K100.npz": "cebcd30b85645b9db25a963a3892b70cfcb86769ca0258d81b9754ed52007ada",
+    "evidence/new_analysis/limit_diagnostic/dense67_guarded/fashion_mnist_seed55_K100.npz": "899b452b02de8d5772dc38c6ecf630c776c6ff353f07d82f876716c629953a2e"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

@@ -1,0 +1,8 @@
+{
+  "runtime_seconds": 2.660718770999665,
+  "readout_fits": 120,
+  "certified_sampled_checks": 254120,
+  "certified_sampled_disagreements": 0,
+  "protocol_sha256": "54fa91d55bfdf2393944dc9f1e17dc5e0167dc6d8e13b40f12dae7d366fa29d8",
+  "runner_sha256": "d04c96266e5be52724cdea3d313073a75c104e9fd430ca34c4d7007ec7827ae7"
+}

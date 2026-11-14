@@ -1,0 +1,34 @@
+mnist_seed11_K100 PASS
+mnist_seed22_K100 PASS
+mnist_seed33_K100 PASS
+mnist_seed44_K100 PASS
+mnist_seed55_K100 PASS
+fashion_mnist_seed11_K100 PASS
+fashion_mnist_seed22_K100 PASS
+fashion_mnist_seed33_K100 PASS
+fashion_mnist_seed44_K100 PASS
+fashion_mnist_seed55_K100 PASS
+{
+  "status": "PASS",
+  "method": "Independent reconstruction from preserved R2 image data and archived weights; no runner imports and no new fits",
+  "counts": {
+    "groups": 10,
+    "m3_prediction_labels": 140270,
+    "m3_selector_masks": 120,
+    "m3_per_seed_rows": 140,
+    "m3_class_count_rows": 1400,
+    "m1_validation_prediction_labels": 4800000,
+    "m1_threshold_query_widths": 490945,
+    "m1_finite_reversal_checks": 175027,
+    "m2_region_unions": 210
+  },
+  "maximum_threshold_relative_error": 1.2364442802947906e-10,
+  "all_certified_selector_labels_agree": true,
+  "all_equal_size_masks_match": true,
+  "all_m1_m2_masks_match": true,
+  "normalized_and_raw_scores_preserve_labels": true,
+  "mnist_full_query_predictions_at_t_sC_all_class_one": true,
+  "random_reference": "Exact finite-population expectation; full-query correctness independently reconstructed",
+  "elapsed_seconds": 19.449396114000024,
+  "script_sha256": "558337954ba39098bf1bb844c1b2a42be512a710a74a40c91f81948341f94975"
+}

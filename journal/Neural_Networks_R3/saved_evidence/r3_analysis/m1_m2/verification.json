@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "manifest_files": 16,
+  "mask_count_comparisons": 1260,
+  "r2_region_counts_matched": 210,
+  "sampled_direct_solve_threshold_checks": 338,
+  "minimum_scaled_competing_margin": 0.0029772735699911124
+}

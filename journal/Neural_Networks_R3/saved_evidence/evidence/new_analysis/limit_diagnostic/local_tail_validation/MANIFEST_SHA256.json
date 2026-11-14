@@ -1,0 +1,17 @@
+{
+  "COMPLETE.json": "9eb66ce56fe27f39e5ee6e8843173483b85161088efc5692fc62e7ef874d13a2",
+  "all_query_per_seed.csv": "65157d945f94c4f2c80b4f7c52c3c02f17906a74b93eaab1bcd0e60aa9e1a93c",
+  "all_query_summary.csv": "00e56df737341b46c81d688956af57e0f815f4b481a1aa54b320497828f4446e",
+  "certified_per_seed.csv": "ddd6be558182ceec7586e9227cbfee257642dd5c6e6e05ac25d1922958be4313",
+  "certified_summary.csv": "5d9a4bc0a1fd395b0d1f4cdca1a723e5b7479a875edea73599c694cb88b158b2",
+  "fashion_mnist_seed11_K100.npz": "82a160917f3b783c4a51a69926fded3f200657627d3eb7ca500406764f7e39cf",
+  "fashion_mnist_seed22_K100.npz": "d06e93fe416c56f77d2f1c3b749c2314998339cb1979b413d3dfa5b2d39bc831",
+  "fashion_mnist_seed33_K100.npz": "cf48ca1bb0b8d1aac10fc5d71b6d525b432b2321312684730472393121dbf9e4",
+  "fashion_mnist_seed44_K100.npz": "44b28c24fc7e2b19080ebeabe0b96c6d419042e30b8d526186fb7266d04dc82e",
+  "fashion_mnist_seed55_K100.npz": "5bcbcef91792d18e867f87bb5095953efc0e70332db99bd840383fa66f0ae575",
+  "mnist_seed11_K100.npz": "cdab448df07d7931b40ddb0152145fd7543ea7e1d8a5a2000e49e782a93f8f6f",
+  "mnist_seed22_K100.npz": "4c9b8c1ca7dc77bf6905f44e2da16213d2f1ea5542e41c251eee192b755080c9",
+  "mnist_seed33_K100.npz": "1179522e0811cef7b0bad47fda1e0aa6481626a1299d286ccd10eed7261fbb89",
+  "mnist_seed44_K100.npz": "ef3ea6b7151e412de73c4b6e1a6618ca0794d1438d142aaadccb4e8fcb3b14f4",
+  "mnist_seed55_K100.npz": "1c8eb36b2dc7ce7f7b4dbedfd5a207e8f54842b60fe67ccb4a80c5e550dd5d74"
+}

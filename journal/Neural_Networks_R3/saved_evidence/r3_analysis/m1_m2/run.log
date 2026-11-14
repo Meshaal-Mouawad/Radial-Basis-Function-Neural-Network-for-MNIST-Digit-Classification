@@ -1,0 +1,10 @@
+{"group": "mnist_seed11_K100", "seconds": 1.749453692999964, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}
+{"group": "mnist_seed22_K100", "seconds": 1.5224134119999917, "finite_original_pairs": 96, "finite_all_archived_pairs": 111, "prediction_mismatch": 0}
+{"group": "mnist_seed33_K100", "seconds": 1.2208834740000611, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}
+{"group": "mnist_seed44_K100", "seconds": 1.1509871430000658, "finite_original_pairs": 96, "finite_all_archived_pairs": 111, "prediction_mismatch": 0}
+{"group": "mnist_seed55_K100", "seconds": 1.2078618010000355, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}
+{"group": "fashion_mnist_seed11_K100", "seconds": 1.786703536999994, "finite_original_pairs": 96, "finite_all_archived_pairs": 126, "prediction_mismatch": 0}
+{"group": "fashion_mnist_seed22_K100", "seconds": 2.0672274170000264, "finite_original_pairs": 96, "finite_all_archived_pairs": 129, "prediction_mismatch": 0}
+{"group": "fashion_mnist_seed33_K100", "seconds": 2.9058116779999636, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}
+{"group": "fashion_mnist_seed44_K100", "seconds": 2.1021357740000894, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}
+{"group": "fashion_mnist_seed55_K100", "seconds": 1.7822037189999946, "finite_original_pairs": 96, "finite_all_archived_pairs": 114, "prediction_mismatch": 0}

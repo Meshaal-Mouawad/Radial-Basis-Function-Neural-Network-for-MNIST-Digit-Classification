@@ -1,0 +1,13 @@
+{
+  "seed": 20261109,
+  "datasets": 250,
+  "interval_enclosures": 15750,
+  "certified_bands": 2244,
+  "certified_predictions": 33660,
+  "resolvent_checks": 3000,
+  "strict_obstruction_checks": 2930,
+  "violations": 0,
+  "max_observed_resolvent_error_to_bound_ratio": 0.9998853840539853,
+  "exact_gaussian_obstruction": "r^T(W_b-W_a)=lambda/det(A+lambda I), positive for every lambda>0",
+  "exact_tied_limit": "r^T(W_b-W_a)=(-63/4)/det(A+lambda I), negative for every lambda>=0 despite limit tie"
+}
