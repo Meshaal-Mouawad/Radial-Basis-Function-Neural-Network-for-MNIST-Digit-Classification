@@ -1,0 +1,148 @@
+\subsection{A necessary condition from the large-penalty limit}
+\label{sec:ridge-obstruction}
+An agreement certificate gives a sufficient condition for a complete parameter
+region. The ridge limit supplies a complementary test that can rule such a
+region out. For a fixed width, write
+\[
+ A_\sigma=H_\sigma^\tr H_\sigma,\qquad
+ Z_\sigma=H_\sigma^\tr Y=Y_C+V_\sigma+P_\sigma,
+ \qquad k_c(\sigma,x)=r(\sigma)^\tr Z_\sigma[:,c].
+\]
+Here $r(\sigma)$ is the nearest-response normalization in
+Eq.~\eqref{eq:query}. The score $k_c$ sums training-label contributions
+through the prototype features. It can be calculated from the same training
+quantities used by the original certificate, without fitting output weights.
+
+\begin{proposition}[Large-penalty decision and exclusion]
+\label{prop:ridge-limit}
+For every fixed positive width and query,
+\[
+ \lim_{\lambda\to\infty}\lambda r(\sigma)^\tr W_{\sigma,\lambda}
+ =r(\sigma)^\tr Z_\sigma.
+\]
+Let $a$ be the nearest-prototype label. If, for some competing class $b$,
+$\delta=k_b(\sigma,x)-k_a(\sigma,x)>0$, then every region
+$(0,t]\times[\lambda_0,\infty)$ with $t\geq\sigma$ fails to preserve
+label $a$ at this query. More explicitly, put
+$v=Z_\sigma[:,b]-Z_\sigma[:,a]$. Class $b$ has a strictly larger fitted
+score than class $a$ whenever
+\[
+ \lambda>\frac{\norm{r(\sigma)}_2\norm{A_\sigma v}_2}{\delta}.
+\]
+\end{proposition}
+\begin{proof}
+For every $\lambda>0$, positive semidefiniteness of $A_\sigma$ gives
+\[
+ \lambda(A_\sigma+\lambda I)^{-1}
+ =I-(A_\sigma+\lambda I)^{-1}A_\sigma,
+ \qquad
+ \norm{(A_\sigma+\lambda I)^{-1}}_2\leq\lambda^{-1}.
+\]
+The first identity proves the limit and, for any class difference $v$, gives
+\[
+ \left|\lambda r(\sigma)^\tr(A_\sigma+\lambda I)^{-1}v
+              -r(\sigma)^\tr v\right|
+ \leq\frac{\norm{r(\sigma)}_2\norm{A_\sigma v}_2}{\lambda}.
+\]
+The stated threshold leaves a positive competing margin. Since an unbounded
+penalty interval includes penalties above this finite threshold, the requested
+whole-region agreement is impossible.
+\end{proof}
+
+Consequently, a necessary condition for whole-region agreement is
+$k_a(\sigma,x)\geq k_b(\sigma,x)$ for every competitor and every
+$0<\sigma\leq t$. A strict violation at one examined width suffices for
+exclusion. An exact tie does not establish exclusion. Conversely, when class
+$a$ strictly wins the limiting vote at a fixed width, the same error bound,
+applied to each competing class, gives a finite penalty above which $a$
+strictly wins every fitted decision at that width.
+
+\subsection{Agreement on local width intervals and penalty tails}
+\label{sec:local-tail}
+The limiting vote also gives a positive certificate for local width intervals.
+This extends the certified-region geometry to $[s,t]\times[\Lambda,\infty)$
+with $s>0$. Both $r(\sigma)$ and $Z_\sigma$ are entrywise nonnegative and
+nondecreasing in width. Their class scores therefore satisfy
+$k_c(s,x)\leq k_c(\sigma,x)\leq k_c(t,x)$ for $s\leq\sigma\leq t$.
+Define
+\[
+ m_{ab}(s,t,x)=k_a(s,x)-k_b(t,x).
+\]
+For each pair, enclose the signed training difference by
+\[
+ \ell_{ab}=Z_s[:,a]-Z_t[:,b],\qquad
+ u_{ab}=Z_t[:,a]-Z_s[:,b].
+\]
+For a vector $z$, let $z_+=\max(z,0)$ and $z_-=\min(z,0)$ entrywise;
+the negative part retains its sign. Set
+\begin{align*}
+ z^-_{ab}&=A_s(\ell_{ab})_++A_t(\ell_{ab})_-,\\
+ z^+_{ab}&=A_t(u_{ab})_++A_s(u_{ab})_-,\\
+ \rho_{ab}(s,t)&=
+ \left\|\max\left(|z^-_{ab}|,|z^+_{ab}|\right)\right\|_2.
+\end{align*}
+All vector maxima and absolute values here are entrywise.
+
+\begin{theorem}[Local-width, large-penalty agreement]
+\label{thm:local-tail}
+Suppose $0<s\leq t$ and $\Lambda>0$. If, for every class $b\ne a$,
+\[
+ m_{ab}(s,t,x)>
+       \frac{\norm{r(t)}_2\rho_{ab}(s,t)}{\Lambda},
+\]
+then the unique winning class is $a$ for every
+$(\sigma,\lambda)\in[s,t]\times[\Lambda,\infty)$ with finite $\lambda$.
+\end{theorem}
+\begin{proof}
+The entrywise monotonicity of $H_\sigma$ gives
+$A_s\leq A_\sigma\leq A_t$ entrywise. For
+$v_\sigma=Z_\sigma[:,a]-Z_\sigma[:,b]$, we have
+$\ell_{ab}\leq v_\sigma\leq u_{ab}$. Nonnegativity of $A_\sigma$
+first gives $A_\sigma\ell_{ab}\leq A_\sigma v_\sigma
+\leq A_\sigma u_{ab}$. Splitting each endpoint vector into its signed
+positive and negative parts then yields
+\[
+ z^-_{ab}\leq A_\sigma v_\sigma\leq z^+_{ab},\qquad
+ \norm{A_\sigma v_\sigma}_2\leq\rho_{ab}(s,t).
+\]
+The resolvent bound in Proposition~\ref{prop:ridge-limit}, the vote-margin
+bound, and $\norm{r(\sigma)}_2\leq\norm{r(t)}_2$ imply
+\[
+ \lambda r(\sigma)^\tr
+ (W_{\sigma,\lambda}[:,a]-W_{\sigma,\lambda}[:,b])
+ \geq m_{ab}(s,t,x)-
+       \frac{\norm{r(t)}_2\rho_{ab}(s,t)}{\Lambda}>0.
+\]
+Positive score scaling preserves the unique winning class.
+\end{proof}
+
+The certificate requires endpoint feature products and query distances.
+Products with $A_s$ or $A_t$ can be computed as
+$A_\sigma z=H_\sigma^\tr(H_\sigma z)$, so output fitting and inversion
+are unnecessary. At $s=t$, the interval enclosure is exact:
+$\rho_{ab}(t,t)=\norm{A_t(Z_t[:,a]-Z_t[:,b])}_2$. At every width
+where the nearest-prototype label strictly wins the limiting vote, continuity
+therefore provides a nonzero local width interval and a penalty tail with a finite floor
+certified by Theorem~\ref{thm:local-tail}.
+
+A simpler correction bound uses the positive class sum,
+$\rho^+_{ab}(s,t)=\norm{A_t(Z_t[:,a]+Z_t[:,b])}_2$.
+Nonnegativity and the endpoint bounds imply
+$\rho_{ab}(s,t)\leq\rho^+_{ab}(s,t)$, so replacing $\rho_{ab}$ by
+$\rho^+_{ab}$ gives a sufficient comparator on the same region.
+When every $m_{ab}$ is positive, any penalty floor strictly exceeding
+$\max_{b\ne a}\norm{r(t)}_2\rho_{ab}/m_{ab}$ passes the signed test.
+
+\subsection{Certified, excluded, and unresolved requested regions}
+\label{sec:partition}
+For a fixed query and requested full-width region, the sufficient theorem
+returns a certified case. A strict limiting reversal at any included width,
+or a strict competing fitted score at any included finite parameter pair,
+returns an excluded case: the region contains a disagreement and therefore
+fails the uniform-agreement property. These two conclusions are mutually
+exclusive. A query receiving neither conclusion is unresolved. Taking the
+union of strict exclusions over examined widths preserves their validity
+and makes the excluded set nondecreasing with the upper bandwidth.
+The complement of the excluded set bounds attainable full-region agreement
+coverage from above. The local-width theorem supplies a separate positive
+certificate for its explicitly stated band and penalty tail.
