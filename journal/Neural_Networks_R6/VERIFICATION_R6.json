@@ -15,7 +15,7 @@
   "visual_inspection": "PASS_ALL_40_PAGES",
   "source_sha256": "f92fb4cd1daf3b004aecc07f09b587ff424d5fc6e98d472e10577b454c13db55",
   "pdf_sha256": "dbbb8d39cd02b73145eee4d3d5a76e0059372f0da4f6c07ccbafac464e857d8f",
-  "source_zip_sha256": "021ce4fa06dcca7509e56fc3992fe9bcf46fbf4669bcb1979cadc0e790785e02",
+  "source_zip_sha256": "b3767bdda34df1b06a8b3ac59bd72674e636cb32948abc8602b146f1666a58d6",
   "journal_submission_complete": false,
   "configured_agents": [
     {
