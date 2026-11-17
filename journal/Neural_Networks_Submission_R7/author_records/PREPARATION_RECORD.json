@@ -1,0 +1,25 @@
+{
+  "status": "STAGED_FOR_FINAL_CHECK",
+  "manuscript_baseline": "R7_UNCHANGED",
+  "reviewed_commit": "93b4b15a3c2c643a67f45b2146b67a0acd4dfca4",
+  "manuscript_sha256": "06364ad4ebd0f5a01fd5099550d39862c691be931a97daf4cc09e16c3754fb71",
+  "science_source_main_sha256": "71d01178d02cfddf8f980b58239b6242329b5b73bbe0a0347f2358bd33900ad6",
+  "source_members": 29,
+  "figures": 7,
+  "highlight_characters": [
+    70,
+    57,
+    71,
+    72,
+    72
+  ],
+  "new_training_runs": 0,
+  "reviewer_response": "No journal reviewer-response document exists; independent reviews retained outside journal upload",
+  "removed_from_source_package": [
+    "unused PNG/SVG previews",
+    "class development dtx/ins files",
+    "release README and checksum metadata"
+  ],
+  "live_journal_guide": "403 on official direct access; generic publisher submission instructions inspected, portal-specific requirements remain to be checked during upload",
+  "journal_submission_complete": false
+}
