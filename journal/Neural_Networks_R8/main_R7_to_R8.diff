@@ -1,0 +1,10 @@
+--- R7/main.tex
++++ R8/main.tex
+@@ -26,6 +26,7 @@
+ \setlength{\parskip}{0.2em}
+ \setlength{\emergencystretch}{2em}
+ \journal{Neural Networks}
++\date{18 November 2026}
+ \begin{document}
+ \begin{frontmatter}
+ \title{Training-Derived Regions of Nearest-Prototype Agreement in Gaussian RBF Classifiers}

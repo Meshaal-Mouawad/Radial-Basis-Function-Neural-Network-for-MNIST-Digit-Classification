@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "pages": 41,
+  "all_page_render_comparison": "IDENTICAL_AT_108_DPI",
+  "clean_source_build": "PASS",
+  "warnings": 0,
+  "visual_inspection": "ALL_41_PAGES_PLUS_FIGURE3_DETAIL_AND_COVER",
+  "figure3_page": 14,
+  "original_figures_preserved": 7,
+  "total_figures": 8,
+  "journal_submission_complete": false
+}

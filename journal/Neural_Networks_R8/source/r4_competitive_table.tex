@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Validation-selected archived models across all 30 groups. Entries are five-seed means $\pm$ sample SD with the full evaluation set as denominator. All selected models use $\lambda=0$ and have zero sharp full-width coverage. Exclusion concerns the requested region $(0,\sigma]\times[\lambda,\infty)$ attached to the selected endpoint.}
+\label{tab:r4-competitive}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Dataset & $K$ & Accuracy (\%) & Nearest agreement (\%) & Region excluded (\%)\\
+\midrule
+MNIST & 50 & $82.92\pm0.46$ & $65.75\pm5.37$ & $87.53\pm0.28$\\
+MNIST & 100 & $88.43\pm0.27$ & $73.94\pm2.43$ & $88.07\pm0.14$\\
+MNIST & 200 & $91.80\pm0.31$ & $79.83\pm2.52$ & $88.24\pm0.14$\\
+Fashion-MNIST & 50 & $76.23\pm0.88$ & $62.72\pm4.74$ & $98.23\pm3.13$\\
+Fashion-MNIST & 100 & $79.38\pm0.63$ & $68.35\pm4.02$ & $93.75\pm8.61$\\
+Fashion-MNIST & 200 & $82.13\pm0.19$ & $73.58\pm1.69$ & $77.30\pm4.81$\\
+\bottomrule
+\end{tabular}
+\end{table}

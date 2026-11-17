@@ -1,0 +1,20 @@
+{
+  "verdict": "pass",
+  "scope": "Scientific consistency of supplied Figure 3 and its caption and callout",
+  "placement": "After the final sentence of subsection 4.6",
+  "reviewed_source": "working_R7/source/ridge_theory.tex",
+  "reviewed_assets": [
+    "illustration_input/Caption_and_Placement.md",
+    "illustration_input/RBF_R7_Parameter_Regions.pdf",
+    "illustration_input/RBF_R7_Parameter_Regions.png"
+  ],
+  "checks": {
+    "same_query": "An included finite strict fitted-score reversal excludes the full-width request. At 0 < sigma_w < s <= t it lies outside the band certified by Theorem 2.",
+    "finite_penalties": "The witness is at a finite penalty lambda_w >= lambda_0. The local certificate holds for every finite lambda >= Lambda with Lambda > 0 when the strict signed inequality holds for every competing class.",
+    "proposition_3": "A strict limiting reversal yields a finite witness at any included penalty above the proposition's strict threshold.",
+    "empirical_claim": "None. Plot coordinates, penalty floors, and witness placement are schematic.",
+    "artwork_correction": "None",
+    "callout_correction": "None beyond using the LaTeX figure cross-reference",
+    "caption_correction": "Specify a positive local penalty floor Lambda, retain the condition against every competing class, and describe the witness as finite."
+  }
+}

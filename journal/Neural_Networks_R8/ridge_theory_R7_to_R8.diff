@@ -1,0 +1,27 @@
+--- R7/ridge_theory.tex
++++ R8/ridge_theory.tex
+@@ -146,3 +146,24 @@
+ The complement of the excluded set bounds attainable full-region agreement
+ coverage from above. The local-width theorem supplies a separate positive
+ certificate for its explicitly stated band and penalty tail.
++
++
++Figure~\ref{fig:parameter-regions} shows how a strict disagreement at a
++bandwidth below a local band can exclude full-width agreement even when the
++signed test certifies the local band.
++
++\begin{figure}[!htbp]
++\centering
++\includegraphics[width=\textwidth]{Parameter_Regions.pdf}
++\caption{Full-width exclusion and local-band certification for the same query.
++(A) One finite parameter pair within the requested region, marked by a cross
++at bandwidth $\sigma_w$, suffices to exclude uniform nearest-prototype
++agreement when a competing class strictly outscores the reference class.
++(B) With $0<\sigma_w<s\leq t$, the same disagreement falls below the
++bandwidth band $[s,t]$. If the signed condition in
++Theorem~\ref{thm:local-tail} passes against every competing class, the
++reference class wins throughout the shaded band at every finite penalty
++$\lambda\geq\Lambda>0$. Upward arrows indicate that both regions extend to
++arbitrarily large finite penalties. Schematic axes.}
++\label{fig:parameter-regions}
++\end{figure}

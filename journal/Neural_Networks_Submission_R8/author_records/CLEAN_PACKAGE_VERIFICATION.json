@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "manuscript_version": "R8_FIGURE3_INTEGRATED",
+  "clean_files": [
+    "Cover_Letter.pdf",
+    "Declaration_of_Competing_Interest.docx",
+    "Figures/Figure_01_Two_Decision_Paths.pdf",
+    "Figures/Figure_02_Uniform_Certificate_Mechanism.pdf",
+    "Figures/Figure_03_Parameter_Regions.pdf",
+    "Figures/Figure_04_Certificate_Coverage.pdf",
+    "Figures/Figure_05_Agreement_Accuracy.pdf",
+    "Figures/Figure_06_Certified_Frontier_Accuracy.pdf",
+    "Figures/Figure_07_Agreement_Region_Diagnosis.pdf",
+    "Figures/Figure_08_Selected_Class_Accuracy.pdf",
+    "Highlights.txt",
+    "LaTeX_Source.zip",
+    "Manuscript.pdf",
+    "Title_Page.docx",
+    "Supplementary_Research_Artifacts.zip"
+  ],
+  "journal_facing_files": 15,
+  "internal_records_in_clean_archive": false,
+  "full_archive": {
+    "archive": "Neural_Networks_R8_Clean_Submission_Package.zip",
+    "bytes": 707303576,
+    "sha256": "659f5fdcd91c21b24d9959056f2d33f465d046be93e17c927962079b94fe32de"
+  },
+  "small_upload_zip": {
+    "file": "Neural_Networks_R8_Clean_Upload_Files.zip",
+    "bytes": 1278579,
+    "sha256": "6da997fbda28cdbe0cb25d0461a8488b3b531fa8fce82e3839d01df6b17ceb13"
+  },
+  "transport_restore": "PASS",
+  "source_clean_build": "PASS_ALL41PAGES_IDENTICAL",
+  "parts": [
+    {
+      "file": "/workspace/scratch/3c06ccde22f8/output/Neural_Networks_R8_Clean_Submission_Part_1_of_2.zip",
+      "bytes": 353657244,
+      "sha256": "0418c9dfa37d701c96c4e85326aebddbd16950bedc5901e8c57c2061f42ac481"
+    },
+    {
+      "file": "/workspace/scratch/3c06ccde22f8/output/Neural_Networks_R8_Clean_Submission_Part_2_of_2.zip",
+      "bytes": 353657244,
+      "sha256": "580b6818ab554d341a7816f8b56bc4203ae30294901259c4c7bbc9725f5721ef"
+    }
+  ],
+  "journal_submission_complete": false
+}

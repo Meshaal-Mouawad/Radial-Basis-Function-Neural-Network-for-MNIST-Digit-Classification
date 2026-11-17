@@ -1,0 +1,24 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Composition at the same coverage as Table~\ref{tab:r3-selectors}. Selected-class accuracy gives equal weight to each true class represented in the selected set; accepted recall uses all ten full evaluation classes. Entries are five-seed means $\pm$ sample SD. Jaccard compares the two selectors within each seed.}
+\label{tab:r4-composition}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{MNIST} & \multicolumn{2}{c}{Fashion-MNIST}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Measure / selector & $s_C/2$ & $s_C$ & $s_C/2$ & $s_C$\\
+\midrule
+\multicolumn{5}{@{}l}{Selected-class accuracy (\%)}\\
+Certificate & $11.24\pm1.85$ & $10.00\pm0.00$ & $53.36\pm4.76$ & $25.49\pm5.45$\\
+Gated distance & $44.74\pm14.35$ & $10.00\pm0.00$ & $63.64\pm7.69$ & $44.21\pm6.17$\\
+\multicolumn{5}{@{}l}{Macro accepted recall (\%)}\\
+Certificate & $9.88\pm0.17$ & $9.79\pm0.15$ & $30.08\pm2.88$ & $9.63\pm1.44$\\
+Gated distance & $12.68\pm0.62$ & $9.79\pm0.15$ & $31.68\pm2.76$ & $12.40\pm2.37$\\
+\multicolumn{5}{@{}l}{Effective predicted classes}\\
+Certificate & $1.03\pm0.05$ & $1.00\pm0.00$ & $5.35\pm0.90$ & $1.71\pm0.32$\\
+Gated distance & $2.14\pm0.43$ & $1.00\pm0.00$ & $6.43\pm0.92$ & $3.73\pm0.77$\\
+\midrule
+Jaccard & $0.65\pm0.09$ & $1.00\pm0.00$ & $0.70\pm0.07$ & $0.31\pm0.11$\\
+\bottomrule
+\end{tabular}
+\end{table}
