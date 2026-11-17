@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "full_R5_files_verified": 57,
+  "R6_review_entries_verified": 12,
+  "full_R5_archive_sha256": "90f997867cae28cc229d128754a7a01690a2125fc5eb479f892a9b5758cbe378",
+  "unchanged_numerical_supplement_sha256": "ee029862791413b993387234efe9ecad5114d99685ef5fd9d4add4eb53d080c8"
+}

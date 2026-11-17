@@ -1,0 +1,15 @@
+{
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "minor_revision": "CLOSED",
+  "review_M1_M2_M3": "CLOSED_BY_SUPPLIED_INDEPENDENT_REVIEW",
+  "fresh_archive_integrity": "PASS",
+  "fresh_independent_empirical_reconstruction": "PASS",
+  "source_build_and_pdf": "PASS",
+  "new_training_runs": 0,
+  "journal_transfer_submission_complete": false,
+  "reviewer_synthetic_counts": "REVIEWER_REPORTED_NOT_REEXECUTED",
+  "optional_journal_fulltext": "NOT_VERIFIED_BODY_INACCESSIBLE",
+  "source_sha256": "71d01178d02cfddf8f980b58239b6242329b5b73bbe0a0347f2358bd33900ad6",
+  "pdf_sha256": "06364ad4ebd0f5a01fd5099550d39862c691be931a97daf4cc09e16c3754fb71",
+  "supplement_sha256": "ee029862791413b993387234efe9ecad5114d99685ef5fd9d4add4eb53d080c8"
+}

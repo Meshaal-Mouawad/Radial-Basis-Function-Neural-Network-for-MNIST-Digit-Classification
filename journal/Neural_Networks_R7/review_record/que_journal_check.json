@@ -1,0 +1,46 @@
+{
+  "check_date": "2026-11-17",
+  "journal_identity_verified": true,
+  "journal": {
+    "authors": ["Qichao Que", "Mikhail Belkin"],
+    "title": "Back to the Future: Radial Basis Function Network Revisited",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "volume": 42,
+    "issue": 8,
+    "pages": "1856–1867",
+    "issue_year": 2020,
+    "online_date": "2019-03-25",
+    "doi": "10.1109/TPAMI.2019.2906594",
+    "doi_url": "https://doi.org/10.1109/TPAMI.2019.2906594",
+    "publisher_url": "https://ieeexplore.ieee.org/document/8673620/",
+    "access_level": "publisher-indexed metadata, abstract, section headings, first introductory paragraph; no methods or theorem access",
+    "full_text_inspected": false,
+    "direct_access_result": "JavaScript robot verification",
+    "pdf_url_attempted": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8673620",
+    "pdf_access_result": "not accessible via search tool"
+  },
+  "conference": {
+    "title": "Back to the Future: Radial Basis Function Networks Revisited",
+    "year": 2016,
+    "venue": "AISTATS; PMLR 51",
+    "pages": "1375–1383",
+    "metadata_url": "https://proceedings.mlr.press/v51/que16.html",
+    "primary_pdf_url": "https://proceedings.mlr.press/v51/que16.pdf",
+    "supplement_url": "https://proceedings.mlr.press/v51/que16-supp.pdf",
+    "access_level": "primary full text accessible; selected methods and theorem statements inspected",
+    "selected_items": ["Section 2 equation (2), coefficient-square penalty and ridge embedding", "Theorem 1, estimation-error bound", "Corollary 1, generalization rate", "Section 4.2 Theorem 2, quantization-error bound", "Theorem 3, limiting k-means-center distribution"]
+  },
+  "author_route": {
+    "url": "https://misha.belkin-wang.org/papers.html",
+    "access_level": "full publication list accessible",
+    "result": "AISTATS entry links to proceedings; no journal full-text route identified"
+  },
+  "finding": "Inspected conference content supports the R6 comparison to coefficient-regularized RBF networks and data-dependent kernels. Journal primary metadata advertises overlapping scope. Journal theorem-level additions cannot be determined from accessed material.",
+  "recommendation": "retain_conference",
+  "add_journal": false,
+  "replace_with_journal": false,
+  "journal_incremental_relevance": "unresolved_full_text_inaccessible",
+  "optional_review_item_status": "identity verified; existing citation supported; theorem-level journal comparison unresolved",
+  "manuscript_edits": false,
+  "bibliography_edits": false
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "only_source_edits": "Remove literal Appendix prefixes from two class-prefixed references",
+  "main_source_sha256": "71d01178d02cfddf8f980b58239b6242329b5b73bbe0a0347f2358bd33900ad6",
+  "baseline_main_source_sha256": "f92fb4cd1daf3b004aecc07f09b587ff424d5fc6e98d472e10577b454c13db55",
+  "source_zip_sha256": "6fc569415d1dcbcd5fcf1d947386240c78edc682bcbcfcb1eed15c0a3cd89a40",
+  "all_other_source_files_exact": true,
+  "protected_math_results_figures_bibliography_declaration_unchanged": true,
+  "source_files_compared": 35
+}
