@@ -1,8 +1,0 @@
-{
-  "synthetic_query_rectangles": 4500,
-  "certified_method_query_rectangles": 4052,
-  "certified_violations": 0,
-  "max_sharp_minus_basic_constant": 5.551115123125783e-17,
-  "contradictory_duplicate": "PASS",
-  "nearest_tie_abstention": "PASS"
-}

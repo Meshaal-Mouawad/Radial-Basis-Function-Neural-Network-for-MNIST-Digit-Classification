@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "baseline_commit": "03dd8190c16a9322d51362424ba18e5c284fa0c2",
+  "original_tracked_files": 1146,
+  "unique_original_blobs_retained": 931,
+  "exact_duplicate_paths_consolidated": 215,
+  "original_content_preservation": "ALL_ORIGINAL_GIT_BLOBS_RETAINED",
+  "current_version": "R8",
+  "history_rewritten": false,
+  "scope": "GitHub repository and this connected workspace; Mac folders are not mounted",
+  "verification": "All original blob identities retained; duplicate-free canonical mapping verified before commit"
+}
